@@ -83,4 +83,4 @@ turned off.
 
 - The device will vibrate for about 100ms when a gesture is recognized.
 
-[[GuideToPerformingGestures]: https://www.youtube.com/watch?v=wBsYJf0wrkk
+[GuideToPerformingGestures]: https://www.youtube.com/watch?v=wBsYJf0wrkk
