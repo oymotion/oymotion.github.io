@@ -31,7 +31,11 @@ Note:
 > '_Relax_' gesture.
 
 ## Instructions to Wearing and Performing Gestures
-Please refer to the [Gesture Performing Instructions Video][GesturePerformingInstructionsVideo].
+To make sure gForce armband can recognize your gestures, please refer to 
+[Guide to Performing Gestures][GuideToPerformingGestures] and spend several minutes 
+learning and training yourself. The recognition rate can reach 95% and even higher 
+after you get familiar with performing the gestures properly.
+
 
 ## Turning on/off
 - Turn on
@@ -79,4 +83,4 @@ turned off.
 
 - The device will vibrate for about 100ms when a gesture is recognized.
 
-[GesturePerformingInstructionsVideo]: https://www.youtube.com/watch?v=wBsYJf0wrkk
+[[GuideToPerformingGestures]: https://www.youtube.com/watch?v=wBsYJf0wrkk
