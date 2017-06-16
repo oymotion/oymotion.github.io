@@ -5,6 +5,9 @@ layout: default
 
 June 15th, 2017
 
+* This will become a table of contents (this text will be scraped).
+{:toc}
+
 ## Overview
 
 This user guide is intended to help developers to understand how to adopt

@@ -6,6 +6,9 @@ layout: default
 
 June 15th, 2017
 
+* This will become a table of contents (this text will be scraped).
+{:toc}
+
 ## Overview
 gForce 100 Armband is a smart wearable device designed to recognize gestures
 according to the sEMG signals when the user wears it on one of his/her forearms.
@@ -65,7 +68,7 @@ turned off.
 >gForce 100 Armband is NOT designed to work during re-charging, as this brings in
 >electrical noise which contaminates the weak EMG biometric signals.
 
-## Status Indications
+## Other Status Indication
 
 - When BLE connection is not established, the green light LED flashes with an
   interval of 2 seconds (2 seconds on and 2 seconds off).
