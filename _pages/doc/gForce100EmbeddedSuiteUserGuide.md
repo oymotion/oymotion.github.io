@@ -17,7 +17,7 @@ to their embedded design.
 gForce 100 Embedded Suite includes one
 and one gForceJoint module.
 
-* [gForce 100 Armband](gForce100Armband)
+* [gForce 100 Armband][gForce100Armband]
 
   A [BLE Peripheral][BLERoles] that sends out recognized gestures and
   orientation in quaternions over BLE.
@@ -194,5 +194,6 @@ figure:
 [gForce SDK for Arduino][gForceSDKArduino] is a tiny library with sample code
 for developers to use gForce 100 Embedded Suite.
 
+[gForce100Armband]: /doc/gForce100UserGuide/
 [gForceSDKArduino]: https://github.com/oymotion/gForceSDKArduino
 [BLERoles]: https://community.nxp.com/thread/332319

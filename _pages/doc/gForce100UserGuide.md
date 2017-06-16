@@ -31,7 +31,7 @@ Note:
 > '_Relax_' gesture.
 
 ## Instructions to Wearing and Performing Gestures
-Please refer to the [Gesture Performing Instruction Video](https://www.youtube.com/watch?v=wBsYJf0wrkk)
+Please refer to the [Gesture Performing Instructions Video][GesturePerformingInstructionsVideo].
 
 ## Turning on/off
 - Turn on
@@ -78,3 +78,5 @@ turned off.
   frequency.
 
 - The device will vibrate for about 100ms when a gesture is recognized.
+
+[GesturePerformingInstructionsVideo]: https://www.youtube.com/watch?v=wBsYJf0wrkk
