@@ -69,12 +69,12 @@ perspective of gForceJoint board.
 
 gForceJoint UART adopts a data protocol similar to TLV (type-length-value).
 
-gForceJoint UART consists of two kinds of transactions:
+gForceJoint UART consists of two types of data transfers:
 
-1. Commands from the Target Control System to gForceJoint.
-2. Events from gForceJoint to Target Control System.
+1. Command: data from the Target Control System to gForceJoint.
+2. Event: data from gForceJoint to Target Control System.
 
-Right now, only Events are supported. (one-way)
+Right now, only Event is supported. (one-way)
 
 ### Event Format
 
@@ -82,7 +82,7 @@ Right now, only Events are supported. (one-way)
 | --- | --- | --- | --- | --- |
 | Magic Number | Event type | PackageID Flag | Length | Event Payload |
 
-* `sMagic Number`:  0xAAFF
+* `Magic Number`:  0xAAFF
 
 * `Event Type`
 
@@ -94,7 +94,6 @@ Right now, only Events are supported. (one-way)
   | 0x70 | gForce Armband Connected |
   | 0x71 | gForce Armband Disconnected |
 
-
 * `PackageID Flag`
 
   Indicates if the `Event Payload` has `Package ID`.
@@ -105,7 +104,6 @@ Right now, only Events are supported. (one-way)
   else
       Byte[4:]= Event Data
   ```
-
 
  * `Length`
 
@@ -175,7 +173,8 @@ Right now, only Events are supported. (one-way)
 
 ### Examples
 
-The following examples help developers to understand data format.
+#### Understanding The Event Format
+The following examples help developers to understand `Event` format.
 
 When the `PackageID Flag` equals 0 or 1, the `Event Data` to send is 0x01
 (Gesture Fist, value = 0x01), the data packet is explained in the following
@@ -188,5 +187,9 @@ figure:
 | PackageFlag Id == 1 | 0xFF 0xAA | 0x8F | 0x02 | Byte[4]=Package ID(0x00~0xFF),Byte[5]=gForce Data = 0x01 |
 | PackageFlag Id == 0 | 0xFF 0xAA | 0x0F | 0x01 | Byte[4]=gForce Data=0x01 |
 
+#### Arduino Example
+[gForce SDK for Arduino][gForceSDKArduino] is a tiny library with sample code
+for developers to use gForce 100 Embedded Suite.
 
+[gForceSDKArduino]: https://github.com/oymotion/gForceSDKArduino
 [BLERoles]: https://community.nxp.com/thread/332319
