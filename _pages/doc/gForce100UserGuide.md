@@ -10,10 +10,14 @@ June 15th, 2017
 {:toc}
 
 ## Overview
-gForce 100 Armband is a smart wearable device designed to recognize gestures
-according to the sEMG signals when the user wears it on one of his/her forearms.
-It also calculates orientation data in quaternions from its built-in 9-axis
-MEMS at a refresh rate of 50Hz (100Hz will be supported).
+gForce 100 Armband is a smart wearable [Human Interface Device][HID] for
+[gesture recognition][GestureRecognition]. It recognizes gestures according
+to the sEMG signals of human forearms, and as well as calculates orientation
+data in quaternions or [Euler Angles][EulerAngles] from its built-in 9-axis IMU.
+
+Comparing with the gesture recognition devices based on computer vision, gForce
+Armband has the advantage of no dependency of embient light, no strictness with
+angle, much lower energy and much lower cost.
 
 ![gForce100Armband](/assets/images/gForce100Armband.jpg)
 
@@ -31,9 +35,9 @@ Note:
 > '_Relax_' gesture.
 
 ## Instructions to Wearing and Performing Gestures
-To make sure gForce armband can recognize your gestures, please refer to 
-[Guide to Performing Gestures][GuideToPerformingGestures] and spend several minutes 
-learning and training yourself. The recognition rate can reach 95% and even higher 
+To make sure gForce armband can recognize your gestures, please refer to
+[Guide to Performing Gestures][GuideToPerformingGestures] and spend several minutes
+learning and training yourself. The recognition rate can reach 95% and even higher
 after you get familiar with performing the gestures properly.
 
 
@@ -83,4 +87,7 @@ turned off.
 
 - The device will vibrate for about 100ms when a gesture is recognized.
 
+[HID]: https://en.wikipedia.org/wiki/Human_interface_device
+[GestureRecognition]: https://en.wikipedia.org/wiki/Gesture_recognition
+[EulerAngles]: https://en.wikipedia.org/wiki/Euler_angles
 [GuideToPerformingGestures]: https://www.youtube.com/watch?v=wBsYJf0wrkk
