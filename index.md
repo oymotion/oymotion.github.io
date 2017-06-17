@@ -20,7 +20,9 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 9-axis
 
 ### Open Source Software
 [gForce SDK for Arduino][gForceSDKArduino]
+
 [gForce Data Protocol Sample][gForceDataProtocolSample]
+
 gForce SDK - coming soon
 
 ### Downloads
