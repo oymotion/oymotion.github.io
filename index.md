@@ -12,31 +12,39 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 9-axis
 [IMU][IMU].
 
 ### Documents
-[gForce 100 User Guide](doc/gForce100UserGuide)
+* [gForce 100 User Guide](doc/gForce100UserGuide)
 
-[gForce 100 Embedded Suite User Guide](doc/gForce100EmbeddedSuiteUserGuide)
+* [gForce 100 Embedded Suite User Guide](doc/gForce100EmbeddedSuiteUserGuide)
 
-[gForce Data Protocol](doc/gForceDataProtocol)
+* [gForce Data Protocol](doc/gForceDataProtocol)
 
 ### Open Source Software
-[gForce SDK for Arduino][gForceSDKArduino]
+* [gForce SDK for Arduino][gForceSDKArduino]
 
-[gForce Data Protocol Sample][gForceDataProtocolSample]
+* [gForce Data Protocol Sample][gForceDataProtocolSample]
 
-gForce SDK - coming soon
+* gForce SDK - coming soon
 
 ### Downloads
-gForceApp for Android - coming soon
+* gForceApp for Android - coming soon
 
-gForceApp for Windows - coming soon
+* gForceApp for Windows - coming soon
 
+* [EMG Raw Data Capture Utility](/assets/downloads/RawDataCapture.zip)
+
+  Only usable for the gForce 100 device with raw data capturing support.
+
+* [EMG Raw Data Capture SDK](/assets/downloads/RawDataCaptureSDK.zip)
+
+  Only usable for the gForce 100 device with raw data capturing support.
+  
 ---
 ## gForce Neuron
 ### Documents
-[gForce Neuron User Guide](doc/gForceNeuronUserGuide)
+* [gForce Neuron User Guide](doc/gForceNeuronUserGuide)
 
 ### Open source
-[EMG Filters Library][EMGFilters]
+* [EMG Filters Library][EMGFilters]
 
 
 [HID]: https://en.wikipedia.org/wiki/Human_interface_device
