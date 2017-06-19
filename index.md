@@ -32,11 +32,11 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 9-axis
 
 * [EMG Raw Data Capture Utility](/assets/downloads/RawDataCapture.zip)
 
-  Only usable for the gForce 100 device with raw data capturing support.
+  Only for gForce 100 device with raw data capturing support.
 
 * [EMG Raw Data Capture SDK](/assets/downloads/RawDataCaptureSDK.zip)
 
-  Only usable for the gForce 100 device with raw data capturing support.
+  Only for gForce 100 device with raw data capturing support.
   
 ---
 ## gForce Neuron
