@@ -23,7 +23,7 @@ github_username:  oymotion
 repository: oymotion/oymotion.github.io
 
 show_downloads: false
-google_analytics: true
+google_analytics: UA-101258964-1
 
 # Build settings
 markdown: kramdown
