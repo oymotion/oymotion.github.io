@@ -39,6 +39,10 @@ amplifier is 800x, the input vatage of the orignal sEMG is:
   $$in &= \frac{1.25 \times \(out-128\)}{128 \times 800}}$$                           
 {% endraw %}
 
+\begin{align}
+  i &= \frac{1.25 \times \(o-128\)}{128 \times 800}}
+\end{align}
+
 ## Plotting in Matlab
 The following are a bunch of commands to read captured raw data file 
 `rawdata.hex` and plot the channel 0 in Matlab:
