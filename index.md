@@ -12,23 +12,46 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 9-axis
 [IMU][IMU].
 
 ### Documents
-* [gForce 100 User Guide](doc/gForce100UserGuide)
+* [gForce 100 Manual](/assets/downloads/gForce100_manual_v1.1-eng.pdf) &
+  [gForce 100 User Guide](doc/gForce100UserGuide)
+
+  The user guide provides more detailed information than the Manual.
 
 * [gForce 100 Embedded Suite User Guide](doc/gForce100EmbeddedSuiteUserGuide)
 
+  Provides guide of using gForce 100 in embedded devices such as robots and
+  prosthetics.
+
 * [gForce Data Protocol](doc/gForceDataProtocol)
+
+  The specification of gForce Data Protocol defines the details of gForce
+  interacting with host computers of PC, AR and VR.
+
+* [gForce EMG Raw Data](doc/gForceEMGRawData)
+
+  Provides more information about using EMG raw data.
 
 ### Open Source Software
 * [gForce SDK for Arduino][gForceSDKArduino]
 
+  The open source library with example code to illustrate how to connnect
+  gForce to Arduino-alike devices.
+
 * [gForce Data Protocol Sample][gForceDataProtocolSample]
 
-* gForce SDK - coming soon
+  An open source simple example developed for Android to illustrate   
+  [gForce Data Protocol](doc/gForceDataProtocol).
+
+* gForce SDK
+
+  Coming soon. The SDK for Windows and Android.
 
 ### Downloads
-* gForceApp for Android - coming soon
+* gForceApp for Android and Windows
 
-* gForceApp for Windows - coming soon
+  Coming soon. The hub application for other applications to interact with
+  gForce. It also provide utilities for users setting, firmware upgrading and
+  diagnosing gForce.
 
 * [EMG Raw Data Capture Utility](/assets/downloads/RawDataCapture.zip)
 
@@ -37,7 +60,7 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 9-axis
 * [EMG Raw Data Capture SDK](/assets/downloads/RawDataCaptureSDK.zip)
 
   Only for gForce 100 with support for raw data capturing.
-  
+
 ---
 ## gForce Neuron
 ### Documents
