@@ -32,10 +32,14 @@ channel 0 is byte 0, 8, 16, 24, 32...; and channel 7 byte 7, 15, 23, 31, 39...
 The same for any captured raw data file, as there is no header in the file.
 
 ## More about Channel Sample Data
-Since it is 1 byte per channel per sample, and the output votage is 0-2.5v, and
-amplifier is 800x, the input vatage of the orignal sEMG is:
+It is 1 byte per channel per sample, and the output votage is 0-2.5v, and
+amplifier is 800x, therefore, the input vatage of the orignal sEMG is:
 
-$$mathbf{In} &= \frac{1.25 \times \(mathbf{out}-128\)}{128 \times 800}}$$                           
+$$mathbf{In} &= \frac{1.25 \times \(mathbf{Out}-128\)}{128 \times 800}}$$                           
+
+$$
+\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
+$$
 
 ## Plotting in Matlab
 The following are a bunch of commands to read captured raw data file 
