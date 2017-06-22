@@ -49,15 +49,15 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 9-axis
 ### Downloads
 * gForceApp for Android and Windows
 
-  Coming soon. The hub application for other applications to interact with
-  gForce. It also provide utilities for users setting, firmware upgrading and
+  Coming soon. The **hub** application for other applications to interact with
+  gForce. It also provides utilities for users setting, firmware upgrading and
   diagnosing gForce.
 
-* [EMG Raw Data Capture Utility](/assets/downloads/RawDataCapture.zip)
+* [sEMG Raw Data Capture Utility](/assets/downloads/RawDataCapture.zip)
 
   Only for gForce 100 with support for raw data capturing.
 
-* [EMG Raw Data Capture SDK](/assets/downloads/RawDataCaptureSDK.zip)
+* [sEMG Raw Data Capture SDK](/assets/downloads/RawDataCaptureSDK.zip)
 
   Only for gForce 100 with support for raw data capturing.
 
@@ -67,7 +67,9 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 9-axis
 * [gForce Neuron User Guide](doc/gForceNeuronUserGuide)
 
 ### Open Source Software
-* [EMG Filters Library][EMGFilters]
+* [sEMG Filters Library][EMGFilters]
+
+  Provides some basic filter functions for sEMG digital signals.
 
 
 [HID]: https://en.wikipedia.org/wiki/Human_interface_device
