@@ -18,10 +18,10 @@ If you need such a special version of gForce, please query info@oymotion.com.
 
 
 ## Data Format
-The sEMG raw data, either is captured in files by the sEMG Raw Data Capture
-Utility or developer's own application built upon the sEMG Raw Data SDK,
-consists of a series of samples of 8-channel interleaved data. Let's look 
-at the first 18 bytes of the captured raw data for instance:
+The sEMG raw data, which is captured either into files by the sEMG Raw Data 
+Capture Utility or by developer's own application built upon the sEMG Raw Data 
+SDK, consists of a series of samples of 8-channel interleaved data. Let's look 
+at the first 18-byte sequence of the captured raw data for instance:
 
 Byte|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|...
 ----|-|-|-|-|-|-|-|-|-|-|--|--|--|--|--|--|--|--|---
