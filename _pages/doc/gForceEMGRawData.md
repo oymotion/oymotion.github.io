@@ -35,11 +35,7 @@ The same for any captured raw data file, as there is no header in the file.
 It is 1 byte per channel per sample, and the output votage is 0-2.5v, and
 amplifier is 800x, therefore, the input vatage of the orignal sEMG is:
 
-$$mathbf{In} &= \frac{1.25 \times \(mathbf{Out}-128\)}{128 \times 800}}$$                           
-
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-$$
+$$mathbf{In} = \frac{1.25 \times (mathbf{Out}-128)}{128 \times 800}}$$                           
 
 ## Plotting in Matlab
 The following are a bunch of commands to read captured raw data file 
