@@ -15,7 +15,7 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 9-axis
 * [gForce 100 Manual](/assets/downloads/gForce100_manual_v1.1-eng.pdf) &
   [gForce 100 User Guide](doc/gForce100UserGuide)
 
-  The user guide provides more detailed information than the Manual.
+  The User Guide provides more detailed information than the Manual.
 
 * [gForce 100 Embedded Suite User Guide](doc/gForce100EmbeddedSuiteUserGuide)
 
@@ -66,7 +66,7 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 9-axis
 ### Documents
 * [gForce Neuron User Guide](doc/gForceNeuronUserGuide)
 
-### Open source
+### Open Source Software
 * [EMG Filters Library][EMGFilters]
 
 
