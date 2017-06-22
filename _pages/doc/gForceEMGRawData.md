@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+# gForce sEMG Raw Data
+June 22th, 2017
+
 * This will become a table of contents (this text will be scraped).
 {:toc}
 
