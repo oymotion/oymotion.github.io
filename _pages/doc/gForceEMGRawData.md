@@ -21,7 +21,7 @@ consists of a series of samples of 8-channel interleaved data. Let's look
 at the first 18 bytes of the captured raw data for instance:
 
 Byte|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|...
-----|-|-|-|-|-|-|-|-|-|-|--|--|--|--|--|--|--|--|...
+----|-|-|-|-|-|-|-|-|-|-|--|--|--|--|--|--|--|--|---
 **Channel**|0|1|2|3|4|5|6|7|0|1|2|3|4|5|6|7|0|1|...
 **Sample**|0|0|0|0|0|0|0|0|1|1|1|1|1|1|1|1|2|2|...
 
@@ -35,13 +35,7 @@ The same for any captured raw data file, as there is no header in the file.
 Since it is 1 byte per channel per sample, and the output votage is 0-2.5v, and
 amplifier is 800x, the input vatage of the orignal sEMG is:
 
-{% raw %}
-  $$in &= \frac{1.25 \times \(out-128\)}{128 \times 800}}$$                           
-{% endraw %}
-
-\begin{align}
-  i &= \frac{1.25 \times \(o-128\)}{128 \times 800}}
-\end{align}
+$$mathbf{In} &= \frac{1.25 \times \(mathbf{out}-128\)}{128 \times 800}}$$                           
 
 ## Plotting in Matlab
 The following are a bunch of commands to read captured raw data file 
