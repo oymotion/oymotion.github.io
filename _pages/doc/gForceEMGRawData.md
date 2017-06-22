@@ -20,7 +20,6 @@ Utility or developer's own application built upon the sEMG Raw Data SDK,
 consists of a series of samples of 8-channel interleaved data. Let's look 
 at the first 18 bytes of the captured raw data for instance:
 
-
 Byte|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|...
 ----|-|-|-|-|-|-|-|-|-|-|--|--|--|--|--|--|--|--|...
 **Channel**|0|1|2|3|4|5|6|7|0|1|2|3|4|5|6|7|0|1|...
@@ -36,9 +35,9 @@ The same for any captured raw data file, as there is no header in the file.
 Since it is 1 byte per channel per sample, and the output votage is 0-2.5v, and
 amplifier is 800x, the input vatage of the orignal sEMG is:
 
-\begin{align}
-  in &= \frac{out-128}{800}}                             \\
-\end{align}
+{% raw %}
+  $$in &= \frac{1.25 \times \(out-128\)}{128 \times 800}}$$                           
+{% endraw %}
 
 ## Plotting in Matlab
 The following are a bunch of commands to read captured raw data file 
