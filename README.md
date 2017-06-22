@@ -20,5 +20,9 @@ $ bundle exec jekyll serve
 
 Then you would be able to preview your local web site at http://localhost:4000
 
+## Use MathJax for mathematics
+Jekyll uses MathJax for mathematics. [Here](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference)
+is a basic MathJax reference.
+
 [BashOnUbuntuOnWindows]: https://msdn.microsoft.com/commandline/wsl/about
 [Jekyll]: http://jekyllrb.com
