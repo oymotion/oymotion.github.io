@@ -46,13 +46,13 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 6-axis
 
   Coming soon. The SDK for Windows and Android.
 
-### Downloads
-* gForceApp for Android and Windows
+* [gForceApp][gForceApp]
 
-  Coming soon. The **hub** application for other applications to interact with
+  The **hub** application for other applications to interact with
   gForce. It also provides utilities for users setting, firmware upgrading and
   diagnosing gForce.
 
+### Downloads
 * [sEMG Raw Data Capture Utility](/assets/downloads/RawDataCapture.zip)
 
   Only for gForce 100 with support for raw data capturing.
@@ -80,3 +80,4 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 6-axis
 [gForceSDKArduino]: https://github.com/oymotion/gForceSDKArduino
 [gForceDataProtocolSample]: https://github.com/oymotion/gForceDataProtocolSample
 [EMGFilters]: https://github.com/oymotion/EMGFilters
+[gForceApp]: https://github.com/oymotion/gForceApp
