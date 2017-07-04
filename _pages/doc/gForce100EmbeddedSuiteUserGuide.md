@@ -69,7 +69,7 @@ The UART interface has the VCC/GND/TX/RX pins. The TX/RX is named from the
 perspective of gForceJoint board.
 
 ## Relationship between LED status and gesture
-gForceJoint use different LED lamp status to represent the different gesture
+gForceJoint use different LED lamp status to represent the different gestures
 that recognized by the gForce.  
 The following figure shows the simple diagram about gForceJoint.   
 ![gForceJoint Simple Diagram](/assets/images/gForceJointSimpleDiagrams.png)
