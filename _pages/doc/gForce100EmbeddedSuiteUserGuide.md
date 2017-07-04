@@ -3,7 +3,7 @@ layout: default
 ---
 # gForce 100 Embedded Suite User Guide
 
-June 15th, 2017
+July 4th, 2017
 
 * This will become a table of contents (this text will be scraped).
 {:toc}
