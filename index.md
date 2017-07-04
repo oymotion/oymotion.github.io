@@ -8,8 +8,8 @@ title:  "Welcome to the OYMotion Community!"
 gForce 100 Armband is a smart wearable [Human Interface Device][HID] for
 [gesture recognition][GestureRecognition]. It recognizes gestures according
 to the sEMG signals of human forearms, and as well as calculates orientation
-data in quaternions or [Euler Angles][EulerAngles] from its built-in 9-axis
-[IMU][IMU].
+data in quaternions or [Euler Angles][EulerAngles] from its built-in 6-axis
+[IMU][IMU] and tri-axis [magnetometer][magnetometer].
 
 ### Documents
 * [gForce 100 Manual](/assets/downloads/gForce100_manual_v1.1-eng.pdf) &
@@ -76,6 +76,7 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 9-axis
 [GestureRecognition]: https://en.wikipedia.org/wiki/Gesture_recognition
 [EulerAngles]: https://en.wikipedia.org/wiki/Euler_angles
 [IMU]: https://en.wikipedia.org/wiki/Inertial_measurement_unit
+[magnetometer]:https://en.wikipedia.org/wiki/Magnetometer
 [gForceSDKArduino]: https://github.com/oymotion/gForceSDKArduino
 [gForceDataProtocolSample]: https://github.com/oymotion/gForceDataProtocolSample
 [EMGFilters]: https://github.com/oymotion/EMGFilters
