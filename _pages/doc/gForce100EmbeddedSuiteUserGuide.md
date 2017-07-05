@@ -68,14 +68,14 @@ support 3.3V or 5V power supply.
 The UART interface has the VCC/GND/TX/RX pins. The TX/RX is named from the
 perspective of gForceJoint board.
 
-## Relationship between LED status and gesture
-gForceJoint use different LED lamp status to represent the different gestures
-that recognized by the gForce.  
-The following figure shows the simple diagram about gForceJoint.   
+## Relationship between LED Indicators And Gestures
+gForceJoint has six LED lights to indicate recognized gestures.
+
 ![gForceJoint Simple Diagram](/assets/images/gForceJointSimpleDiagrams.png)
 
-  1. The `Power LED` will be on when the gForceJoint power on, else off.
-  2. The following talbe show the relationship between `LED1~LED6` and `gestures`  
+Note: The `Power LED` will be on when the gForceJoint is powered on, otherwise off.
+  
+The following table shows the relationship between LED1...6 and gestures:  
 
 
   |~    | Fist | Spread Fingers | Wave-In | Wave-Out | Pinch | Shoot | Relax |Unknown gesture|
