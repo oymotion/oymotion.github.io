@@ -39,27 +39,36 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 6-axis
 
 * [gForce Data Protocol Sample][gForceDataProtocolSample]
 
-  An open source simple example developed for Android to illustrate   
+  An open source simple example developed for Android to illustrate
   [gForce Data Protocol](doc/gForceDataProtocol).
 
-* gForce SDK
+* [gForce SDK][gForceSDK]
 
-  Coming soon. The SDK for Windows and Android.
+  The SDK for Windows and Android with Unity support.
 
-### Downloads
-* gForceApp for Android and Windows
+* [gForceApp][gForceApp]
 
-  Coming soon. The **hub** application for other applications to interact with
+  The **hub** application for other applications to interact with
   gForce. It also provides utilities for users setting, firmware upgrading and
   diagnosing gForce.
 
+### Downloads
+* [gForce Armband Firmware](/assets/downloads/gForceArmbandFirmware.bin)
+
+    Releases of gForce Armband firmware. Please upgrade firmware using the
+    latest [gForceApp for Android][gForceAppForAndroid].
+
+* [gForceApp for Android][gForceAppForAndroid]
+
+    Pre-built releases of [gForceApp][gForceApp] for Android.
+
 * [sEMG Raw Data Capture Utility](/assets/downloads/RawDataCapture.zip)
 
-  Only for gForce 100 with support for raw data capturing.
+    Only for gForce 100 with support for raw data capturing.
 
 * [sEMG Raw Data Capture SDK](/assets/downloads/RawDataCaptureSDK.zip)
 
-  Only for gForce 100 with support for raw data capturing.
+    Only for gForce 100 with support for raw data capturing.
 
 ---
 ## gForce Neuron
@@ -80,3 +89,6 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 6-axis
 [gForceSDKArduino]: https://github.com/oymotion/gForceSDKArduino
 [gForceDataProtocolSample]: https://github.com/oymotion/gForceDataProtocolSample
 [EMGFilters]: https://github.com/oymotion/EMGFilters
+[gForceSDK]: https://github.com/oymotion/gForceSDK
+[gForceApp]: https://github.com/oymotion/gForceApp
+[gForceAppForAndroid]: https://github.com/oymotion/gForceApp/releases
