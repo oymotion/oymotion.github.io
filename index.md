@@ -39,12 +39,12 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 6-axis
 
 * [gForce Data Protocol Sample][gForceDataProtocolSample]
 
-  An open source simple example developed for Android to illustrate   
+  An open source simple example developed for Android to illustrate
   [gForce Data Protocol](doc/gForceDataProtocol).
 
-* gForce SDK
+* [gForce SDK][gForceSDK]
 
-  Coming soon. The SDK for Windows and Android.
+  The SDK for Windows and Android with Unity support.
 
 * [gForceApp][gForceApp]
 
@@ -80,4 +80,5 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 6-axis
 [gForceSDKArduino]: https://github.com/oymotion/gForceSDKArduino
 [gForceDataProtocolSample]: https://github.com/oymotion/gForceDataProtocolSample
 [EMGFilters]: https://github.com/oymotion/EMGFilters
+[gForceSDK]: https://github.com/oymotion/gForceSDK
 [gForceApp]: https://github.com/oymotion/gForceApp
