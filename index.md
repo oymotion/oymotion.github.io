@@ -53,13 +53,17 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 6-axis
   diagnosing gForce.
 
 ### Downloads
+* [gForceApp for Android][gForceAppForAndroid]
+
+    The pre-built release of [gForceApp][gForceApp] for Android.
+
 * [sEMG Raw Data Capture Utility](/assets/downloads/RawDataCapture.zip)
 
-  Only for gForce 100 with support for raw data capturing.
+    Only for gForce 100 with support for raw data capturing.
 
 * [sEMG Raw Data Capture SDK](/assets/downloads/RawDataCaptureSDK.zip)
 
-  Only for gForce 100 with support for raw data capturing.
+    Only for gForce 100 with support for raw data capturing.
 
 ---
 ## gForce Neuron
@@ -82,3 +86,4 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 6-axis
 [EMGFilters]: https://github.com/oymotion/EMGFilters
 [gForceSDK]: https://github.com/oymotion/gForceSDK
 [gForceApp]: https://github.com/oymotion/gForceApp
+[gForceAppForAndroid]: https://github.com/oymotion/gForceApp/releases
