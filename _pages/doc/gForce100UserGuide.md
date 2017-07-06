@@ -4,7 +4,7 @@ layout: default
 
 # gForce 100 Armband User Guide
 
-June 15th, 2017
+July 6th, 2017
 
 * This will become a table of contents (this text will be scraped).
 {:toc}
@@ -92,3 +92,4 @@ Note:
 [EulerAngles]: https://en.wikipedia.org/wiki/Euler_angles
 [IMU]: https://en.wikipedia.org/wiki/Inertial_measurement_unit
 [GuideToPerformingGestures]: https://www.youtube.com/watch?v=wBsYJf0wrkk
+[gForceApp]: https://github.com/oymotion/gForceApp
