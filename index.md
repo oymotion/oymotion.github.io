@@ -57,6 +57,8 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 6-axis
 
     Releases of gForce Armband firmware. Please upgrade firmware using the
     latest [gForceApp for Android][gForceAppForAndroid].
+    
+    **Note**: gForce Armband firmware v3.x.y is only for gForce Armband hardware v3.
 
 * [gForceApp for Android][gForceAppForAndroid]
 
