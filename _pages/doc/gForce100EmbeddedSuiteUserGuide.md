@@ -99,6 +99,14 @@ gForceJoint UART consists of two types of data transfers:
 
 Right now, only Event is supported. (one-way)
 
+### Serial Port Setting
+
+The following tables shows the serial port parameters used by gForceJoint:
+
+ | Baudrate  | Data Bits | Parity | Stop Bits | Flow Type |
+ |-----------|-----------|--------|-----------|-----------|
+ |115200bps  | 8bit      | None   | 1bit      | None      |
+
 ### Event Format
 
 | Byte[0:1] | Byte[2]Bit[0:6] | Byte[2]Bit[7] | Byte[3] | Byte[4:] |
@@ -107,15 +115,15 @@ Right now, only Event is supported. (one-way)
 
 * `Magic Number`:  0xAAFF
 
-* `Event Type`
+* `Event Type`   
 
-  | Event type | Description |
-  | --- | --- |
-  | 0x02 | Quaternion (float) |
-  | 0x0F | Gesture |
-  | 0x14 | gForce Armband Status Notify |
-  | 0x70 | gForce Armband Connected |
-  | 0x71 | gForce Armband Disconnected |
+  | Event type | Description |  
+  | --- | --- |   
+  | 0x02 | Quaternion (float) |   
+  | 0x0F | Gesture |   
+  | 0x14 | gForce Armband Status Notify |   
+  | 0x70 | gForce Armband Connected |   
+  | 0x71 | gForce Armband Disconnected |   
 
 * `PackageID Flag`
 
