@@ -53,7 +53,7 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 6-axis
   diagnosing gForce.
 
 ### Downloads
-* [gForce Armband Firmware v3.1.10-20170711](/assets/downloads/gForceAPP_R3_1_10_20170711.bin) 
+* [gForce Armband Firmware v3.1.27-20170720](/assets/downloads/gForceAPP_R3_1_27_20170720.bin) 
 
     Releases of gForce Armband firmware. Please upgrade firmware using the
     latest [gForceApp for Android][gForceAppForAndroid].
