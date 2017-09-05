@@ -20,21 +20,12 @@ If you need such a special version of gForce, please query info@oymotion.com.
 ## Data Format
 The sEMG raw data, which is captured either into files by the sEMG Raw Data 
 Capture Utility or by developer's own application built upon the sEMG Raw Data 
-SDK, consists of a series of samples of 8-channel interleaved data. Let's look 
-at the first 18-byte sequence of the captured raw data for instance:
+SDK, consists of a series of 140-byte packages, each of which consists of
+2-byte (0x8192) magic number, 1-byte CRC, 1-byte package id,  128-byte of 16 
+groups of 8-channel interleaved sample data and 8-byte time-stamp.
 
-Byte|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|...
-----|-|-|-|-|-|-|-|-|-|-|--|--|--|--|--|--|--|--|---
-**Channel**|0|1|2|3|4|5|6|7|0|1|2|3|4|5|6|7|0|1|...
-**Sample**|0|0|0|0|0|0|0|0|1|1|1|1|1|1|1|1|2|2|...
 
-According to the above table, data of every 8 channels, consequently channel 
-0 - 7, makes up 1 sample, and each channel occupies 1 byte, so the data of 
-channel 0 is byte 0, 8, 16, 24, 32...; and channel 7 byte 7, 15, 23, 31, 39...
-
-The same for any captured raw data file, as there is no header in the file.
-
-## More about Channel Sample Data
+## More about 8-Channel Sample Data
 It is 1 byte per channel per sample, and the output votage is 0-2.5v, and
 amplifier is 800x, therefore, the input vatage of the orignal sEMG is:
 
@@ -46,7 +37,11 @@ The following are a bunch of commands to read captured raw data file
 
 ```matlab
 >> fp=fopen('rawdata.hex', 'r', 'l');
->> data=fread(fp,'uchar','l');
+>> file_data=fread(fp,'uchar','l');
+>> data=[];
+>> for i=1:140:length(file_data) 
+>>     data=[data file_data([i+4:i+131])]; 
+>> end
 >> data_2d=reshape(data, 8, []);
 >> figure;
 >> plot(data_2d(1,:));
