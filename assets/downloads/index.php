@@ -1,1 +1,2 @@
-{"version":"4.1.16","address":"https://oymotion.github.io/assets/downloads/gForceAP_V4_1_16_20170907103422.bin"}
+{"version_R3":"4.1.16","address_R3":"https://oymotion.github.io/assets/downloads/gForceAP_V4_1_16_20170907103422.bin",
+"version_R2":"0.0.40","address_R2":"https://oymotion.github.io/assets/downloads/gForceAP_V2_20170621.bin"}
