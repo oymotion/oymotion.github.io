@@ -55,7 +55,7 @@ data in quaternions or [Euler Angles][EulerAngles] from its built-in 6-axis
   Internal testing, coming soon......
 
 ### Downloads
-* [gForceApp for Android  gForceApp_v2.3.4-20171009.apk][/assets/downloads/gForceApp_v2.3.4-20171009.apk]
+* [gForceApp for Android  gForceApp_v2.3.4-20171009.apk](/assets/downloads/gForceApp_v2.3.4-20171009.apk)
 
     Pre-built releases of gForceApp for Android.
 
