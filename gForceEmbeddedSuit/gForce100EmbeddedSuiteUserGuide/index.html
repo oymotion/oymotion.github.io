@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="KaiZhou">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>gForce Embedded Suit - OYMotion</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../..">OYMotion</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Document <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../../gForce100/gForce100UserGuide/">gForce100</a>
+</li>
+                            
+<li class="active">
+    <a href="./">gForce Embedded Suit</a>
+</li>
+                            
+<li >
+    <a href="../../gForceEMGRawData/gForceEMGRawData/">gForceEMG</a>
+</li>
+                            
+<li >
+    <a href="../../gForceNeuron/gForceNeuronUserGuide/">gForceNeuron</a>
+</li>
+                            
+<li >
+    <a href="../../gForceDataProtocol/gForceDataProtocol/">gForceDataProtocol</a>
+</li>
+                        </ul>
+                    </li>
+                    <li >
+                        <a href="../../openSoftwareList/openSoftware/">OpenSoftware</a>
+                    </li>
+                    <li >
+                        <a href="../../downloadList/Download/">Download</a>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../../gForce100/gForce100UserGuide/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../../gForceEMGRawData/gForceEMGRawData/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#gforce-100-embedded-suite-user-guide">gForce 100 Embedded Suite User Guide</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#connecting-gforce-with-gforcejoint">Connecting gForce with gForceJoint</a></li>
+            <li><a href="#connecting-gforcejoint-with-target-control-system">Connecting gForceJoint with Target Control System</a></li>
+            <li><a href="#relationship-between-led-indicators-and-gestures">Relationship between LED Indicators And Gestures</a></li>
+            <li><a href="#gforcejoint-uart-data-protocol">gForceJoint UART Data Protocol</a></li>
+            <li><a href="#examples">Examples</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="gforce-100-embedded-suite-user-guide">gForce 100 Embedded Suite User Guide</h1>
+<p>July 4th, 2017</p>
+<h2 id="overview">Overview</h2>
+<p>This user guide is intended to help developers to understand how to adopt
+gForce 100 Embedded Suite to add gesture and forearm orientation control
+to their embedded design.</p>
+<p>gForce 100 Embedded Suite includes one
+and one gForceJoint module.</p>
+<ul>
+<li><a href="../../gForce100/gForce100UserGuide/">gForce 100 Armband</a></li>
+</ul>
+<p>A <a href="https://community.nxp.com/thread/332319">BLE Peripheral</a> that sends out recognized gestures and
+  orientation in quaternions over BLE.</p>
+<ul>
+<li>gForceJoint</li>
+</ul>
+<p>A <a href="https://community.nxp.com/thread/332319">BLE Central</a> that finds, pairs and connects with the gForce
+  Armband, and then parses and forwards the data thru a UART interface.</p>
+<p>gForceJoint acts as a bridge between the gForce 100 Armband and target system
+  to control.</p>
+<p><img alt="gForce Joint" src="../images/gForceJoint.jpg" /></p>
+<p>Developers can wire the gForceJoint to the UART inteface of the target control
+system (e.g an Arduino board, or an Raspberry Pi) so that the target control
+system can be controled by the gForce 100 Armband.</p>
+<p><img alt="gForce 100 Embedded Suite Block Diagram" src="../images/gForce100EmbeddedSuiteBlockDiagram.jpg" /></p>
+<h2 id="connecting-gforce-with-gforcejoint">Connecting gForce with gForceJoint</h2>
+<p>To make things easier, gForceJoint is designed to automatically find, pair
+and connect with the first gForce Armband with a strong Bluetooth signal (RSSI)
+level above a preset threshold. In general, it would be the closest gForce
+Armband that has the highest RSSI. Therefore, after powering on gForce 100
+armband and gForceJoint, put the gForce 100 Armband as close to the gForceJoint
+as within 5 cm. Successful connection turns the green LED on the gForce Armband
+to flash at a relatively high frequency.</p>
+<p>To disconnect, simply <a href="../gForce100Armband/#turning-onoff">turn off the gForce 100 Armand</a>.</p>
+<h2 id="connecting-gforcejoint-with-target-control-system">Connecting gForceJoint with Target Control System</h2>
+<p>gForceJoint provides GPIO and UART to interface with target control system.
+However, UART is recommended.</p>
+<p>The following figure shows the IOs of gForceJoint.</p>
+<p><img alt="gForce Joint IO's" src="../images/gForceJointIO.png" /></p>
+<p>VCC is the power supply to the gForceJoint board. gForceJoint is designed to
+support 3.3V or 5V power supply.</p>
+<ul>
+<li>When 5V is used, the jumper should be put to connect 'A2' and 'O1'.</li>
+<li>When 3.3V is used, the jumper should be put to connect 'A1' and 'O1'</li>
+</ul>
+<p>The UART interface has the VCC/GND/TX/RX pins. The TX/RX is named from the
+perspective of gForceJoint board.</p>
+<h2 id="relationship-between-led-indicators-and-gestures">Relationship between LED Indicators And Gestures</h2>
+<p>gForceJoint has six LED lights to indicate recognized gestures.</p>
+<p><img alt="gForceJoint Simple Diagram" src="../images/gForceJointSimpleDiagrams.png" /></p>
+<p>Note: The <code>Power LED</code> will be on when the gForceJoint is powered on, otherwise off.</p>
+<p>The following table shows the relationship between LED1...6 and gestures:  </p>
+<table>
+<thead>
+<tr>
+<th>~</th>
+<th>Fist</th>
+<th>Spread Fingers</th>
+<th>Wave-In</th>
+<th>Wave-Out</th>
+<th>Pinch</th>
+<th>Shoot</th>
+<th>Relax</th>
+<th>Unknown gesture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LED1</td>
+<td><strong>On</strong></td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+</tr>
+<tr>
+<td>LED2</td>
+<td>Off</td>
+<td><strong>On</strong></td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+</tr>
+<tr>
+<td>LED3</td>
+<td>Off</td>
+<td>Off</td>
+<td><strong>On</strong></td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+</tr>
+<tr>
+<td>LED4</td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+<td><strong>On</strong></td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+</tr>
+<tr>
+<td>LED5</td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+<td><strong>On</strong></td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+</tr>
+<tr>
+<td>LED6</td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+<td>Off</td>
+<td><strong>On</strong></td>
+<td>Off</td>
+<td>Off</td>
+</tr>
+</tbody>
+</table>
+<h2 id="gforcejoint-uart-data-protocol">gForceJoint UART Data Protocol</h2>
+<p>gForceJoint UART adopts a data protocol similar to TLV (type-length-value).</p>
+<p>gForceJoint UART consists of two types of data transfers:</p>
+<ol>
+<li>Command: data from the Target Control System to gForceJoint.</li>
+<li>Event: data from gForceJoint to Target Control System.</li>
+</ol>
+<p>Right now, only Event is supported. (one-way)</p>
+<h3 id="serial-port-setting">Serial Port Setting</h3>
+<p>The following tables shows the serial port parameters used by gForceJoint:</p>
+<table>
+<thead>
+<tr>
+<th>Baudrate</th>
+<th>Data Bits</th>
+<th>Parity</th>
+<th>Stop Bits</th>
+<th>Flow Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>115200bps</td>
+<td>8bit</td>
+<td>None</td>
+<td>1bit</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<h3 id="event-format">Event Format</h3>
+<table>
+<thead>
+<tr>
+<th>Byte[0:1]</th>
+<th>Byte[2]Bit[0:6]</th>
+<th>Byte[2]Bit[7]</th>
+<th>Byte[3]</th>
+<th>Byte[4:]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Magic Number</td>
+<td>Event type</td>
+<td>PackageID Flag</td>
+<td>Length</td>
+<td>Event Payload</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><code>Magic Number</code>:  0xAAFF</p>
+</li>
+<li>
+<p><code>Event Type</code>   </p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Event type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x02</td>
+<td>Quaternion (float)</td>
+</tr>
+<tr>
+<td>0x0F</td>
+<td>Gesture</td>
+</tr>
+<tr>
+<td>0x14</td>
+<td>gForce Armband Status Notify</td>
+</tr>
+<tr>
+<td>0x70</td>
+<td>gForce Armband Connected</td>
+</tr>
+<tr>
+<td>0x71</td>
+<td>gForce Armband Disconnected</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><code>PackageID Flag:</code> Indicates if the <code>Event Payload</code> has <code>Package ID</code>. <br />
+<code>if PackageID == 1:
+      Byte[4] = Package ID
+      Byte[5:]= Event Data
+  else
+      Byte[4:]= Event Data</code></p>
+</li>
+<li>
+<p><code>Length:</code> Indicates the total bytes of the following Byte[4:]</p>
+</li>
+<li>
+<p><code>Package ID:</code> Only applicable if <code>PackageID Flag</code> == 1. A one-byte timestamp to the <code>Event</code>. This ID can be used to check if there are packets lost (timestamps are successive, if not, there is certain packet lost due to such like poor BLE connection).</p>
+</li>
+<li>
+<p><code>Event Data:</code> The content of <code>Event Data</code> depend on <code>Event Type</code>, it can be gestures or quaternion array.</p>
+</li>
+<li>
+<p>Quaternion</p>
+<table>
+<thead>
+<tr>
+<th>Byte[0-3]</th>
+<th>Byte[4-7]</th>
+<th>Byte[8-11]</th>
+<th>Byte[12-15]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>W</td>
+<td>X</td>
+<td>Y</td>
+<td>Z</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Gesture</p>
+<table>
+<thead>
+<tr>
+<th>Byte[0]</th>
+<th>Gesture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x00</td>
+<td>Relax</td>
+</tr>
+<tr>
+<td>0x01</td>
+<td>Fist</td>
+</tr>
+<tr>
+<td>0x02</td>
+<td>Spread Fingers</td>
+</tr>
+<tr>
+<td>0x03</td>
+<td>Wave-In</td>
+</tr>
+<tr>
+<td>0x04</td>
+<td>Wave-Out</td>
+</tr>
+<tr>
+<td>0x05</td>
+<td>Pinch</td>
+</tr>
+<tr>
+<td>0x06</td>
+<td>Shoot</td>
+</tr>
+<tr>
+<td>0xFF</td>
+<td>Unknown Gesture</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>gForce Armband Status Notify</p>
+<p>Notify is used to report that gForce 100 Armband has some status changes
+  that need to report to the Target Control System. Notify is one-byte.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bit0</td>
+<td>1</td>
+<td>Re-center</td>
+</tr>
+</tbody>
+</table>
+<p>Re-center is used to align the original coordinate system of gForce
+  Armband with what the user is facing in such like the VR glasses.
+  When gForce Armband is powered up from being off, the default original
+  coordinate is based on the geomagnetic field with pointing the USB port
+  to earth north and the main block parallel to ground will have a
+  quaternion [w=1, x=0, y=0, z=0]. The User can set the current orientation
+  to the original coordinate system [w=1, x=0, y=0, z=0] by pressing on
+  the button on the gForce Armband.</p>
+</li>
+<li>
+<p>gForce Armband Connected</p>
+<table>
+<thead>
+<tr>
+<th>Byte[0:5]</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>~</td>
+<td>The Bluetooth MAC address of the gForce Armband connected</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>gForce Armband Disconnected</p>
+<table>
+<thead>
+<tr>
+<th>Byte[0:5]</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>~</td>
+<td>The Bluetooth MAC address of the gForce Armband disconnected</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<h3 id="understanding-the-event-format">Understanding The Event Format</h3>
+<p>The following examples help developers to understand <code>Event</code> format.</p>
+<p>When the <code>PackageID Flag</code> equals 0 or 1, the <code>Event Data</code> to send is 0x01
+(Gesture Fist, value = 0x01), the data packet is explained in the following
+figure:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Magic Number</th>
+<th>Event</th>
+<th>Length</th>
+<th>Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>Byte[0:1]</td>
+<td>Byte[2]</td>
+<td>Byte[3]</td>
+<td>Byte[4:N]</td>
+</tr>
+<tr>
+<td>PackageFlag Id == 1</td>
+<td>0xFF 0xAA</td>
+<td>0x8F</td>
+<td>0x02</td>
+<td>Byte[4]=Package ID(0x00~0xFF),Byte[5]=gForce Data = 0x01</td>
+</tr>
+<tr>
+<td>PackageFlag Id == 0</td>
+<td>0xFF 0xAA</td>
+<td>0x0F</td>
+<td>0x01</td>
+<td>Byte[4]=gForce Data=0x01</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arduino-example">Arduino Example</h3>
+<p><a href="https://github.com/oymotion/gForceSDKArduino">gForce SDK for Arduino</a> is a tiny library with sample code
+for developers to use gForce 100 Embedded Suite.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright© 2017 OYMotion Technologies,Inc.All rights reserved.</p>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '../..';</script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/require.js"></script>
+        <script src="../../search/search.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&larr;</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&rarr;</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </body>
+</html>
