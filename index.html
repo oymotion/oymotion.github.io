@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        <meta name="author" content="KaiZhou">
+        
+        <link rel="shortcut icon" href="./img/favicon.ico">
+        <title>OYMotion</title>
+        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="./css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="./css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/highlight.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="./js/jquery-1.10.2.min.js"></script>
+        <script src="./js/bootstrap-3.0.3.min.js"></script>
+        <script src="./js/highlight.pack.js"></script> 
+    </head>
+
+    <body class="homepage">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href=".">OYMotion</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href=".">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Document <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="gForce100/gForce100UserGuide/">gForce100</a>
+</li>
+                            
+<li >
+    <a href="gForceEmbeddedSuit/gForce100EmbeddedSuiteUserGuide/">gForce Embedded Suit</a>
+</li>
+                            
+<li >
+    <a href="gForceEMGRawData/gForceEMGRawData/">gForceEMG</a>
+</li>
+                            
+<li >
+    <a href="gForceNeuron/gForceNeuronUserGuide/">gForceNeuron</a>
+</li>
+                            
+<li >
+    <a href="gForceDataProtocol/gForceDataProtocol/">gForceDataProtocol</a>
+</li>
+                        </ul>
+                    </li>
+                    <li >
+                        <a href="openSoftwareList/openSoftware/">OpenSoftware</a>
+                    </li>
+                    <li >
+                        <a href="downloadList/Download/">Download</a>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li class="disabled">
+                        <a rel="next" >
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="gForce100/gForce100UserGuide/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#gforce-armband">gForce Armband</a></li>
+            <li><a href="#documents">Documents</a></li>
+            <li><a href="#open-source-software">Open Source Software</a></li>
+            <li><a href="#downloads">Downloads</a></li>
+            <li><a href="#examples">Examples</a></li>
+        <li class="main "><a href="#gforce-neuron">gForce Neuron</a></li>
+            <li><a href="#documents_1">Documents</a></li>
+            <li><a href="#open-source-software_1">Open Source Software</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<hr />
+<h2 id="gforce-armband">gForce Armband</h2>
+<p>gForce 100 Armband is a smart wearable <a href="https://en.wikipedia.org/wiki/Human_interface_device">Human Interface Device</a> for
+<a href="https://en.wikipedia.org/wiki/Gesture_recognition">gesture recognition</a>. It recognizes gestures according
+to the sEMG signals of human forearms, and as well as calculates orientation
+data in quaternions or <a href="https://en.wikipedia.org/wiki/Euler_angles">Euler Angles</a> from its built-in 6-axis
+<a href="https://en.wikipedia.org/wiki/Inertial_measurement_unit">IMU</a> and tri-axis <a href="https://en.wikipedia.org/wiki/Magnetometer">magnetometer</a>.</p>
+<h3 id="documents">Documents</h3>
+<ul>
+<li><a href="./assets/downloads/gForce100_manual_v1.1-eng.pdf">gForce 100 Manual</a> &amp;
+  <a href="gForce100/gForce100UserGuide/">gForce 100 User Guide</a></li>
+</ul>
+<p>The User Guide provides more detailed information than the Manual.</p>
+<ul>
+<li><a href="gForceEmbeddedSuit/gForce100EmbeddedSuiteUserGuide/">gForce 100 Embedded Suite User Guide</a></li>
+</ul>
+<p>Provides guide of using gForce 100 in embedded devices such as robots and
+  prosthetics.</p>
+<ul>
+<li><a href="gForceDataProtocol/gForceDataProtocol/">gForce Data Protocol</a></li>
+</ul>
+<p>The specification of gForce Data Protocol defines the details of gForce
+  interacting with host computers of PC, AR and VR.</p>
+<ul>
+<li><a href="gForceEMGRawData/gForceEMGRawData/">gForce EMG Raw Data</a></li>
+</ul>
+<p>Provides more information about using EMG raw data.</p>
+<h3 id="open-source-software">Open Source Software</h3>
+<ul>
+<li><a href="https://github.com/oymotion/gForceSDKArduino">gForce SDK for Arduino</a></li>
+</ul>
+<p>The open source library with example code to illustrate how to connnect
+  gForce to Arduino-alike devices.</p>
+<ul>
+<li><a href="https://github.com/oymotion/gForceDataProtocolSample">gForce Data Protocol Sample</a></li>
+</ul>
+<p>An open source simple example developed for Android to illustrate
+  <a href="./doc/gForceDataProtocol">gForce Data Protocol</a>.</p>
+<ul>
+<li><a href="https://github.com/oymotion/gForceSDK">gForce SDK</a></li>
+</ul>
+<p>The SDK for Windows and Android with Unity support. <br />
+  Internal testing, coming soon......</p>
+<ul>
+<li><a href="https://github.com/oymotion/gForceApp">gForceApp</a></li>
+</ul>
+<p>The <strong>hub</strong> application for other applications to interact with
+  gForce. It also provides utilities for users setting, firmware upgrading and
+  diagnosing gForce. Released APK is open for downloading.
+  Internal testing, coming soon......</p>
+<h3 id="downloads">Downloads</h3>
+<ul>
+<li>
+<p><a href="./assets/downloads/gForceApp_v2.3.4-20171009.apk">gForceApp for Android  gForceApp_v2.3.4-20171009.apk</a></p>
+<p>Pre-built releases of gForceApp for Android.</p>
+</li>
+<li>
+<p><a href="./assets/downloads/RawDataCapture.zip">sEMG Raw Data Capture Utility</a></p>
+<p>Only for gForce 100 with support for raw data capturing.</p>
+</li>
+<li>
+<p><a href="./assets/downloads/RawDataCaptureSDK.zip">sEMG Raw Data Capture SDK</a></p>
+<p>Only for gForce 100 with support for raw data capturing.</p>
+</li>
+</ul>
+<h3 id="examples">Examples</h3>
+<ul>
+<li><a href="https://github.com/oymotion/gForceExample">gForce Examples</a></li>
+</ul>
+<p>The collection of gForce Armband application examples, like controlling a mechanical hand.</p>
+<hr />
+<h2 id="gforce-neuron">gForce Neuron</h2>
+<h3 id="documents_1">Documents</h3>
+<ul>
+<li><a href="./doc/gForceNeuronUserGuide">gForce Neuron User Guide</a></li>
+</ul>
+<h3 id="open-source-software_1">Open Source Software</h3>
+<ul>
+<li><a href="https://github.com/oymotion/EMGFilters">sEMG Filters Library</a></li>
+</ul>
+<p>Provides some basic filter functions for sEMG digital signals.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright© 2017 OYMotion Technologies,Inc.All rights reserved.</p>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '.';</script>
+        <script src="./js/base.js"></script>
+        <script src="./search/require.js"></script>
+        <script src="./search/search.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&larr;</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>&rarr;</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 0.17.1
+Build Date UTC : 2017-11-13 09:57:52
+-->
