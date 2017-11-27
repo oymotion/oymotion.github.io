@@ -252,12 +252,12 @@
         },
         {
             "location": "/downloadList/Download/",
-            "text": "Download List\n\n\nOct 11th,2017\n\n\n\n\n\n\ngForceApp for Android  gForceApp_v2.3.4-20171009.apk\n\n\nPre-built releases of gForceApp for Android.\n\n\n\n\n\n\nsEMG Raw Data Capture Utility\n\n\nOnly for gForce 100 with support for raw data capturing.\n\n\n\n\n\n\nsEMG Raw Data Capture SDK\n\n\nOnly for gForce 100 with support for raw data capturing.",
+            "text": "Download List\n\n\nOct 11th,2017\n\n\n\n\n\n\ngForceApp for Android  gForceApp_v2.3.4-20171009.apk\n\n\nPre-built releases of gForceApp for Android.\n\n\n\n\n\n\nsEMG Raw Data Capture Utility\n\n\nOnly for gForce 100 with support for raw data capturing.\n\n\n\n\n\n\nsEMG Raw Data Capture SDK\n\n\nOnly for gForce 100 with support for raw data capturing.\n\n\n\n\n\n\ndownload serial port driver\n\n\nserial port driver for Arduino MEGA",
             "title": "Download"
         },
         {
             "location": "/downloadList/Download/#download-list",
-            "text": "Oct 11th,2017    gForceApp for Android  gForceApp_v2.3.4-20171009.apk  Pre-built releases of gForceApp for Android.    sEMG Raw Data Capture Utility  Only for gForce 100 with support for raw data capturing.    sEMG Raw Data Capture SDK  Only for gForce 100 with support for raw data capturing.",
+            "text": "Oct 11th,2017    gForceApp for Android  gForceApp_v2.3.4-20171009.apk  Pre-built releases of gForceApp for Android.    sEMG Raw Data Capture Utility  Only for gForce 100 with support for raw data capturing.    sEMG Raw Data Capture SDK  Only for gForce 100 with support for raw data capturing.    download serial port driver  serial port driver for Arduino MEGA",
             "title": "Download List"
         }
     ]
