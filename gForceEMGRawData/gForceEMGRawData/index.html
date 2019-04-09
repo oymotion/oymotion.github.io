@@ -1,151 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <meta name="author" content="KaiZhou">
-        
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>gForceEMG - OYMotion</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="../../css/highlight.css">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <meta name="author" content="KaiZhou" /> 
+  <link rel="shortcut icon" href="../../img/favicon.ico" /> 
+  <title>gForceEMG - OYMotion</title> 
+  <link href="../../css/bootstrap-custom.min.css" rel="stylesheet" /> 
+  <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet" /> 
+  <link href="../../css/base.css" rel="stylesheet" /> 
+  <link rel="stylesheet" href="../../css/highlight.css" /> 
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --> 
+  <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-
-        <script src="../../js/jquery-1.10.2.min.js"></script>
-        <script src="../../js/bootstrap-3.0.3.min.js"></script>
-        <script src="../../js/highlight.pack.js"></script> 
-    </head>
-
-    <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-
-        <!-- Collapsed navigation -->
-        <div class="navbar-header">
-            <!-- Expander button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="../..">OYMotion</a>
-        </div>
-
-        <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
-                <!-- Main navigation -->
-                <ul class="nav navbar-nav">
-                    <li >
-                        <a href="../..">Home</a>
-                    </li>
-                    <li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Document <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            
-<li >
-    <a href="../../gForce100/gForce100UserGuide/">gForce100</a>
-</li>
-                            
-<li >
-    <a href="../../gForceEmbeddedSuit/gForce100EmbeddedSuiteUserGuide/">gForce Embedded Suit</a>
-</li>
-                            
-<li class="active">
-    <a href="./">gForceEMG</a>
-</li>
-                            
-  <li class="dropdown-submenu">
-    <a href="#">gForceExample</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../gForceExample/LobotControlBygForce/LobotControlBygForce/">LobotControl</a>
-</li>
-    </ul>
-  </li>
-                            
-<li >
-    <a href="../../gForceNeuron/gForceNeuronUserGuide/">gForceNeuron</a>
-</li>
-                            
-<li >
-    <a href="../../gForceDataProtocol/gForceDataProtocol/">gForceDataProtocol</a>
-</li>
-                        </ul>
-                    </li>
-                    <li >
-                        <a href="../../openSoftwareList/openSoftware/">OpenSoftware</a>
-                    </li>
-                    <li >
-                        <a href="../../downloadList/Download/">Download</a>
-                    </li>
-                </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
-                        <i class="fa fa-search"></i> Search
-                    </a>
-                </li>
-                    <li >
-                        <a rel="next" href="../../gForceEmbeddedSuit/gForce100EmbeddedSuiteUserGuide/">
-                            <i class="fa fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li >
-                        <a rel="prev" href="../../gForceExample/LobotControlBygForce/LobotControlBygForce/">
-                            Next <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </li>
-            </ul>
-        </div>
+        <![endif]--> 
+  <script src="../../js/jquery-1.10.2.min.js"></script> 
+  <script src="../../js/bootstrap-3.0.3.min.js"></script> 
+  <script src="../../js/highlight.pack.js"></script> 
+ </head> 
+ <body> 
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation"> 
+   <div class="container"> 
+    <!-- Collapsed navigation --> 
+    <div class="navbar-header"> 
+     <!-- Expander button --> 
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+     <a class="navbar-brand" href="../..">OYMotion</a> 
+    </div> 
+    <!-- Expanded navigation --> 
+    <div class="navbar-collapse collapse"> 
+     <!-- Main navigation --> 
+     <ul class="nav navbar-nav"> 
+      <li> <a href="../..">Home</a> </li> 
+      <li class="dropdown active"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Document <b class="caret"></b></a> 
+       <ul class="dropdown-menu"> 
+        <li> <a href="../../gForce100/gForce100UserGuide/">gForce100</a> </li> 
+        <li> <a href="../../gForceEmbeddedSuit/gForce100EmbeddedSuiteUserGuide/">gForce Embedded Suit</a> </li> 
+        <li class="active"> <a href="./">gForceEMG</a> </li> 
+        <li> <a href="../../gForceNeuron/gForceNeuronUserGuide/">gForceNeuron</a> </li> 
+        <li> <a href="../../gForceDataProtocol/gForceDataProtocol/">gForceDataProtocol</a> </li> 
+       </ul> </li> 
+      <li> <a href="../../openSoftwareList/openSoftware/">OpenSoftware</a> </li> 
+      <li> <a href="../../downloadList/Download/">Download</a> </li> 
+     </ul> 
+     <ul class="nav navbar-nav navbar-right"> 
+      <li> <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal"> <i class="fa fa-search"></i> Search </a> </li> 
+      <li> <a rel="next" href="../../gForceEmbeddedSuit/gForce100EmbeddedSuiteUserGuide/"> <i class="fa fa-arrow-left"></i> Previous </a> </li> 
+      <li> <a rel="prev" href="../../gForceNeuron/gForceNeuronUserGuide/"> Next <i class="fa fa-arrow-right"></i> </a> </li> 
+     </ul> 
+    </div> 
+   </div> 
+  </div> 
+  <div class="container"> 
+   <div class="col-md-3">
+    <div class="bs-sidebar hidden-print affix well" role="complementary"> 
+     <ul class="nav bs-sidenav"> 
+      <li class="main active"><a href="#gforce-semg-raw-data">gForce sEMG Raw Data</a></li> 
+      <li><a href="#data-format">Data Format</a></li> 
+      <li><a href="#more-about-8-channel-sample-data">More about 8-Channel Sample Data</a></li> 
+      <li><a href="#plotting-in-matlab">Plotting in Matlab</a></li> 
+      <li><a href="#filter-for-semg">Filter for sEMG</a></li> 
+     </ul> 
     </div>
-</div>
-
-        <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#gforce-semg-raw-data">gForce sEMG Raw Data</a></li>
-            <li><a href="#data-format">Data Format</a></li>
-            <li><a href="#more-about-8-channel-sample-data">More about 8-Channel Sample Data</a></li>
-            <li><a href="#plotting-in-matlab">Plotting in Matlab</a></li>
-            <li><a href="#filter-for-semg">Filter for sEMG</a></li>
-    </ul>
-</div></div>
-                <div class="col-md-9" role="main">
-
-<h1 id="gforce-semg-raw-data">gForce sEMG Raw Data</h1>
-<p>June 22th, 2017</p>
-<p>Some versions of gForce provides users with the ability of capturing sEMG raw
-data with the <a href="../../assets/downloads/RawDataCapture.zip">sEMG Raw Data Capture Utility</a>
-or <a href="../../assets/downloads/RawDataCaptureSDK.zip">sEMG Raw Data Capture SDK</a>.</p>
-<p>sEMG raw data is usually used in medical researching or for the developers
-that want to build their own gesture recognition algorithm.</p>
-<p>If you need such a special version of gForce, please query info@oymotion.com.</p>
-<h2 id="data-format">Data Format</h2>
-<p>The sEMG raw data, which is captured either into files by the sEMG Raw Data 
-Capture Utility or by developer's own application built upon the sEMG Raw Data 
-SDK, consists of a series of 140-byte packages, each of which consists of
-2-byte (0x8192) magic number, 1-byte CRC, 1-byte package id,  128-byte of 16 
-groups of 8-channel interleaved sample data and 8-byte time-stamp.</p>
-<h2 id="more-about-8-channel-sample-data">More about 8-Channel Sample Data</h2>
-<p>It is 1 byte per channel per sample, and the output votage is 0-2.5v, and
-amplifier is 800x, therefore, the input vatage of the orignal sEMG is:</p>
-<p>$$\mathcal{In} = 1.25 \frac{(\mathcal{Out}-128)}{128 \times 800}$$                           </p>
-<h2 id="plotting-in-matlab">Plotting in Matlab</h2>
-<p>The following are a bunch of commands to read captured raw data file 
-<code>rawdata.hex</code> and plot the channel 0 in Matlab:</p>
-<pre><code class="matlab">&gt;&gt; fp=fopen('rawdata.hex', 'r', 'l');
+   </div> 
+   <div class="col-md-9" role="main"> 
+    <h1 id="gforce-semg-raw-data">gForce sEMG Raw Data</h1> 
+    <p>June 22th, 2017</p> 
+    <p>Some versions of gForce provides users with the ability of capturing sEMG raw data with the <a href="../../assets/downloads/RawDataCapture.zip">sEMG Raw Data Capture Utility</a> or <a href="../../assets/downloads/RawDataCaptureSDK.zip">sEMG Raw Data Capture SDK</a>.</p> 
+    <p>sEMG raw data is usually used in medical researching or for the developers that want to build their own gesture recognition algorithm.</p> 
+    <p>If you need such a special version of gForce, please query info@oymotion.com.</p> 
+    <h2 id="data-format">Data Format</h2> 
+    <p>The sEMG raw data, which is captured either into files by the sEMG Raw Data Capture Utility or by developer's own application built upon the sEMG Raw Data SDK, consists of a series of 140-byte packages, each of which consists of 2-byte (0x8192) magic number, 1-byte CRC, 1-byte package id, 128-byte of 16 groups of 8-channel interleaved sample data and 8-byte time-stamp.</p> 
+    <h2 id="more-about-8-channel-sample-data">More about 8-Channel Sample Data</h2> 
+    <p>It is 1 byte per channel per sample, and the output votage is 0-2.5v, and amplifier is 800x, therefore, the input vatage of the orignal sEMG is:</p> 
+    <p>$$\mathcal{In} = 1.25 \frac{(\mathcal{Out}-128)}{128 \times 800}$$ </p> 
+    <h2 id="plotting-in-matlab">Plotting in Matlab</h2> 
+    <p>The following are a bunch of commands to read captured raw data file <code>rawdata.hex</code> and plot the channel 0 in Matlab:</p> 
+    <pre><code class="matlab">&gt;&gt; fp=fopen('rawdata.hex', 'r', 'l');
 &gt;&gt; file_data=fread(fp,'uchar','l');
 &gt;&gt; data=[];
 &gt;&gt; for i=1:140:length(file_data) 
@@ -154,95 +87,88 @@ amplifier is 800x, therefore, the input vatage of the orignal sEMG is:</p>
 &gt;&gt; data_2d=reshape(data, 8, []);
 &gt;&gt; figure;
 &gt;&gt; plot(data_2d(1,:));
-</code></pre>
-
-<p>It must be noted that Matlab uses 1-based array index!</p>
-<p>You will be able to see the plotted figure like the following:</p>
-<p><img alt="RawDataMatlabFigure01" src="../images/RawDataMatlabFigure01.jpg" /></p>
-<p>If you want to plot channel 7 instead, just replace the last command with:</p>
-<pre><code class="matlab">&gt;&gt; plot(data_2d(8,:));
-</code></pre>
-
-<h2 id="filter-for-semg">Filter for sEMG</h2>
-<ul>
-<li><a href="https://github.com/oymotion/EMGFilters">sEMG Filters Library</a> Provides some basic filter functions for sEMG digital signals.</li>
-</ul></div>
-        </div>
-
-        <footer class="col-md-12">
-            <hr>
-                <p>Copyright© 2017 OYMotion Technologies,Inc.All rights reserved.</p>
-            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>var base_url = '../..';</script>
-        <script src="../../js/base.js"></script>
-        <script src="../../search/require.js"></script>
-        <script src="../../search/search.js"></script>
-
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
-            </div>
-            <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
-                    </div>
-                </form>
-                <div id="mkdocs-search-results"></div>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
-            </div>
-            <div class="modal-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th style="width: 20%;">Keys</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><kbd>?</kbd></td>
-                    <td>Open this help</td>
-                  </tr>
-                  <tr>
-                    <td><kbd>&larr;</kbd></td>
-                    <td>Previous page</td>
-                  </tr>
-                  <tr>
-                    <td><kbd>&rarr;</kbd></td>
-                    <td>Next page</td>
-                  </tr>
-                  <tr>
-                    <td><kbd>s</kbd></td>
-                    <td>Search</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    </body>
+</code></pre> 
+    <p>It must be noted that Matlab uses 1-based array index!</p> 
+    <p>You will be able to see the plotted figure like the following:</p> 
+    <p><img alt="RawDataMatlabFigure01" src="../images/RawDataMatlabFigure01.jpg" /></p> 
+    <p>If you want to plot channel 7 instead, just replace the last command with:</p> 
+    <pre><code class="matlab">&gt;&gt; plot(data_2d(8,:));
+</code></pre> 
+    <h2 id="filter-for-semg">Filter for sEMG</h2> 
+    <ul> 
+     <li><a href="https://github.com/oymotion/EMGFilters">sEMG Filters Library</a> Provides some basic filter functions for sEMG digital signals.</li> 
+    </ul>
+   </div> 
+  </div> 
+  <footer class="col-md-12"> 
+   <hr /> 
+   <p>Copyright&copy; 2017 OYMotion Technologies,Inc.All rights reserved.</p> 
+   <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p> 
+  </footer> 
+  <script>var base_url = '../..';</script> 
+  <script src="../../js/base.js"></script> 
+  <script src="../../search/require.js"></script> 
+  <script src="../../search/search.js"></script> 
+  <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true"> 
+   <div class="modal-dialog"> 
+    <div class="modal-content"> 
+     <div class="modal-header"> 
+      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button> 
+      <h4 class="modal-title" id="exampleModalLabel">Search</h4> 
+     </div> 
+     <div class="modal-body"> 
+      <p> From here you can search these documents. Enter your search terms below. </p> 
+      <form role="form"> 
+       <div class="form-group"> 
+        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" /> 
+       </div> 
+      </form> 
+      <div id="mkdocs-search-results"></div> 
+     </div> 
+     <div class="modal-footer"> 
+     </div> 
+    </div> 
+   </div> 
+  </div>
+  <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true"> 
+   <div class="modal-dialog"> 
+    <div class="modal-content"> 
+     <div class="modal-header"> 
+      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button> 
+      <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4> 
+     </div> 
+     <div class="modal-body"> 
+      <table class="table"> 
+       <thead> 
+        <tr> 
+         <th style="width: 20%;">Keys</th> 
+         <th>Action</th> 
+        </tr> 
+       </thead> 
+       <tbody> 
+        <tr> 
+         <td><kbd>?</kbd></td> 
+         <td>Open this help</td> 
+        </tr> 
+        <tr> 
+         <td><kbd>←</kbd></td> 
+         <td>Previous page</td> 
+        </tr> 
+        <tr> 
+         <td><kbd>→</kbd></td> 
+         <td>Next page</td> 
+        </tr> 
+        <tr> 
+         <td><kbd>s</kbd></td> 
+         <td>Search</td> 
+        </tr> 
+       </tbody> 
+      </table> 
+     </div> 
+     <div class="modal-footer"> 
+     </div> 
+    </div> 
+   </div> 
+  </div>   
+ </body>
 </html>
