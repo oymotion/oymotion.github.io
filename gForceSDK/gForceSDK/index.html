@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Sun shichao">
+        
+        <link rel="shortcut icon" href="../../image/favicon.ico">
+        
+        <title>SDK Manual - OYMotion</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">OYMotion</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../gForce100/gForce100UserGuide/">gForce100</a>
+</li>
+                                    
+<li >
+    <a href="../../gForcePro/gForcePro/">gForcePr/gForcePro+</a>
+</li>
+                                    
+<li >
+    <a href="../../gForceJoint/gForceJoint/">gForceJoint</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">SDK <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../SDKList/">SDK List</a>
+</li>
+                                    
+<li class="active">
+    <a href="./">SDK Manual</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">APPs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../APPs/OTrain/">OTrain</a>
+</li>
+                                    
+<li >
+    <a href="../../APPs/gForceAppLegacy/">gForceApp for gForce100/gForcePro</a>
+</li>
+                                    
+<li >
+    <a href="../../APPs/gForceApp/">gForceApp for gForcePro+</a>
+</li>
+                                    
+<li >
+    <a href="../../APPs/oym8CHWave/">oym8CHWave</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../SDKList/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../APPs/OTrain/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#gforce-sdk-manual">gForce SDK Manual</a></li>
+            <li><a href="#functions-to-get-data">Functions to Get Data</a></li>
+            <li><a href="#data-format-in-callback">Data Format in Callback</a></li>
+            <li><a href="#examples-for-getting-data-from-gforce">Examples For Getting Data from gForce</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="gforce-sdk-manual">gForce SDK Manual</h1>
+<hr />
+<h2 id="functions-to-get-data">Functions to Get Data</h2>
+<table>
+<thead>
+<tr>
+<th align="left">SDK Type</th>
+<th align="left">Orientation Data</th>
+<th align="left">Gesture Data</th>
+<th align="left">Device Status</th>
+<th align="left">Other Data*</th>
+<th align="left">Data Config Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">gForceCXX</td>
+<td align="left">onOrientationData(...)**</td>
+<td align="left">onGestureData(...)**</td>
+<td align="left">onDeviceStatusChanged(...)**</td>
+<td align="left">onExtendedDeviceData(...)**</td>
+<td align="left">DeviceSetting::setDataNotifSwitch(...)</td>
+</tr>
+<tr>
+<td align="left">gForceCSharp</td>
+<td align="left">onOrientationData(...)**</td>
+<td align="left">onGestureData(...)**</td>
+<td align="left">onDeviceStatusChanged(...)**</td>
+<td align="left">onExtendedDeviceData(...)**</td>
+<td align="left">setNotification(...)</td>
+</tr>
+<tr>
+<td align="left">gForceUnity</td>
+<td align="left">onOrientationData(...)**</td>
+<td align="left">onGestureData(...)**</td>
+<td align="left">onDeviceStatusChanged(...)**</td>
+<td align="left">onExtendedDeviceData(...)**</td>
+<td align="left">setNotification(...)</td>
+</tr>
+<tr>
+<td align="left">gForcePython</td>
+<td align="left">Callback of GF.startDataNotification(...)</td>
+<td align="left">Callback of GF.startDataNotification(...)</td>
+<td align="left">Callback of GF.startDataNotification(...)</td>
+<td align="left">Callback of GF.startDataNotification(...)</td>
+<td align="left">GF.setDataNotifSwitch(...)</td>
+</tr>
+<tr>
+<td align="left">gForceArduino</td>
+<td align="left">GForceAdapter::GetGForceData(...)</td>
+<td align="left">GForceAdapter::GetGForceData(...)</td>
+<td align="left">GForceAdapter::GetGForceData(...)</td>
+<td align="left">GForceAdapter::GetGForceData(...)***</td>
+<td align="left">NA</td>
+</tr>
+<tr>
+<td align="left">gForceEmbedded</td>
+<td align="left">GForceAdapter::GetGForceData(...)</td>
+<td align="left">GForceAdapter::GetGForceData(...)</td>
+<td align="left">GForceAdapter::GetGForceData(...)</td>
+<td align="left">GForceAdapter::GetGForceData(...)***</td>
+<td align="left">NA</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>:
+* : Includes 10 data types
+** : In subclass of HubListener
+*** : Only EMG data supported.</p>
+<hr />
+<h2 id="data-format-in-callback">Data Format in Callback</h2>
+<p>Callback will be invoked (e.g., <code>onExtendedDeviceData(...)</code> in subclass of HubListener or user callback of <code>GF.startDataNotification(...)</code>) when desired data notification comes.</p>
+<p>Data format:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Notification Data Type</th>
+<th align="left">Data Packet Length</th>
+<th align="left">First Byte Value</th>
+<th align="left">Data Content*</th>
+<th align="left">Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Acceletor</td>
+<td align="left">13</td>
+<td align="left">0x01 (NTF_ACC_DATA)</td>
+<td align="left">Acceletor_X(4 Byte long), Acceletor_Y, Acceletor_Z</td>
+<td align="left">Accelerate speed of axis x,y and z</td>
+</tr>
+<tr>
+<td align="left">Gyroscope</td>
+<td align="left">13</td>
+<td align="left">0x02 (NTF_GYO_DATA)</td>
+<td align="left">Gyroscope_X(4 Byte long), Gyroscope_Y, Gyroscope_Z</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Magnetometer</td>
+<td align="left">13</td>
+<td align="left">0x03 (NTF_MAG_DATA)</td>
+<td align="left">Gyroscope_X(4 Byte long), Compass_Y, Compass_Z</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Euler Angle</td>
+<td align="left">13</td>
+<td align="left">0x04 (NTF_EULER_DATA)</td>
+<td align="left">Pitch(4 Byte float), Roll, Yaw</td>
+<td align="left">Euler angle data is in degree. Pitch and Roll is in the range of [-180, 180], Yaw is in the range of [-90, 90]</td>
+</tr>
+<tr>
+<td align="left">Quaternion</td>
+<td align="left">17</td>
+<td align="left">0x05 (NTF_QUAT_FLOAT_DATA)</td>
+<td align="left">Quaternion_W(4 Byte float), Quaternion_X, Quaternion_Y, Quaternion_Z</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">Rotation Matrix</td>
+<td align="left">37</td>
+<td align="left">0x06 (NTF_ROTA_DATA)</td>
+<td align="left">Rot[0][0], Rot[0][1], Rot[0][2], Rot[1][0],...</td>
+<td align="left">3*3 Rotation matrix of data type long, leading 3 4-bytes integer represent the first row of matrix and so on</td>
+</tr>
+<tr>
+<td align="left">Gesture</td>
+<td align="left">3</td>
+<td align="left">0x07 (NTF_EMG_GEST_DATA)</td>
+<td align="left">Gesture identify(1 Byte uint), Probability(1 Byte uint)</td>
+<td align="left">Possibility is in the range of [0, 100]</td>
+</tr>
+<tr>
+<td align="left">Raw EMG</td>
+<td align="left">129</td>
+<td align="left">0x08 (NTF_EMG_ADC_DATA)</td>
+<td align="left">CH0,CH1...CH7, CH0,CH1...CH7, ...</td>
+<td align="left">Packet length depends on config of EMG, defalut 129. If resolution set to 8, 1 byte represents data of 1 channel. 2 bytes for 1 channel incase of resolution=12.</td>
+</tr>
+<tr>
+<td align="left">Mouse</td>
+<td align="left">NA</td>
+<td align="left">0x09 (NTF_HID_MOUSE)</td>
+<td align="left">NA</td>
+<td align="left">Not currently supported</td>
+</tr>
+<tr>
+<td align="left">Joystick</td>
+<td align="left">NA</td>
+<td align="left">0x0A (NTF_HID_JOYSTICK)</td>
+<td align="left">NA</td>
+<td align="left">Not currently supported</td>
+</tr>
+<tr>
+<td align="left">Device Status</td>
+<td align="left">2</td>
+<td align="left">0x0B (NTF_DEV_STATUS)</td>
+<td align="left">bit0 is for Recenter status, bit1 is for USB insert, bit2 is for USB unplug, bit3 is for motionless status; bit4 - bit7 is reserved</td>
+<td align="left">1 Byte for new device status</td>
+</tr>
+<tr>
+<td align="left">Log Message</td>
+<td align="left">&gt;= 1</td>
+<td align="left">0x0C (NTF_LOG_DATA)</td>
+<td align="left">log message string</td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p>* : Starts from second byte of data packet.</p>
+<hr />
+<h2 id="examples-for-getting-data-from-gforce">Examples For Getting Data from gForce</h2>
+<p>Get EMG raw data examples</p>
+<h3 id="c">C++</h3>
+<p>1. Implement <code>HubListener</code> interface</p>
+<pre><code class="c++">  class HubListenerImpl : public HubListener{...}
+</code></pre>
+
+<p>2. Config EMG data</p>
+<p>Call <code>DeviceSetting::setEMGRawDataConfig(...);</code> to configure Emg. First parameter is sample Rate in Hz, second parameter is channel Mask, third parameter is package data length, fourth parameter is Adc resolution, Fifth parameter is callback function.</p>
+<p>3. Open ACC Data Notification</p>
+<p>Call <code>DeviceSetting::setDataNotifySwitch(...)</code> to open EMG raw. Set first parameter as DeviceSetting::DNF_EMG_RAW</p>
+<p>4. Extract the data of acceleration</p>
+<pre><code class="C++">void onExtendedDeviceData(SPDEVICE device, DeviceDataType dataType, gfsPtr&lt;const vector&lt;GF_UINT8&gt;&gt; data) override
+{
+  switch (dataType) {
+  case DeviceDataType::DDT_EMGRAW:
+      auto ptr = data-&gt;data();
+
+      for (int i = 0; i &lt; 128; i++)
+      {
+        //for 8bpp mode
+        printf(&quot;Emg data [%d] = %u\n&quot;, i, *(reinterpret_cast&lt;const uint8_t*&gt;(ptr++)));
+
+        //for 12bpp mode
+        //   printf(&quot;Emg data [%d] = %u\n&quot;, i, *(reinterpret_cast&lt;const uint16_t*&gt;(ptr)));
+        //   ptr += 2;
+      }
+
+    break;
+
+  case DeviceDataType::DDT_GYROSCOPE:
+      //... extract gyroscope data form 'data'
+    break;
+
+  default:
+    break;
+  }
+}
+</code></pre>
+
+<hr />
+<h3 id="python">Python</h3>
+<pre><code class="python">def ondata(data):
+    if data[0] == NotifDataType['DNF_EMG_RAW'] and len(data) == 129:
+            # Data for EMG CH0~CHn repeatly.
+            # Resolution set in setEmgRawDataConfig:
+            #   8: one byte for one channel
+            #   12: two bytes in LSB for one channel.
+            # eg. 8bpp mode, data[1] = channel[0], data[2] = channel[1], ... data[8] = channel[7]
+            #                data[9] = channel[0] and so on
+            # eg. 12bpp mode, {data[2], data[1]} = channel[0], {data[4], data[3]} = channel[1] and so on
+            for i in range(1, 129):
+                print(data[i])
+
+def set_cmd_cb(resp):
+    print('Command result: {}'.format(resp))
+
+GF = GForceProfile()
+GF.setEmgRawDataConfig(sampRate = 650, channelMask = 0xFF, dataLen = 128, resolution = 8, cb = set_cmd_cb, timeout = 1000)
+GF.setDataNotifSwitch(DataNotifFlags['DNF_EMG_RAW'], set_cmd_cb, timeout = 1000)
+GF.startDataNotification(ondata)
+
+button = input()
+
+if len(button) != 0:
+    GF.stopDataNotification()
+    GF.setDataNotifSwitch(DataNotifFlags['DNF_OFF'], set_cmd_cb, timeout = 1000)
+</code></pre>
+
+<hr />
+<h3 id="csharp">CSharp</h3>
+<p>1. Call setEmgConfig(...) configure EMG data</p>
+<pre><code class="CSharp">setEmgConfig(650/*sampleRateHz*/, 0x00FF/*interestedChannels*/, 128/*packageDataLength*/, 8/*adcResolution*/);
+</code></pre>
+
+<p>2. Call setNotification(...) open EMG raw</p>
+<pre><code class="CSharp">setNotification((uint)DataNotifFlags.DNF_EMG_RAW);
+</code></pre>
+
+<p>3. print the data of EMG raw</p>
+<pre><code class="CSharp">public override void onExtendedDeviceData(Device device, Device.DataType type, byte[] data)
+{
+   if (device == gForceHub_.connectedDevice_ &amp;&amp; type == Emgraw)
+   {
+       System.Console.Write(&quot;Emg data len: {0}, data:&quot; , data.Length);
+
+       var sb = new StringBuilder(&quot;{&quot;);
+
+       foreach (var b in data)
+       {
+           sb.Append(b + &quot;,&quot;);
+       }
+
+       sb.Remove(sb.Length - 1, 1);
+       sb.Append(&quot;}&quot;);
+
+       System.Console.WriteLine(sb.ToString());
+   }
+}
+</code></pre>
+
+<p><strong>Note</strong>: Data transfers should be off when configuring data types and starting/stoping data notification.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright© 2020 OYMotion Technologies,Inc.All rights reserved.</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../image/favicon.ico">
         
-        <title>gForce100 - OYMotion</title>
+        <title>gForceJoint - OYMotion</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -54,16 +54,16 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li class="active">
-    <a href="./">gForce100</a>
+<li >
+    <a href="../../gForce100/gForce100UserGuide/">gForce100</a>
 </li>
                                     
 <li >
     <a href="../../gForcePro/gForcePro/">gForcePr/gForcePro+</a>
 </li>
                                     
-<li >
-    <a href="../../gForceJoint/gForceJoint/">gForceJoint</a>
+<li class="active">
+    <a href="./">gForceJoint</a>
 </li>
                                 </ul>
                             </li>
@@ -110,12 +110,12 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../..">
+                                <a rel="next" href="../../gForcePro/gForcePro/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../../gForcePro/gForcePro/">
+                                <a rel="prev" href="../../gForceSDK/SDKList/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -127,90 +127,66 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#gforce-100-armband-user-guide">gForce 100 Armband User Guide</a></li>
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#turning-onoff">Turning on/off</a></li>
-            <li><a href="#re-charging">Re-charging</a></li>
-            <li><a href="#other-status-indication">Other Status Indication</a></li>
-            <li><a href="#instructions-to-wearing-and-performing-gestures">Instructions to Wearing and Performing Gestures</a></li>
-            <li><a href="#predefined-gestures">Predefined Gestures</a></li>
+        <li class="main active"><a href="#gforce-joint">gForce Joint</a></li>
+            <li><a href="#brief">Brief</a></li>
+            <li><a href="#gforce-joint-usage">gForce Joint Usage</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="gforce-100-armband-user-guide">gForce 100 Armband User Guide</h1>
-<p>July 6th, 2017</p>
-<h2 id="overview">Overview</h2>
-<p>gForce 100 Armband is a smart wearable <a href="https://en.wikipedia.org/wiki/Human_interface_device">Human Interface Device</a> for
-<a href="https://en.wikipedia.org/wiki/Gesture_recognition">gesture recognition</a>. It recognizes gestures according
-to the sEMG signals of human forearms, and as well as calculates orientation
-data in quaternions or <a href="https://en.wikipedia.org/wiki/Euler_angles">Euler Angles</a> from its built-in 9-axis
-<a href="https://en.wikipedia.org/wiki/Inertial_measurement_unit">IMU</a>.</p>
-<p>Comparing with the other gesture recognition devices that are based on
-the computer vision technology, gForce Armband has the advantage of no
-dependency of embient light, no strictness with angle, much lower energy
-and much lower cost.</p>
-<p><img alt="gForce100Armband" src="../imgs/gForce100Armband.jpg" /></p>
-<h2 id="turning-onoff">Turning on/off</h2>
+<h1 id="gforce-joint">gForce Joint</h1>
+<h2 id="brief">Brief</h2>
+<p>This document tries to guiding how one can use gForce gesture armband with Arduino.
+Before continuing, please make sure you have sufficient experience with <a href="https://www.arduino.cc/">Arduino</a>, and <a href="https://www.arduino.cc/en/Main/Software">ArduinoIDE</a> was installed on your PC.</p>
 <ul>
-<li>
-<p>Turn on</p>
-<p>When gForce 100 Armband is off, its green LED light will be off. To turn
-it on, simply press the button in the middle of its main block.</p>
-<p>When gForce 100 Armband starts to power on, it will vibrate for about 0.5
-second. Once it is successfully powered up, the green LED light flashes
-at a frequency of 4HZ with 2 seconds on and 2 seconds off.</p>
-<p>Make sure the armband has sufficient power, otherwise re-charge it with
-a micro USB line.</p>
-</li>
-<li>
-<p>Turn off</p>
-<p>When gForce 100 Armband is on, pressing and holding the button for about 5
-seconds and then releasing will turn it off. The green LED being off
-indicates the device has been turned off successfully.</p>
-</li>
+<li><a href="https://www.arduino.cc/en/Guide/Introduction">What is Arduino</a></li>
+<li><a href="https://www.arduino.cc/en/Main/Software">How to install ArduinoIDE</a></li>
+<li><a href="https://www.arduino.cc/en/Reference/HomePage">Learn Arduino</a></li>
 </ul>
-<p><strong>Note</strong>:</p>
-<blockquote>
-<p>If gForce 100 Armband is not in use, please turn it off. Right now the
-auto-low-power mode is not implemented yet.</p>
-</blockquote>
-<h2 id="re-charging">Re-charging</h2>
-<p>gForce 100 Armband is equipped with Li-ion battery (200mAh). The USB port on
-the main block is used for battery re-charging.</p>
-<p>During re-charging, the red light LED on the main block is on. Re-charging will maximally take 2 hours, and after re-charging completes, the red light LED is turned off.</p>
-<p><strong>Note</strong>:</p>
-<blockquote>
-<p>gForce 100 Armband is NOT designed to work during re-charging, as this brings in
-electrical noise which contaminates the weak EMG biometric signals.</p>
-</blockquote>
-<h2 id="other-status-indication">Other Status Indication</h2>
+<h2 id="gforce-joint-usage">gForce Joint Usage</h2>
+<p>This chapter guides the steps to connect gForce Joint to Arm band. The following names are being used: gForceJoint, gForce, gForceSDKArduino, ArduinoMEGA</p>
 <ul>
-<li>
-<p>After successfully connecting with a BLE central device (e.g. gForceJoint,
-  gForceDongle or any other BLE central device), the green LED light flashes
-  at 5HZ when any data (e.g. quaternion, gesture or raw data) switch is on.</p>
-</li>
-<li>
-<p>The device will vibrate for about 100ms when a gesture is recognized.</p>
-</li>
+<li><a href="../../gForce100/gForce100UserGuide/">What is gForce</a></li>
+<li><a href="https://github.com/oymotion/gForceSDKEmbedded">What is gForceJoint</a></li>
+<li><a href="https://github.com/oymotion/gForceSDKArduino">What is gForceSDKArduino</a></li>
+<li><a href="https://www.arduino.cc/en/Main/arduinoBoardMega">What is ArduinoMEGA</a></li>
 </ul>
-<h2 id="instructions-to-wearing-and-performing-gestures">Instructions to Wearing and Performing Gestures</h2>
-<p>To make sure gForce armband can recognize your gestures, please refer to
-<a href="https://www.youtube.com/watch?v=wBsYJf0wrkk">Guide to Performing Gestures</a> and spend several minutes learning and training yourself. The recognition rate can reach 95% and even higher after you get familiar with performing the gestures properly.</p>
-<h2 id="predefined-gestures">Predefined Gestures</h2>
-<p>The six predefined gestures are:
-* <em>Fist</em>
-* <em>Spread Fingers</em>
-* <em>Wave In</em>
-* <em>Wave Out</em>
-* <em>Pinch</em>
-* <em>Shoot</em></p>
-<p><strong>Note</strong>:</p>
-<blockquote>
-<p>When both your arm and hand are at a rest state, it will be recognized as a
-'<em>Relax</em>' gesture.</p>
-</blockquote></div>
+<p><img alt="gForceAndArduino" src="../imgs/gForceAndArduino_En.png" /></p>
+<h3 id="step-1-import-gforcesdkarduino">Step 1: Import gForceSDKArduino</h3>
+<ul>
+<li><a href="https://github.com/oymotion/gForceSDKArduino">How to import gForceSDKArduino</a></li>
+</ul>
+<h3 id="step-2-test-communication-between-gforcejoint-and-arduinomega">Step 2: Test communication between gForceJoint and ArduinoMEGA</h3>
+<p><img alt="gForceJointPC" src="../imgs/gForceJointPC_En.png" /></p>
+<ol>
+<li>Wire gForceJoint with ArduinoMEGA:  in this demo case, gForceJoint is connected to MEGA’s Serial Port #2 (gForceJoint (TX) =&gt; MEGA (RX2))</li>
+<li>Open <a href="https://github.com/oymotion/gForceSDKArduino/blob/master/examples/gForceJointTest/gForceJointTest.ino">gForceJointTest</a> in ArduinoIDE. Compile and upload to ArduinoMEGA.</li>
+<li>Open the Serial Port Monitor from ArduinoIDE.</li>
+<li>Set the serial port monitor with a baud rate of 115200bps.</li>
+<li>
+<p>Pair and connect gForce armband to gForceJoint, perform the gestures that’s defined, check if the information printed out in the Serial Port Monitor is correct, and hence make sure the connect between gForceJoint and MEGA works.</p>
+</li>
+<li>
+<p><a href="https://oymotion.github.io/assets/downloads/gForce100_manual_v1.1-eng.pdf">How to wear gForce armband?</a><br />
+If a gForce-100 is used, users should follow wearing instruction and gesture strictly.</p>
+</li>
+<li>
+<p>How to connect gForce with gForceJoint wirelessly?  </p>
+</li>
+<li>Turn on gForce armband, the green led should flash slowly</li>
+<li>Make sure gForceJoint is powered on</li>
+<li>Put gForce armband close to gForceJoint such as within 10 cm of distance.</li>
+<li>gForce armband will automatically connect to gForceJoint. The green led should   flash much faster.</li>
+<li>
+<p>If not, make sure gForceJoint is not connected to other gForce armband. Only one armband is allowed. And, make sure, power is on.</p>
+</li>
+<li>
+<p>One should make sure gForceJoint works with ArduinoMEGA before continuing. Possible mistakes are:</p>
+</li>
+<li>Wiring mistakes between gForceJoint and ArduinoMEAG</li>
+<li>gForce doesn’t connect with gForceJoint because distance. When connecting, gForce armband and gForceJoint HAVE to be within a short distance as close as possible such as 10 cm.</li>
+<li>User doesn’t follow armband wearing and gestures.</li>
+</ol></div>
         </div>
 
         <footer class="col-md-12">

@@ -9,7 +9,7 @@
         
         <link rel="shortcut icon" href="../../image/favicon.ico">
         
-        <title>gForce100 - OYMotion</title>
+        <title>gForcePr/gForcePro+ - OYMotion</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -54,12 +54,12 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li class="active">
-    <a href="./">gForce100</a>
+<li >
+    <a href="../../gForce100/gForce100UserGuide/">gForce100</a>
 </li>
                                     
-<li >
-    <a href="../../gForcePro/gForcePro/">gForcePr/gForcePro+</a>
+<li class="active">
+    <a href="./">gForcePr/gForcePro+</a>
 </li>
                                     
 <li >
@@ -110,12 +110,12 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../..">
+                                <a rel="next" href="../../gForce100/gForce100UserGuide/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../../gForcePro/gForcePro/">
+                                <a rel="prev" href="../../gForceJoint/gForceJoint/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -127,37 +127,38 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#gforce-100-armband-user-guide">gForce 100 Armband User Guide</a></li>
+        <li class="main active"><a href="#gforceprogforcepro-armband-user-guide">gForcePro/gForcePro+ Armband User Guide</a></li>
             <li><a href="#overview">Overview</a></li>
             <li><a href="#turning-onoff">Turning on/off</a></li>
             <li><a href="#re-charging">Re-charging</a></li>
             <li><a href="#other-status-indication">Other Status Indication</a></li>
-            <li><a href="#instructions-to-wearing-and-performing-gestures">Instructions to Wearing and Performing Gestures</a></li>
-            <li><a href="#predefined-gestures">Predefined Gestures</a></li>
+            <li><a href="#gesture-training">Gesture Training</a></li>
+            <li><a href="#fetch-emgqurternion-data">Fetch EMG/Qurternion/... Data</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="gforce-100-armband-user-guide">gForce 100 Armband User Guide</h1>
-<p>July 6th, 2017</p>
+<h1 id="gforceprogforcepro-armband-user-guide">gForcePro/gForcePro+ Armband User Guide</h1>
+<p>August 28th, 2020</p>
+<hr />
 <h2 id="overview">Overview</h2>
-<p>gForce 100 Armband is a smart wearable <a href="https://en.wikipedia.org/wiki/Human_interface_device">Human Interface Device</a> for
+<p>gForcePro/gForcePro+ Armband is a smart wearable <a href="https://en.wikipedia.org/wiki/Human_interface_device">Human Interface Device</a> for
 <a href="https://en.wikipedia.org/wiki/Gesture_recognition">gesture recognition</a>. It recognizes gestures according
 to the sEMG signals of human forearms, and as well as calculates orientation
-data in quaternions or <a href="https://en.wikipedia.org/wiki/Euler_angles">Euler Angles</a> from its built-in 9-axis
-<a href="https://en.wikipedia.org/wiki/Inertial_measurement_unit">IMU</a>.</p>
+data in quaternions or <a href="https://en.wikipedia.org/wiki/Euler_angles">Euler Angles</a> from its built-in 9-axis <a href="https://en.wikipedia.org/wiki/Inertial_measurement_unit">IMU</a>.</p>
 <p>Comparing with the other gesture recognition devices that are based on
 the computer vision technology, gForce Armband has the advantage of no
 dependency of embient light, no strictness with angle, much lower energy
 and much lower cost.</p>
-<p><img alt="gForce100Armband" src="../imgs/gForce100Armband.jpg" /></p>
+<p><img alt="gForcePro/gForcePro+ Armband" src="../imgs/Armband.png" /></p>
+<hr />
 <h2 id="turning-onoff">Turning on/off</h2>
 <ul>
 <li>
 <p>Turn on</p>
-<p>When gForce 100 Armband is off, its green LED light will be off. To turn
+<p>When gForcePro/gForcePro+ Armband is off, its green LED light will be off. To turn
 it on, simply press the button in the middle of its main block.</p>
-<p>When gForce 100 Armband starts to power on, it will vibrate for about 0.5
+<p>When gForcePro/gForcePro+ Armband starts to power on, it will vibrate for about 0.5
 second. Once it is successfully powered up, the green LED light flashes
 at a frequency of 4HZ with 2 seconds on and 2 seconds off.</p>
 <p>Make sure the armband has sufficient power, otherwise re-charge it with
@@ -165,25 +166,27 @@ a micro USB line.</p>
 </li>
 <li>
 <p>Turn off</p>
-<p>When gForce 100 Armband is on, pressing and holding the button for about 5
+<p>When gForcePro/gForcePro+ Armband is on, pressing and holding the button for about 5
 seconds and then releasing will turn it off. The green LED being off
 indicates the device has been turned off successfully.</p>
 </li>
 </ul>
 <p><strong>Note</strong>:</p>
 <blockquote>
-<p>If gForce 100 Armband is not in use, please turn it off. Right now the
+<p>If gForcePro/gForcePro+ Armband is not in use, please turn it off. Right now the
 auto-low-power mode is not implemented yet.</p>
 </blockquote>
+<hr />
 <h2 id="re-charging">Re-charging</h2>
-<p>gForce 100 Armband is equipped with Li-ion battery (200mAh). The USB port on
+<p>gForcePro/gForcePro+ Armband is equipped with Li-ion battery (200mAh). The USB port on
 the main block is used for battery re-charging.</p>
 <p>During re-charging, the red light LED on the main block is on. Re-charging will maximally take 2 hours, and after re-charging completes, the red light LED is turned off.</p>
 <p><strong>Note</strong>:</p>
 <blockquote>
-<p>gForce 100 Armband is NOT designed to work during re-charging, as this brings in
+<p>gForcePro/gForcePro+ Armband is NOT designed to work during re-charging, as this brings in
 electrical noise which contaminates the weak EMG biometric signals.</p>
 </blockquote>
+<hr />
 <h2 id="other-status-indication">Other Status Indication</h2>
 <ul>
 <li>
@@ -195,22 +198,33 @@ electrical noise which contaminates the weak EMG biometric signals.</p>
 <p>The device will vibrate for about 100ms when a gesture is recognized.</p>
 </li>
 </ul>
-<h2 id="instructions-to-wearing-and-performing-gestures">Instructions to Wearing and Performing Gestures</h2>
-<p>To make sure gForce armband can recognize your gestures, please refer to
-<a href="https://www.youtube.com/watch?v=wBsYJf0wrkk">Guide to Performing Gestures</a> and spend several minutes learning and training yourself. The recognition rate can reach 95% and even higher after you get familiar with performing the gestures properly.</p>
-<h2 id="predefined-gestures">Predefined Gestures</h2>
-<p>The six predefined gestures are:
-* <em>Fist</em>
-* <em>Spread Fingers</em>
-* <em>Wave In</em>
-* <em>Wave Out</em>
-* <em>Pinch</em>
-* <em>Shoot</em></p>
-<p><strong>Note</strong>:</p>
-<blockquote>
-<p>When both your arm and hand are at a rest state, it will be recognized as a
-'<em>Relax</em>' gesture.</p>
-</blockquote></div>
+<hr />
+<h2 id="gesture-training">Gesture Training</h2>
+<ul>
+<li>
+<p><strong>gForcePro</strong>
+  gForcePro supports user gesture training with help of OTrain desktop APP.
+  Refer to <a href="../../APPs/OTrain/">OTrain</a> for more details.</p>
+</li>
+<li>
+<p><strong>gForcePro+</strong>
+  gForcePro+ uses gForce APP to train user gestures.
+  Refer to <a href="../../APPs/gForceApp/">gForce APP</a> for more details.</p>
+</li>
+</ul>
+<hr />
+<h2 id="fetch-emgqurternion-data">Fetch EMG/Qurternion/... Data</h2>
+<ul>
+<li>
+<p><strong>Via SDK</strong>
+  Use <a href="https://github.com/oymotion/gForceSDKCXX">gForceSDKCXX</a>, <a href="https://github.com/oymotion/gForceSDKCSharp">gForceSDKCSharp</a>, <a href="https://github.com/oymotion/gForceSDKPython">gForceSDKPython</a> to fetch EMG data, etc.
+  See <a href="../../gForceSDK/SDKList/">SDK list</a> &amp; <a href="../../gForceSDK/gForceSDK/">gForceSDK manual</a> for help.</p>
+</li>
+<li>
+<p><strong>Via oym8CHWave</strong>
+  Refer to <a href="../../APPs/oym8CHWave/">oym8CHWave</a> for more details.</p>
+</li>
+</ul></div>
         </div>
 
         <footer class="col-md-12">
