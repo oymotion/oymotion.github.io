@@ -10,112 +10,99 @@
         <link rel="shortcut icon" href="../../image/favicon.ico">
         
         <title>gForceJoint - OYMotion</title>
-        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
     <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="../..">OYMotion</a>
-                </div>
+                <a class="navbar-brand" href="../..">OYMotion</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
+                <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li >
-                                <a href="../..">Home</a>
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
                             </li>
                             <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Products <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../../gForce100/gForce100UserGuide/">gForce100</a>
+<li>
+    <a href="../../gForce100/gForce100UserGuide/" class="dropdown-item">gForce100</a>
 </li>
                                     
-<li >
-    <a href="../../gForcePro/gForcePro/">gForcePro/gForcePro+</a>
+<li>
+    <a href="../../gForcePro/gForcePro/" class="dropdown-item">gForcePro/gForcePro+</a>
 </li>
                                     
-<li class="active">
-    <a href="./">gForceJoint</a>
+<li>
+    <a href="./" class="dropdown-item active">gForceJoint</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">SDK <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">SDK <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../../gForceSDK/SDKList/">SDK List</a>
+<li>
+    <a href="../../gForceSDK/SDKList/" class="dropdown-item">SDK List</a>
 </li>
                                     
-<li >
-    <a href="../../gForceSDK/gForceSDK/">SDK Manual</a>
+<li>
+    <a href="../../gForceSDK/gForceSDK/" class="dropdown-item">SDK Manual</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">APPs <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">APPs <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../../APPs/OTrain/">OTrain</a>
+<li>
+    <a href="../../APPs/OTrain/" class="dropdown-item">OTrain</a>
 </li>
                                     
-<li >
-    <a href="../../APPs/gForceAppLegacy/">gForceApp for gForce100/gForcePro</a>
+<li>
+    <a href="../../APPs/gForceAppLegacy/" class="dropdown-item">gForceApp for gForce100/gForcePro</a>
 </li>
                                     
-<li >
-    <a href="../../APPs/gForceApp/">gForceApp for gForcePro+</a>
+<li>
+    <a href="../../APPs/gForceApp/" class="dropdown-item">gForceApp for gForcePro+</a>
 </li>
                                     
-<li >
-    <a href="../../APPs/oym8CHWave/">oym8CHWave</a>
+<li>
+    <a href="../../APPs/oym8CHWave/" class="dropdown-item">oym8CHWave</a>
 </li>
                                 </ul>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li >
-                                <a rel="next" href="../../gForcePro/gForcePro/">
+                            <li class="nav-item">
+                                <a rel="prev" href="../../gForcePro/gForcePro/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li >
-                                <a rel="prev" href="../../gForceSDK/SDKList/">
+                            <li class="nav-item">
+                                <a rel="next" href="../../gForceSDK/SDKList/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -125,14 +112,38 @@
         </div>
 
         <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#gforce-joint">gForce Joint</a></li>
-            <li><a href="#brief">Brief</a></li>
-            <li><a href="#gforce-joint-usage">gForce Joint Usage</a></li>
-    </ul>
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#gforce-joint" class="nav-link">gForce Joint</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#brief" class="nav-link">Brief</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#gforce-joint-usage" class="nav-link">gForce Joint Usage</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#qa" class="nav-link">Q&amp;A</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
 </div></div>
-                <div class="col-md-9" role="main">
+                    <div class="col-md-9" role="main">
 
 <h1 id="gforce-joint">gForce Joint</h1>
 <h2 id="brief">Brief</h2>
@@ -163,30 +174,31 @@ Before continuing, please make sure you have sufficient experience with <a href=
 <li>Open <a href="https://github.com/oymotion/gForceSDKArduino/blob/master/examples/gForceJointTest/gForceJointTest.ino">gForceJointTest</a> in ArduinoIDE. Compile and upload to ArduinoMEGA.</li>
 <li>Open the Serial Port Monitor from ArduinoIDE.</li>
 <li>Set the serial port monitor with a baud rate of 115200bps.</li>
-<li>
-<p>Pair and connect gForce armband to gForceJoint, perform the gestures that’s defined, check if the information printed out in the Serial Port Monitor is correct, and hence make sure the connect between gForceJoint and MEGA works.</p>
-</li>
-<li>
-<p><a href="https://oymotion.github.io/assets/downloads/gForce100_manual_v1.1-eng.pdf">How to wear gForce armband?</a><br />
-If a gForce-100 is used, users should follow wearing instruction and gesture strictly.</p>
-</li>
-<li>
-<p>How to connect gForce with gForceJoint wirelessly?  </p>
-</li>
+<li>Pair and connect gForce armband to gForceJoint, perform the gestures that’s defined, check if the information printed out in the Serial Port Monitor is correct, and hence make sure the connect between gForceJoint and MEGA works.</li>
+</ol>
+<h2 id="qa">Q&amp;A</h2>
+<blockquote>
+<p>How to wear gForce armband?</p>
+</blockquote>
+<p>If a gForce-100 is used, users should follow <a href="https://oymotion.github.io/assets/downloads/gForce100_manual_v1.1-eng.pdf">wearing instruction</a> and gesture strictly.</p>
+<blockquote>
+<p>How to connect gForce with gForceJoint wirelessly?</p>
+</blockquote>
+<ol>
 <li>Turn on gForce armband, the green led should flash slowly</li>
 <li>Make sure gForceJoint is powered on</li>
 <li>Put gForce armband close to gForceJoint such as within 10 cm of distance.</li>
 <li>gForce armband will automatically connect to gForceJoint. The green led should   flash much faster.</li>
-<li>
-<p>If not, make sure gForceJoint is not connected to other gForce armband. Only one armband is allowed. And, make sure, power is on.</p>
-</li>
-<li>
-<p>One should make sure gForceJoint works with ArduinoMEGA before continuing. Possible mistakes are:</p>
-</li>
+<li>If not, make sure gForceJoint is not connected to other gForce armband. Only one armband is allowed. And, make sure, power is on.</li>
+</ol>
+<p><strong>Note</strong>:
+One should make sure gForceJoint works with ArduinoMEGA before continuing. Possible mistakes are:</p>
+<ul>
 <li>Wiring mistakes between gForceJoint and ArduinoMEAG</li>
 <li>gForce doesn’t connect with gForceJoint because distance. When connecting, gForce armband and gForceJoint HAVE to be within a short distance as close as possible such as 10 cm.</li>
 <li>User doesn’t follow armband wearing and gestures.</li>
-</ol></div>
+</ul></div>
+            </div>
         </div>
 
         <footer class="col-md-12">
@@ -196,26 +208,26 @@ If a gForce-100 is used, users should follow wearing instruction and gesture str
         </footer>
         <script>
             var base_url = "../..",
-                shortcuts = {"search": 83, "next": 78, "help": 191, "previous": 80};
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../../js/base.js" defer></script>
         <script src="../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
             </div>
             <div class="modal-body">
                 <p>
                     From here you can search these documents. Enter
                     your search terms below.
                 </p>
-                <form role="form">
+                <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
                 <div id="mkdocs-search-results"></div>
@@ -224,12 +236,12 @@ If a gForce-100 is used, users should follow wearing instruction and gesture str
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">
