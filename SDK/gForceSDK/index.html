@@ -968,14 +968,14 @@ if len(button) != 0:
 <p>1. Inherit <code>HubListener</code> class and implement virtual functions.</p>
 <pre><code class="language-c++">  class Listener : HubListener{...}
 </code></pre>
-<p>2. Call Device::setEmgConfig(...) configure EMG data</p>
+<p>2. Call Device::setEmgConfig(...) to configure EMG data</p>
 <pre><code class="language-CSharp">connectedDevice.setEmgConfig(650/*sampleRateHz*/, 0x00FF/*interestedChannels*/, 128/*packageDataLength*/, 8/*adcResolution*/, (Device dev, uint resp) =&gt;
 {
   // Process the result
 });
 </code></pre>
-<p>3. Call Device::setDataSwitch(...) open EMG raw</p>
-<pre><code class="language-CSharp">connectedDevice.enableDataNotification(0); // Stop notification temporary
+<p>3. Call Device::setDataSwitch(...) to open EMG raw</p>
+<pre><code class="language-CSharp">connectedDevice.enableDataNotification(0); // Disable notification temporarily
 
 connectedDevice.setDataSwitch((uint)DataNotifFlags.DNF_EMG_RAW/*and other data flags you want*/, (Device dev, uint resp) =&gt;
 {
