@@ -1,0 +1,4134 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="傲意科技，感触未来">
+      
+      
+        <meta name="author" content="OYMotion">
+      
+      
+        <link rel="canonical" href="https://oymotion.github.io/en/ROHand/ROH-Protocols/OHandModBusRTUProtocol_Gen1/">
+      
+      
+        <link rel="prev" href="../../ROH-Demos/ROH_Gen2_Demos/">
+      
+      
+        <link rel="next" href="../OHandSerialProtocol_Gen1/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../../../../ROHand/ROH-Protocols/OHandModBusRTUProtocol_Gen1/" hreflang="zh">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>OHandModBusRTUProtocol_Gen1 - OYMotion</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/backdrop.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/light.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/material.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/scale.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/shift-away.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/tippy.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/core/core.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/user.config.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/fonts/material-icons.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/backdrop.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/light.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/material.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/scale.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/shift-away.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/tippy/tippy.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/core/core.css">
+    
+      <link rel="stylesheet" href="../../../../assets/document_dates/user.config.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ohand-modbus-rtu-protocol-v10" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../" title="OYMotion" class="md-header__button md-logo" aria-label="OYMotion" data-md-component="logo">
+      
+  <img src="../../../../assets/images/logo_dark.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OYMotion
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OHandModBusRTUProtocol_Gen1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="indigo"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.04 7 9.54s-2.94 8.27-7 9.54c.95.3 1.95.46 3 .46a10 10 0 0 0 10-10A10 10 0 0 0 9 2"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M160 0c17.7 0 32 14.3 32 32v32h128c17.7 0 32 14.3 32 32s-14.3 32-32 32h-9.6l-8.4 23.1c-16.4 45.2-41.1 86.5-72.2 122 14.2 8.8 29 16.6 44.4 23.5l50.4 22.4 62.2-140c5.1-11.6 16.6-19 29.2-19s24.1 7.4 29.2 19l128 288c7.2 16.2-.1 35.1-16.2 42.2s-35.1-.1-42.2-16.2l-20-45H337.3l-20 45c-7.2 16.2-26.1 23.4-42.2 16.2s-23.4-26.1-16.2-42.2l39.8-89.5-50.4-22.4c-23-10.2-45-22.4-65.8-36.4-21.3 17.2-44.6 32.2-69.5 44.7l-34.7 17.2c-15.8 7.9-35 1.5-42.9-14.3s-1.5-35 14.3-42.9l34.5-17.3c16.3-8.2 31.8-17.7 46.4-28.3-13.8-12.7-26.8-26.4-38.9-40.9l-10.1-12.2c-11.3-13.6-9.5-33.8 4.1-45.1s33.8-9.5 45.1 4.1l10.2 12.2c11.5 13.9 24.1 26.8 37.4 38.7 27.5-30.4 49.2-66.1 63.5-105.4l.5-1.2H32.1C14.3 128 0 113.7 0 96s14.3-32 32-32h96V32c0-17.7 14.3-32 32-32m256 270.8L365.7 384h100.6z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../ROHand/ROH-Protocols/OHandModBusRTUProtocol_Gen1/" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/oymotion" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    github.com/oymotion
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  HOME
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Overview/" class="md-tabs__link">
+          
+  
+  
+  ROHand Dexterous Hand
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../gForce/Overview/" class="md-tabs__link">
+          
+  
+  
+  gForce Series
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../" title="OYMotion" class="md-nav__button md-logo" aria-label="OYMotion" data-md-component="logo">
+      
+  <img src="../../../../assets/images/logo_dark.png" alt="logo">
+
+    </a>
+    OYMotion
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/oymotion" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    github.com/oymotion
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HOME
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROHand Dexterous Hand
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ROHand Dexterous Hand
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Products
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Products
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROH-A001%26A002/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROH-A001/ROH-A002
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROH-LiteS001/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROH-LiteS001
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROH-AP001/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROH-AP001
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROH-AP002/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROH-AP002
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDK
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SDK
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SDK/ROH_SDK_CXX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C/C++ SDK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SDK/ROH_SDK_Python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python SDK
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Demos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROH-Demos/ROH_Gen1_Demos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROH-Gen1-Demos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROH-Demos/ROH_Gen2_Demos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROH-Gen2-Demos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protocol Documents
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Protocol Documents
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OHandModBusRTUProtocol_Gen1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OHandModBusRTUProtocol_Gen1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview-of-modbus-communication-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Overview of ModBus communication protocol
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-parameters-of-rs232rs485-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Parameters of RS232、RS485 Communication
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-frame-of-roh-modbus-data-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Frame of ROH ModBus data frame
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Frame of ROH ModBus data frame">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-read-holding-registerfunction-code-0x03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Read holding register(function code '0x03')
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-preset-single-registerfunction-code-0x06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Preset single register(function code '0x06')
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-preset-multiple-registersfunction-code-0x10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Preset multiple registers(function code '0x10')
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-error-code-of-rohand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Error code of ROHand
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-description-of-modbus-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Description of ModBus register
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Description of ModBus register">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-table-of-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Table of register
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-angle-of-roh_finger_angle_target-and-roh_finger_pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Angle of ROH_FINGER_ANGLE_TARGET and ROH_FINGER_POS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-status-code-of-roh_finger_status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Status code of ROH_FINGER_STATUS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OHandSerialProtocol_Gen1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OHandSerialProtocol_Gen1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OHandModBusRTUProtocol_Gen2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OHandModBusRTUProtocol_Gen2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OHandSerialProtocol_Gen2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OHandSerialProtocol_Gen2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQs/FAQs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    gForce Series
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    gForce Series
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gForce/Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Products
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Products
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gForce/gForce200/gForce200UserGuide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    gForce200
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gForce/gForcePro/gForcePro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    gForcePro/gForcePro+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gForce/gForceJoint/gForceJoint/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    gForceJoint
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDK
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SDK
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gForce/SDK/SDKList/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDK List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gForce/SDK/gForceSDK/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDK Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APPs
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    APPs
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gForce/APPs/OTrain/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OTrain
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gForce/APPs/gForceAppLegacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    gForce100/gForcePro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gForce/APPs/gForceApp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    gForce200/gForcePro+/gForceOct
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../gForce/APPs/oym8CHWave/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    oym8CHWave
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-overview-of-modbus-communication-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Overview of ModBus communication protocol
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-parameters-of-rs232rs485-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Parameters of RS232、RS485 Communication
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-frame-of-roh-modbus-data-frame" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Frame of ROH ModBus data frame
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Frame of ROH ModBus data frame">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-read-holding-registerfunction-code-0x03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Read holding register(function code '0x03')
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-preset-single-registerfunction-code-0x06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Preset single register(function code '0x06')
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-preset-multiple-registersfunction-code-0x10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Preset multiple registers(function code '0x10')
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-error-code-of-rohand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4. Error code of ROHand
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-description-of-modbus-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Description of ModBus register
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Description of ModBus register">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-table-of-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Table of register
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-angle-of-roh_finger_angle_target-and-roh_finger_pos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Angle of ROH_FINGER_ANGLE_TARGET and ROH_FINGER_POS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-status-code-of-roh_finger_status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Status code of ROH_FINGER_STATUS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../../../" class="md-path__link">
+        
+  <span class="md-ellipsis">
+    HOME
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../Overview/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    ROHand Dexterous Hand
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Protocol Documents
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="ohand-modbus-rtu-protocol-v10">OHand ModBus-RTU Protocol V1.0</h1>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-05T19:20:05.024420+08:00'>2025-12-05</time></span><span data-tippy-content data-tippy-raw='2025-12-08'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-12-08T18:06:44+08:00'>2025-12-08</time></span><span class='material-icons' data-icon='doc_author'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='Wang Hang' data-tippy-content data-tippy-raw='<a href="mailto:1154690309@qq.com">Wang Hang</a>'><span class='avatar-text'></span><img class='avatar' src='https://avatars.githubusercontent.com/oymotion' onerror="this.style.display='none'" /></div></div></div></div>
+
+<h2 id="1-overview-of-modbus-communication-protocol">1. Overview of ModBus communication protocol</h2>
+<p>ModBus-RTU protocol uses the Master-Slave Request-Answer communication method. It's protocol frame includes function code, data domain and CRC16 checking.
+ModBus-RTU's master unit reads and writes internal registers of ROHand to obtain and control the status of ROHand.
+<em>Read register</em> means that upper system reads the internal registers value of ROHand(Can be read in groups, in groups mean several registers with same name and adjacency address).Upper system sends a read request frame(Includes the first address of register group, the length of register group, etc.) to ROHand. After ROHand receives the request frame and check it successfully, ROHand will send back the answer frame cotaining the contents of the register data to the upper system.
+<em>Write register</em> means that upper system writes corresponding data in the internal registers of ROHand(Can be written in groups).Upper system sends a request frame(Includes the first address of register group and contents of data to be written) to ROHand. After ROHand receives the request frame and checks it successfully, ROHand will send back answer frame to the upper system.</p>
+<p>ROH ModBus protocol supports the opperation of reading holding register(function code '0x03'), presetting single register(function code '0x06') and presetting multiple register(function code '0x10').</p>
+<h2 id="2-parameters-of-rs232rs485-communication">2. Parameters of RS232、RS485 Communication</h2>
+<p>The parameters of RS232 and RS485 communication are all '115200' bps, '8' data bits, '1'stop bits and 'none' parity.</p>
+<h2 id="3-frame-of-roh-modbus-data-frame">3. Frame of ROH ModBus data frame</h2>
+<h3 id="31-read-holding-registerfunction-code-0x03">3.1. Read holding register(function code '0x03')</h3>
+<p>The format of Master request frame:</p>
+<table>
+<thead>
+<tr>
+<th>Slave address</th>
+<th>Function code</th>
+<th>Start register(high byte)</th>
+<th>Start register(low byte)</th>
+<th>Number of registers(high byte)</th>
+<th>Number of registers(low byte)</th>
+<th>CRC16</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x11</td>
+<td>0x03</td>
+<td>0x6B</td>
+<td>0x00</td>
+<td>0x00</td>
+<td>0x02</td>
+<td>XXXX</td>
+</tr>
+</tbody>
+</table>
+<p>Meaning: read NO.17(0x11) Slave holding register; Start address = 0x006B, Number of registers = 0x0002, end address = 0x006B+2-1 = 0x006C, that is, read NO.17 slave holding register 0x006B-0x006C, two registers in total.</p>
+<p>The format of Slave answer frame:</p>
+<table>
+<thead>
+<tr>
+<th>Slave address</th>
+<th>Function code</th>
+<th>Byte count</th>
+<th>Register(high byte)</th>
+<th>Register(low byte)</th>
+<th>Register(high byte)</th>
+<th>Register(low byte)</th>
+<th>CRC16</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x11</td>
+<td>0x03</td>
+<td>0x04</td>
+<td>0x00</td>
+<td>0x01</td>
+<td>0x00</td>
+<td>0x02</td>
+<td>XXXX</td>
+</tr>
+</tbody>
+</table>
+<p>Meaning: return NO.17(0x11) Slave holding register 0x006B-0x006C, two registers in total. The value of register 0x006B is 0x0001, register 0x0062 is 0x0002.</p>
+<p>When an error occurs in Slave excuting request frame, the format of answer frame is:</p>
+<table>
+<thead>
+<tr>
+<th>Slave address</th>
+<th>Function code</th>
+<th>Error code</th>
+<th>CRC16</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x11</td>
+<td>0x83</td>
+<td>XX</td>
+<td>XXXX</td>
+</tr>
+</tbody>
+</table>
+<p>Where the function code is the value after the request frame function code executes 'OR' operation with 0x80 bit.</p>
+<h3 id="32-preset-single-registerfunction-code-0x06">3.2. Preset single register(function code '0x06')</h3>
+<p>The format of Master request frame:</p>
+<table>
+<thead>
+<tr>
+<th>Slave address</th>
+<th>Function code</th>
+<th>Start register(high byte)</th>
+<th>Start register(low byte)</th>
+<th>Data content(high byte)</th>
+<th>Amount of data(low byte)</th>
+<th>CRC16</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x11</td>
+<td>0x06</td>
+<td>0x00</td>
+<td>0x6B</td>
+<td>0x10</td>
+<td>0x00</td>
+<td>XXXX</td>
+</tr>
+</tbody>
+</table>
+<p>Meaning: set NO.17(0x11) Slave holding register, address of register is 0x006B, data content is 0x1000.</p>
+<p>The format of Slave answer frame:</p>
+<table>
+<thead>
+<tr>
+<th>Slave address</th>
+<th>Function code</th>
+<th>Start register(high byte)</th>
+<th>Start register(low byte)</th>
+<th>Data content(high byte)</th>
+<th>Amount of data(low byte)</th>
+<th>CRC16</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x11</td>
+<td>0x06</td>
+<td>0x00</td>
+<td>0x6B</td>
+<td>0x10</td>
+<td>0x00</td>
+<td>XXXX</td>
+</tr>
+</tbody>
+</table>
+<p>Meaning: the copy of original request frame.</p>
+<p>When an error occurs in Slave excuting request frame, the format of answer frame is:</p>
+<table>
+<thead>
+<tr>
+<th>Slave address</th>
+<th>Function code</th>
+<th>Error code</th>
+<th>CRC16</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x11</td>
+<td>0x86</td>
+<td>XX</td>
+<td>XXXX</td>
+</tr>
+</tbody>
+</table>
+<p>Where the function code is the value after the request frame function code executes 'OR' operation with 0x80 bit.</p>
+<h3 id="33-preset-multiple-registersfunction-code-0x10">3.3 Preset multiple registers(function code '0x10')</h3>
+<p>The format of Master request frame:</p>
+<table>
+<thead>
+<tr>
+<th>Slave address</th>
+<th>Function code</th>
+<th>Start register(high byte)</th>
+<th>Start register(low byte)</th>
+<th>Amount of data(high byte)</th>
+<th>Amount of data(low byte)</th>
+<th>Byte count</th>
+<th>Data(high byte)</th>
+<th>Data(low byte)</th>
+<th>Data(high byte)</th>
+<th>Data(low byte)</th>
+<th>CRC16</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x11</td>
+<td>0x10</td>
+<td>0x00</td>
+<td>0x01</td>
+<td>0x00</td>
+<td>0x02</td>
+<td>0x04</td>
+<td>0x00</td>
+<td>0x0A</td>
+<td>0x01</td>
+<td>0x02</td>
+<td>XXXX</td>
+</tr>
+</tbody>
+</table>
+<p>Meaning: set NO.17(0x11) Slave holding register, start address of register is 0x0001, number of register is 0x0002, data content byte count is 0x04, data content is 0x000A and 0x0102.</p>
+<p>The format of Slave request frame:</p>
+<table>
+<thead>
+<tr>
+<th>Slave address</th>
+<th>Function code</th>
+<th>Start register(high byte)</th>
+<th>Start register(low byte)</th>
+<th>Amount of register(high byte)</th>
+<th>Amount of register(high byte)</th>
+<th>CRC16</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x11</td>
+<td>0x10</td>
+<td>0x00</td>
+<td>0x01</td>
+<td>0x00</td>
+<td>0x02</td>
+<td>XXXX</td>
+</tr>
+</tbody>
+</table>
+<p>Meaning: keep the address, function code, start register and amount of register same with request frame.</p>
+<p>When an error occurs in Slave excuting request frame, the format of answer frame is:</p>
+<table>
+<thead>
+<tr>
+<th>Slave address</th>
+<th>Function code</th>
+<th>Error code</th>
+<th>CRC16</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x11</td>
+<td>0x90</td>
+<td>XX</td>
+<td>XXXX</td>
+</tr>
+</tbody>
+</table>
+<p>Where the function code is the value after the request frame function code executes 'OR' operation with 0x80 bit.</p>
+<h2 id="34-error-code-of-rohand">3.4. Error code of ROHand</h2>
+<table>
+<thead>
+<tr>
+<th>Error name</th>
+<th style="text-align: right;">Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EC01_ILLEGAL_FUNCTION</td>
+<td style="text-align: right;">1</td>
+<td>Illegal function code</td>
+</tr>
+<tr>
+<td>EC02_ILLEGAL_DATA_ADDRESS</td>
+<td style="text-align: right;">2</td>
+<td>Illegal data address</td>
+</tr>
+<tr>
+<td>EC03_ILLEGAL_DATA_VALUE</td>
+<td style="text-align: right;">3</td>
+<td>Illegal data value(protocol layer, not application layer)</td>
+</tr>
+<tr>
+<td>EC04_SERVER_DEVICE_FAILURE</td>
+<td style="text-align: right;">4</td>
+<td>Device failure</td>
+</tr>
+</tbody>
+</table>
+<p>In case the error code is EC04_SERVER_DEVICE_FAILURE, the register ROH_SUB_EXCEPTION holds the specific error code:</p>
+<table>
+<thead>
+<tr>
+<th>Suberror name</th>
+<th style="text-align: right;">Code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ERR_STATUS_INIT</td>
+<td style="text-align: right;">1</td>
+<td>Waiting for initialization or initializing, the read/write operation is not accepted.</td>
+</tr>
+<tr>
+<td>ERR_STATUS_CALI</td>
+<td style="text-align: right;">2</td>
+<td>Waiting for calibration, the read/write operation is not accepted.</td>
+</tr>
+<tr>
+<td>ERR_INVALID_DATA</td>
+<td style="text-align: right;">3</td>
+<td>Invalid register value.</td>
+</tr>
+<tr>
+<td>ERR_STATUS_STUCK</td>
+<td style="text-align: right;">4</td>
+<td>Motor stuck.</td>
+</tr>
+<tr>
+<td>ERR_OP_FAILED</td>
+<td style="text-align: right;">5</td>
+<td>Operation failed.</td>
+</tr>
+<tr>
+<td>ERR_SAVE_FAILED</td>
+<td style="text-align: right;">6</td>
+<td>Save failed.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-description-of-modbus-register">4. Description of ModBus register</h2>
+<h3 id="41-table-of-register">4.1. Table of register</h3>
+<table>
+<thead>
+<tr>
+<th>Register name</th>
+<th style="text-align: right;">Register address</th>
+<th>Read/write access</th>
+<th>Factory defaults for setting items</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ROH_PROTOCOL_VERSION</td>
+<td style="text-align: right;">1000</td>
+<td>R</td>
+<td></td>
+<td>Protocol version number(uint16), high byte is the main version number, low byte is the minor version</td>
+</tr>
+<tr>
+<td>ROH_FW_VERSION</td>
+<td style="text-align: right;">1001</td>
+<td>R</td>
+<td></td>
+<td>Firmware version number(uint16), high byte is the main version number, low byte is the minor version</td>
+</tr>
+<tr>
+<td>ROH_FW_REVISION</td>
+<td style="text-align: right;">1002</td>
+<td>R</td>
+<td></td>
+<td>Firmware revision number(uint16)</td>
+</tr>
+<tr>
+<td>ROH_HW_VERSION</td>
+<td style="text-align: right;">1003</td>
+<td>R</td>
+<td></td>
+<td>Hardware version number(uint16), high byte is the hardware type, low byte is the hardware version.</td>
+</tr>
+<tr>
+<td>ROH_BOOT_VERSION</td>
+<td style="text-align: right;">1004</td>
+<td>R</td>
+<td></td>
+<td>Boot loader version number(uint6), high byte is the main version number, low byte is the minor version number.</td>
+</tr>
+<tr>
+<td>ROH_NODE_ID</td>
+<td style="text-align: right;">1005</td>
+<td>R/W</td>
+<td>2</td>
+<td>ROHand ID, only low byte is valid, ROHand will save and reboot when successfully written.</td>
+</tr>
+<tr>
+<td>ROH_SUB_EXCEPTION</td>
+<td style="text-align: right;">1006</td>
+<td>R</td>
+<td></td>
+<td>Error subcode</td>
+</tr>
+<tr>
+<td>ROH_BATTERY_VOLTAGE</td>
+<td style="text-align: right;">1007</td>
+<td>R</td>
+<td></td>
+<td>Voltage value of ROH in mV, temporarily unavailable.</td>
+</tr>
+<tr>
+<td>ROH_SELF_TEST_LEVEL</td>
+<td style="text-align: right;">1008</td>
+<td>R/W</td>
+<td>1</td>
+<td>Self-test switch, allowed to self-test when set 1, not to self-test when set 0, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_BEEP_SWITCH</td>
+<td style="text-align: right;">1009</td>
+<td>R/W</td>
+<td>1</td>
+<td>Buzzer switch, allowed to vocalize when set 1, to be quiet when set 0, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_BEEP_PERIOD</td>
+<td style="text-align: right;">1010</td>
+<td>W</td>
+<td></td>
+<td>Buzzer vocalize period in ms.</td>
+</tr>
+<tr>
+<td>ROH_BUTTON_PRESS_CNT</td>
+<td style="text-align: right;">1011</td>
+<td>R/W</td>
+<td></td>
+<td>Number of key presses, as a confirmation during calibration for ROH.</td>
+</tr>
+<tr>
+<td>ROH_RECALIBRATE</td>
+<td style="text-align: right;">1012</td>
+<td>W</td>
+<td></td>
+<td>Recalibration, writing a specific value (not public) will put the ROHand into a calibration state.</td>
+</tr>
+<tr>
+<td>ROH_START_INIT</td>
+<td style="text-align: right;">1013</td>
+<td>W</td>
+<td></td>
+<td>Start self-test, only valid while waiting for self-test status.</td>
+</tr>
+<tr>
+<td>ROH_RESET</td>
+<td style="text-align: right;">1014</td>
+<td>W</td>
+<td></td>
+<td>Reset, enter DFU mode when writing non-zero values, restart to working mode when writing 0.</td>
+</tr>
+<tr>
+<td>ROH_POWER_OFF</td>
+<td style="text-align: right;">1015</td>
+<td>W</td>
+<td></td>
+<td>Power off, temporarily unavailable.</td>
+</tr>
+<tr>
+<td>ROH_RESERVED0</td>
+<td style="text-align: right;">1016</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_RESERVED1</td>
+<td style="text-align: right;">1017</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_RESERVED2</td>
+<td style="text-align: right;">1018</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_RESERVED3</td>
+<td style="text-align: right;">1019</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_CALI_END0</td>
+<td style="text-align: right;">1020</td>
+<td>R/W</td>
+<td>Factory calibration value</td>
+<td>Upper limit (uint16) of thumb operation interval (absolute position), saved to Non-Volatile Memory (NVM) when setting, and no need to be set by the user.</td>
+</tr>
+<tr>
+<td>ROH_CALI_END1</td>
+<td style="text-align: right;">1021</td>
+<td>R/W</td>
+<td>Factory calibration value</td>
+<td>Upper limit (uint16) of index finger operation interval (absolute position), saved to Non-Volatile Memory (NVM) when setting, and no need to be set by the user.</td>
+</tr>
+<tr>
+<td>ROH_CALI_END2</td>
+<td style="text-align: right;">1022</td>
+<td>R/W</td>
+<td>Factory calibration value</td>
+<td>Upper limit (uint16) of middle finger operation interval (absolute position), saved to Non-Volatile Memory (NVM) when setting, and no need to be set by the user.</td>
+</tr>
+<tr>
+<td>ROH_CALI_END3</td>
+<td style="text-align: right;">1023</td>
+<td>R/W</td>
+<td>Factory calibration value</td>
+<td>Upper limit (uint16) of ring finger operation interval (absolute position), saved to Non-Volatile Memory (NVM) when setting, and no need to be set by the user.</td>
+</tr>
+<tr>
+<td>ROH_CALI_END4</td>
+<td style="text-align: right;">1024</td>
+<td>R/W</td>
+<td>Factory calibration value</td>
+<td>Upper limit (uint16) of little finger operation interval (absolute position), saved to Non-Volatile Memory (NVM) when setting, and no need to be set by the user.</td>
+</tr>
+<tr>
+<td>ROH_CALI_END5</td>
+<td style="text-align: right;">1025</td>
+<td>R/W</td>
+<td>Factory calibration value</td>
+<td>Upper limit (uint16) of thumb rotation interval (absolute position), saved to Non-Volatile Memory (NVM) when setting, and no need to be set by the user.</td>
+</tr>
+<tr>
+<td>ROH_CALI_END6</td>
+<td style="text-align: right;">1026</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_CALI_END7</td>
+<td style="text-align: right;">1027</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_CALI_END8</td>
+<td style="text-align: right;">1028</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_CALI_END9</td>
+<td style="text-align: right;">1029</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_CALI_START0</td>
+<td style="text-align: right;">1030</td>
+<td>R/W</td>
+<td>Factory calibration value</td>
+<td>Lower limit (uint16) of thumb operation interval (absolute position), saved to Non-Volatile Memory (NVM) when setting, and no need to be set by the user.</td>
+</tr>
+<tr>
+<td>ROH_CALI_START1</td>
+<td style="text-align: right;">1031</td>
+<td>R/W</td>
+<td>Factory calibration value</td>
+<td>Lower limit (uint16) of index finger operation interval (absolute position), saved to Non-Volatile Memory (NVM) when setting, and no need to be set by the user.</td>
+</tr>
+<tr>
+<td>ROH_CALI_START2</td>
+<td style="text-align: right;">1032</td>
+<td>R/W</td>
+<td>Factory calibration value</td>
+<td>Lower limit (uint16) of middle finger operation interval (absolute position), saved to Non-Volatile Memory (NVM) when setting, and no need to be set by the user.</td>
+</tr>
+<tr>
+<td>ROH_CALI_START3</td>
+<td style="text-align: right;">1033</td>
+<td>R/W</td>
+<td>Factory calibration value</td>
+<td>Lower limit (uint16) of ring finger operation interval (absolute position), saved to Non-Volatile Memory (NVM) when setting, and no need to be set by the user.</td>
+</tr>
+<tr>
+<td>ROH_CALI_START4</td>
+<td style="text-align: right;">1034</td>
+<td>R/W</td>
+<td>Factory calibration value</td>
+<td>Lower limit (uint16) of little finger operation interval (absolute position), saved to Non-Volatile Memory (NVM) when setting, and no need to be set by the user.</td>
+</tr>
+<tr>
+<td>ROH_CALI_START5</td>
+<td style="text-align: right;">1035</td>
+<td>R/W</td>
+<td>Factory calibration value</td>
+<td>Lower limit (uint16) of thumb rotation interval (absolute position), saved to Non-Volatile Memory (NVM) when setting, and no need to be set by the user.</td>
+</tr>
+<tr>
+<td>ROH_CALI_START6</td>
+<td style="text-align: right;">1036</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_CALI_START7</td>
+<td style="text-align: right;">1037</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_CALI_START8</td>
+<td style="text-align: right;">1038</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_CALI_START9</td>
+<td style="text-align: right;">1039</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_CALI_THUMB_POS0</td>
+<td style="text-align: right;">1040</td>
+<td>R/W</td>
+<td>Factory calibration value</td>
+<td>Preset position (uint16) of thumb lateral palm position(absolute position), saved to Non-Volatile Memory (NVM) when setting, and no need to be set by the user.</td>
+</tr>
+<tr>
+<td>ROH_CALI_THUMB_POS1</td>
+<td style="text-align: right;">1041</td>
+<td>R/W</td>
+<td>Factory calibration value</td>
+<td>Preset position 1 (uint16) of thumb lateral palm position(absolute position), saved to Non-Volatile Memory (NVM) when setting, and no need to be set by the user.</td>
+</tr>
+<tr>
+<td>ROH_CALI_THUMB_POS2</td>
+<td style="text-align: right;">1042</td>
+<td>R/W</td>
+<td>Factory calibration value</td>
+<td>Preset position 2 (uint16) of thumb lateral palm position(absolute position), saved to Non-Volatile Memory (NVM) when setting, and no need to be set by the user.</td>
+</tr>
+<tr>
+<td>ROH_CALI_THUMB_POS3</td>
+<td style="text-align: right;">1043</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_CALI_THUMB_POS4</td>
+<td style="text-align: right;">1044</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_P0</td>
+<td style="text-align: right;">1045</td>
+<td>R/W</td>
+<td>250 * 100</td>
+<td>P-value *100 (uint16) of thumb bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_P1</td>
+<td style="text-align: right;">1046</td>
+<td>R/W</td>
+<td>250 * 100</td>
+<td>P-value *100 (uint16) of index finger bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_P2</td>
+<td style="text-align: right;">1047</td>
+<td>R/W</td>
+<td>250 * 100</td>
+<td>P-value *100 (uint16) of middle finger bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_P3</td>
+<td style="text-align: right;">1048</td>
+<td>R/W</td>
+<td>250 * 100</td>
+<td>P-value *100 (uint16) of ring finger bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_P4</td>
+<td style="text-align: right;">1049</td>
+<td>R/W</td>
+<td>250 * 100</td>
+<td>P-value *100 (uint16) of little finger bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_P5</td>
+<td style="text-align: right;">1050</td>
+<td>R/W</td>
+<td>250 * 100</td>
+<td>P-value *100 (uint16) of thumb rotation, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_P6</td>
+<td style="text-align: right;">1051</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_P7</td>
+<td style="text-align: right;">1052</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_P8</td>
+<td style="text-align: right;">1053</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_P9</td>
+<td style="text-align: right;">1054</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_I0</td>
+<td style="text-align: right;">1055</td>
+<td>R/W</td>
+<td>2 * 100</td>
+<td>I-value *100 (uint16) of thumb bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_I1</td>
+<td style="text-align: right;">1056</td>
+<td>R/W</td>
+<td>2 * 100</td>
+<td>I-value *100 (uint16) of index finger bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_I2</td>
+<td style="text-align: right;">1057</td>
+<td>R/W</td>
+<td>2 * 100</td>
+<td>I-value *100 (uint16) of middle finger bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_I3</td>
+<td style="text-align: right;">1058</td>
+<td>R/W</td>
+<td>2 * 100</td>
+<td>I-value *100 (uint16) of ring finger bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_I4</td>
+<td style="text-align: right;">1059</td>
+<td>R/W</td>
+<td>2 * 100</td>
+<td>I-value *100 (uint16) of little finger bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_I5</td>
+<td style="text-align: right;">1060</td>
+<td>R/W</td>
+<td>2 * 100</td>
+<td>I-value *100 (uint16) of thumb rotation, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_I6</td>
+<td style="text-align: right;">1061</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_I7</td>
+<td style="text-align: right;">1062</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_I8</td>
+<td style="text-align: right;">1063</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_I9</td>
+<td style="text-align: right;">1064</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_D0</td>
+<td style="text-align: right;">1065</td>
+<td>R/W</td>
+<td>250 * 100</td>
+<td>D-value *100 (uint16) of thumb bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_D1</td>
+<td style="text-align: right;">1066</td>
+<td>R/W</td>
+<td>250 * 100</td>
+<td>D-value *100 (uint16) of index finger bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_D2</td>
+<td style="text-align: right;">1067</td>
+<td>R/W</td>
+<td>250 * 100</td>
+<td>D-value *100 (uint16) of middle finger bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_D3</td>
+<td style="text-align: right;">1068</td>
+<td>R/W</td>
+<td>250 * 100</td>
+<td>D-value *100 (uint16) of ring finger bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_D4</td>
+<td style="text-align: right;">1069</td>
+<td>R/W</td>
+<td>250 * 100</td>
+<td>D-value *100 (uint16) of little finger bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_D5</td>
+<td style="text-align: right;">1070</td>
+<td>R/W</td>
+<td>250 * 100</td>
+<td>D-value *100 (uint16) of thumb rotation, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_D6</td>
+<td style="text-align: right;">1071</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_D7</td>
+<td style="text-align: right;">1072</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_D8</td>
+<td style="text-align: right;">1073</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_D9</td>
+<td style="text-align: right;">1074</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_G0</td>
+<td style="text-align: right;">1075</td>
+<td>R/W</td>
+<td>1.00 * 100</td>
+<td>G-value *100 (uint16) of thumb bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_G1</td>
+<td style="text-align: right;">1076</td>
+<td>R/W</td>
+<td>1.00 * 100</td>
+<td>G-value *100 (uint16) of index finger bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_G2</td>
+<td style="text-align: right;">1077</td>
+<td>R/W</td>
+<td>1.00 * 100</td>
+<td>G-value *100 (uint16) of middle finger bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_G3</td>
+<td style="text-align: right;">1078</td>
+<td>R/W</td>
+<td>1.00 * 100</td>
+<td>G-value *100 (uint16) of ring finger bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_G4</td>
+<td style="text-align: right;">1079</td>
+<td>R/W</td>
+<td>1.00 * 100</td>
+<td>G-value *100 (uint16) of little finger bending, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_G5</td>
+<td style="text-align: right;">1080</td>
+<td>R/W</td>
+<td>1.00 * 100</td>
+<td>G-value *100 (uint16) of thumb rotation, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_G6</td>
+<td style="text-align: right;">1081</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_G7</td>
+<td style="text-align: right;">1082</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_G8</td>
+<td style="text-align: right;">1083</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_G9</td>
+<td style="text-align: right;">1084</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_STATUS0</td>
+<td style="text-align: right;">1085</td>
+<td>R</td>
+<td></td>
+<td>Status (uint16) of thumb.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_STATUS1</td>
+<td style="text-align: right;">1086</td>
+<td>R</td>
+<td></td>
+<td>Status (uint16) of index finger.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_STATUS2</td>
+<td style="text-align: right;">1087</td>
+<td>R</td>
+<td></td>
+<td>Status (uint16) of middle finger.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_STATUS3</td>
+<td style="text-align: right;">1088</td>
+<td>R</td>
+<td></td>
+<td>Status (uint16) of ring finge.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_STATUS4</td>
+<td style="text-align: right;">1089</td>
+<td>R</td>
+<td></td>
+<td>Status (uint16) of little finger.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_STATUS5</td>
+<td style="text-align: right;">1090</td>
+<td>R</td>
+<td></td>
+<td>Status (uint16) of thumb rotation.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_STATUS6</td>
+<td style="text-align: right;">1091</td>
+<td>R</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_STATUS7</td>
+<td style="text-align: right;">1092</td>
+<td>R</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_STATUS8</td>
+<td style="text-align: right;">1093</td>
+<td>R</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_STATUS9</td>
+<td style="text-align: right;">1094</td>
+<td>R</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT_LIMIT0</td>
+<td style="text-align: right;">1095</td>
+<td>R/W</td>
+<td>1178</td>
+<td>Current limit value (uint16) of thumb bending motor in mA, reset to default value when power up.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT_LIMIT1</td>
+<td style="text-align: right;">1096</td>
+<td>R/W</td>
+<td>1178</td>
+<td>Current limit value (uint16) of index finger bending motor in mA, reset to default value when power up.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT_LIMIT2</td>
+<td style="text-align: right;">1097</td>
+<td>R/W</td>
+<td>1178</td>
+<td>Current limit value (uint16) of middle finger bending motor in mA, reset to default value when power up.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT_LIMIT3</td>
+<td style="text-align: right;">1098</td>
+<td>R/W</td>
+<td>1178</td>
+<td>Current limit value (uint16) of ring finger bending motor in mA, reset to default value when power up.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT_LIMIT4</td>
+<td style="text-align: right;">1099</td>
+<td>R/W</td>
+<td>1178</td>
+<td>Current limit value (uint16) of little finger bending motor in mA, reset to default value when power up.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT_LIMIT5</td>
+<td style="text-align: right;">1100</td>
+<td>R/W</td>
+<td>1178</td>
+<td>Current limit value (uint16) of thumb rotation motor in mA, reset to default value when power up.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT_LIMIT6</td>
+<td style="text-align: right;">1101</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT_LIMIT7</td>
+<td style="text-align: right;">1102</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT_LIMIT8</td>
+<td style="text-align: right;">1103</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT_LIMIT9</td>
+<td style="text-align: right;">1104</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT0</td>
+<td style="text-align: right;">1105</td>
+<td>R</td>
+<td></td>
+<td>Current value (uint16) of thumb bending motor in mA.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT1</td>
+<td style="text-align: right;">1106</td>
+<td>R</td>
+<td></td>
+<td>Current value (uint16) of index finger bending motor in mA.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT2</td>
+<td style="text-align: right;">1107</td>
+<td>R</td>
+<td></td>
+<td>Current value (uint16) of middle finger bending motor in mA.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT3</td>
+<td style="text-align: right;">1108</td>
+<td>R</td>
+<td></td>
+<td>Current value (uint16) of ring finger bending motor in mA.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT4</td>
+<td style="text-align: right;">1109</td>
+<td>R</td>
+<td></td>
+<td>Current value (uint16) of little finger bending motor in mA.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT5</td>
+<td style="text-align: right;">1110</td>
+<td>R</td>
+<td></td>
+<td>Current value (uint16)A of thumb rotation motor in mA.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT6</td>
+<td style="text-align: right;">1111</td>
+<td>R</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT7</td>
+<td style="text-align: right;">1112</td>
+<td>R</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT8</td>
+<td style="text-align: right;">1113</td>
+<td>R</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_CURRENT9</td>
+<td style="text-align: right;">1114</td>
+<td>R</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_FORCE_LIMIT0</td>
+<td style="text-align: right;">1115</td>
+<td>R/W</td>
+<td>15000</td>
+<td>Force limit value (uint16) of thumb in mN, reset to default value when power up.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_FORCE_LIMIT1</td>
+<td style="text-align: right;">1116</td>
+<td>R/W</td>
+<td>15000</td>
+<td>Force limit value (uint16) of index finge in mNr, reset to default value when power up.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_FORCE_LIMIT2</td>
+<td style="text-align: right;">1117</td>
+<td>R/W</td>
+<td>15000</td>
+<td>Force limit value (uint16) of middle finger in mN, reset to default value when power up.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_FORCE_LIMIT3</td>
+<td style="text-align: right;">1118</td>
+<td>R/W</td>
+<td>15000</td>
+<td>Force limit value (uint16) of ring finger in mN, reset to default value when power up.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_FORCE_LIMIT4</td>
+<td style="text-align: right;">1119</td>
+<td>R/W</td>
+<td>15000</td>
+<td>Force limit value (uint16) of little finger in mN, reset to default value when power up.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_FORCE0</td>
+<td style="text-align: right;">1120</td>
+<td>R</td>
+<td></td>
+<td>Force value (uint16) of thumb in mN.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_FORCE1</td>
+<td style="text-align: right;">1121</td>
+<td>R</td>
+<td></td>
+<td>Force value (uint16) of index finger in mN.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_FORCE2</td>
+<td style="text-align: right;">1122</td>
+<td>R</td>
+<td></td>
+<td>Force value (uint16) of middle finger in mN.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_FORCE3</td>
+<td style="text-align: right;">1123</td>
+<td>R</td>
+<td></td>
+<td>Force value (uint16) of ring finger in mN.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_FORCE4</td>
+<td style="text-align: right;">1124</td>
+<td>R</td>
+<td></td>
+<td>Force value (uint16) of little finger in mN.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_SPEED0</td>
+<td style="text-align: right;">1125</td>
+<td>R/W</td>
+<td>65535</td>
+<td>Logical speed (uint16) of thumb bending in logical posstion/second, reset to default value when power up.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_SPEED1</td>
+<td style="text-align: right;">1126</td>
+<td>R/W</td>
+<td>65535</td>
+<td>Logical speed (uint16) of index finger bending in logical posstion/second, reset to default value when power up.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_SPEED2</td>
+<td style="text-align: right;">1127</td>
+<td>R/W</td>
+<td>65535</td>
+<td>Logical speed (uint16) of middle finger in logical posstion/second, reset to default value when power up.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_SPEED3</td>
+<td style="text-align: right;">1128</td>
+<td>R/W</td>
+<td>65535</td>
+<td>Logical speed (uint16) of ring finger bending in logical posstion/second, reset to default value when power up.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_SPEED4</td>
+<td style="text-align: right;">1129</td>
+<td>R/W</td>
+<td>65535</td>
+<td>Logical speed (uint16) of little finger bending in logical posstion/second, reset to default value when power up.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_SPEED5</td>
+<td style="text-align: right;">1130</td>
+<td>R/W</td>
+<td>65535</td>
+<td>Logical speed (uint16)d of thumb rotation in logical posstion/secon, reset to default value when power up.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_SPEED6</td>
+<td style="text-align: right;">1131</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_SPEED7</td>
+<td style="text-align: right;">1132</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_SPEED8</td>
+<td style="text-align: right;">1133</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_SPEED9</td>
+<td style="text-align: right;">1134</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS_TARGET0</td>
+<td style="text-align: right;">1135</td>
+<td>R/W</td>
+<td></td>
+<td>Logical target position (uint16) of thumb bending.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS_TARGET1</td>
+<td style="text-align: right;">1136</td>
+<td>R/W</td>
+<td></td>
+<td>Logical target position (uint16) of index finger bending.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS_TARGET2</td>
+<td style="text-align: right;">1137</td>
+<td>R/W</td>
+<td></td>
+<td>Logical target position (uint16) of middle finger bending.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS_TARGET3</td>
+<td style="text-align: right;">1138</td>
+<td>R/W</td>
+<td></td>
+<td>Logical target position (uint16) of ring finger bending.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS_TARGET4</td>
+<td style="text-align: right;">1139</td>
+<td>R/W</td>
+<td></td>
+<td>Logical target position (uint16) of little finger bending.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS_TARGET5</td>
+<td style="text-align: right;">1140</td>
+<td>R/W</td>
+<td></td>
+<td>Logical target position (uint16) of thumb rotation.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS_TARGET6</td>
+<td style="text-align: right;">1141</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS_TARGET7</td>
+<td style="text-align: right;">1142</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS_TARGET8</td>
+<td style="text-align: right;">1143</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS_TARGET9</td>
+<td style="text-align: right;">1144</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS0</td>
+<td style="text-align: right;">1145</td>
+<td>R</td>
+<td></td>
+<td>Logical position (uint16) of thumb bending.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS1</td>
+<td style="text-align: right;">1146</td>
+<td>R</td>
+<td></td>
+<td>Logical position (uint16) of index finger bending.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS2</td>
+<td style="text-align: right;">1147</td>
+<td>R</td>
+<td></td>
+<td>Logical position (uint16) of middle finger bending.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS3</td>
+<td style="text-align: right;">1148</td>
+<td>R</td>
+<td></td>
+<td>Logical position (uint16) of ring finger bending.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS4</td>
+<td style="text-align: right;">1149</td>
+<td>R</td>
+<td></td>
+<td>Logical position (uint16) of little finger bending.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS5</td>
+<td style="text-align: right;">1150</td>
+<td>R</td>
+<td></td>
+<td>Logical position (uint16) of thumb rotation.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS6</td>
+<td style="text-align: right;">1151</td>
+<td>R</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS7</td>
+<td style="text-align: right;">1152</td>
+<td>R</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS8</td>
+<td style="text-align: right;">1153</td>
+<td>R</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_POS9</td>
+<td style="text-align: right;">1154</td>
+<td>R</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE_TARGET0</td>
+<td style="text-align: right;">1155</td>
+<td>R/W</td>
+<td></td>
+<td>Target angle between the thumb motor axis and the rotation axis (int16) in degree, equals the actual angle*100.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE_TARGET1</td>
+<td style="text-align: right;">1156</td>
+<td>R/W</td>
+<td></td>
+<td>Target angle between the the first section of the index finger and the palm (int16) in degree, equals the actual angle*100.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE_TARGET2</td>
+<td style="text-align: right;">1157</td>
+<td>R/W</td>
+<td></td>
+<td>Target angle between the the first section of the middle finger and the palm (int16) in degree, equals the actual angle*100.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE_TARGET3</td>
+<td style="text-align: right;">1158</td>
+<td>R/W</td>
+<td></td>
+<td>Target angle between the the first section of the ring finger and the palm (int16) in degree, equals the actual angle*100.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE_TARGET4</td>
+<td style="text-align: right;">1159</td>
+<td>R/W</td>
+<td></td>
+<td>Target angle between the the first section of the little finger and the palm (int16) in degree, equals the actual angle*100.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE_TARGET5</td>
+<td style="text-align: right;">1160</td>
+<td>R/W</td>
+<td></td>
+<td>Target angle of the thumb rotation (int16) in degree, equals the actual angle*100.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE_TARGET6</td>
+<td style="text-align: right;">1161</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE_TARGET7</td>
+<td style="text-align: right;">1162</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE_TARGET8</td>
+<td style="text-align: right;">1163</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE_TARGET9</td>
+<td style="text-align: right;">1164</td>
+<td>R/W</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE0</td>
+<td style="text-align: right;">1165</td>
+<td>R</td>
+<td></td>
+<td>Angle between the thumb motor axis and the rotation axis (int16) in degree, equals the actual angle*100.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE1</td>
+<td style="text-align: right;">1166</td>
+<td>R</td>
+<td></td>
+<td>Angle between the the first section of the index finger and the palm (int16) in degree, equals the actual angle*100.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE2</td>
+<td style="text-align: right;">1167</td>
+<td>R</td>
+<td></td>
+<td>Angle between the the first section of the middle finger and the palm (int16) in degree, equals the actual angle*100.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE3</td>
+<td style="text-align: right;">1168</td>
+<td>R</td>
+<td></td>
+<td>Angle between the the first section of the ring finger and the palm (int16) in degree, equals the actual angle*100.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE4</td>
+<td style="text-align: right;">1169</td>
+<td>R</td>
+<td></td>
+<td>Angle between the the first section of the little finger and the palm (int16) in degree, equals the actual angle*100.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE5</td>
+<td style="text-align: right;">1170</td>
+<td>R</td>
+<td></td>
+<td>Angle of the thumb rotation (int16) in degree, equals the actual angle*100.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE6</td>
+<td style="text-align: right;">1171</td>
+<td>R</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE7</td>
+<td style="text-align: right;">1172</td>
+<td>R</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE8</td>
+<td style="text-align: right;">1173</td>
+<td>R</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+<tr>
+<td>ROH_FINGER_ANGLE9</td>
+<td style="text-align: right;">1174</td>
+<td>R</td>
+<td></td>
+<td>Reserved.</td>
+</tr>
+</tbody>
+</table>
+<div class="highlight"><pre><span></span><code><span class="cm">/* ModBus-RTU registers for ROH */</span>
+
+<span class="cp">#define ROH_PROTOCOL_VERSION       (1000) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FW_VERSION             (1001) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FW_REVISION            (1002) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_HW_VERSION             (1003) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_BOOT_VERSION           (1004) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_NODE_ID                (1005) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_SUB_EXCEPTION          (1006) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_BATTERY_VOLTAGE        (1007) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_SELF_TEST_LEVEL        (1008) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_BEEP_SWITCH            (1009) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_BEEP_PERIOD            (1010) </span><span class="cm">/* W   */</span>
+<span class="cp">#define ROH_BUTTON_PRESS_CNT       (1011) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_RECALIBRATE            (1012) </span><span class="cm">/* W   */</span>
+<span class="cp">#define ROH_START_INIT             (1013) </span><span class="cm">/* W   */</span>
+<span class="cp">#define ROH_RESET                  (1014) </span><span class="cm">/* W   */</span>
+<span class="cp">#define ROH_POWER_OFF              (1015) </span><span class="cm">/* W   */</span>
+<span class="cp">#define ROH_RESERVED0              (1016) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_RESERVED1              (1017) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_RESERVED2              (1018) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_RESERVED3              (1019) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END0              (1020) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END1              (1021) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END2              (1022) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END3              (1023) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END4              (1024) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END5              (1025) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END6              (1026) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END7              (1027) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END8              (1028) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END9              (1029) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START0            (1030) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START1            (1031) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START2            (1032) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START3            (1033) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START4            (1034) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START5            (1035) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START6            (1036) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START7            (1037) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START8            (1038) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START9            (1039) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_THUMB_POS0        (1040) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_THUMB_POS1        (1041) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_THUMB_POS2        (1042) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_THUMB_POS3        (1043) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_THUMB_POS4        (1044) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P0              (1045) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P1              (1046) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P2              (1047) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P3              (1048) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P4              (1049) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P5              (1050) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P6              (1051) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P7              (1052) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P8              (1053) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P9              (1054) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I0              (1055) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I1              (1056) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I2              (1057) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I3              (1058) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I4              (1059) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I5              (1060) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I6              (1061) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I7              (1062) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I8              (1063) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I9              (1064) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D0              (1065) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D1              (1066) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D2              (1067) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D3              (1068) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D4              (1069) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D5              (1070) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D6              (1071) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D7              (1072) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D8              (1073) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D9              (1074) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G0              (1075) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G1              (1076) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G2              (1077) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G3              (1078) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G4              (1079) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G5              (1080) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G6              (1081) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G7              (1082) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G8              (1083) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G9              (1084) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STATUS0         (1085) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_STATUS1         (1086) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_STATUS2         (1087) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_STATUS3         (1088) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_STATUS4         (1089) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_STATUS5         (1090) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_STATUS6         (1091) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_STATUS7         (1092) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_STATUS8         (1093) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_STATUS9         (1094) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT0  (1095) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT1  (1096) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT2  (1097) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT3  (1098) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT4  (1099) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT5  (1100) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT6  (1101) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT7  (1102) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT8  (1103) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT9  (1104) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT0        (1105) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT1        (1106) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT2        (1107) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT3        (1108) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT4        (1109) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT5        (1110) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT6        (1111) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT7        (1112) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT8        (1113) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT9        (1114) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE_LIMIT0    (1115) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_LIMIT1    (1116) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_LIMIT2    (1117) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_LIMIT3    (1118) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_LIMIT4    (1119) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE0          (1120) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE1          (1121) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE2          (1122) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE3          (1123) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE4          (1124) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_SPEED0          (1125) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_SPEED1          (1126) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_SPEED2          (1127) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_SPEED3          (1128) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_SPEED4          (1129) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_SPEED5          (1130) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_SPEED6          (1131) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_SPEED7          (1132) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_SPEED8          (1133) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_SPEED9          (1134) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET0     (1135) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET1     (1136) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET2     (1137) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET3     (1138) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET4     (1139) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET5     (1140) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET6     (1141) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET7     (1142) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET8     (1143) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET9     (1144) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS0            (1145) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_POS1            (1146) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_POS2            (1147) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_POS3            (1148) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_POS4            (1149) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_POS5            (1150) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_POS6            (1151) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_POS7            (1152) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_POS8            (1153) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_POS9            (1154) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET0   (1155) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET1   (1156) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET2   (1157) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET3   (1158) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET4   (1159) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET5   (1160) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET6   (1161) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET7   (1162) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET8   (1163) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET9   (1164) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE0          (1165) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE1          (1166) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE2          (1167) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE3          (1168) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE4          (1169) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE5          (1170) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE6          (1171) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE7          (1172) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE8          (1173) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE9          (1174) </span><span class="cm">/* R   */</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># ModBus-RTU registers for ROH</span>
+
+<span class="n">ROH_PROTOCOL_VERSION</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">1000</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FW_VERSION</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1001</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FW_REVISION</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1002</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_HW_VERSION</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1003</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_BOOT_VERSION</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1004</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_NODE_ID</span>                   <span class="o">=</span> <span class="p">(</span><span class="mi">1005</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_SUB_EXCEPTION</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1006</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_BATTERY_VOLTAGE</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1007</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_SELF_TEST_LEVEL</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1008</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_BEEP_SWITCH</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1009</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_BEEP_PERIOD</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1010</span><span class="p">)</span> <span class="c1"># W</span>
+<span class="n">ROH_BUTTON_PRESS_CNT</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">1011</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_RECALIBRATE</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1012</span><span class="p">)</span> <span class="c1"># W</span>
+<span class="n">ROH_START_INIT</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1013</span><span class="p">)</span> <span class="c1"># W</span>
+<span class="n">ROH_RESET</span>                     <span class="o">=</span> <span class="p">(</span><span class="mi">1014</span><span class="p">)</span> <span class="c1"># W</span>
+<span class="n">ROH_POWER_OFF</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1015</span><span class="p">)</span> <span class="c1"># W</span>
+<span class="n">ROH_RESERVED0</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1016</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_RESERVED1</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1017</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_RESERVED2</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1018</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_RESERVED3</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1019</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END0</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1020</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END1</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1021</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END2</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1022</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END3</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1023</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END4</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1024</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END5</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1025</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END6</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1026</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END7</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1027</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END8</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1028</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END9</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1029</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START0</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1030</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START1</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1031</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START2</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1032</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START3</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1033</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START4</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1034</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START5</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1035</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START6</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1036</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START7</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1037</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START8</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1038</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START9</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1039</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_THUMB_POS0</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1040</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_THUMB_POS1</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1041</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_THUMB_POS2</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1042</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_THUMB_POS3</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1043</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_THUMB_POS4</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1044</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P0</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1045</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P1</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1046</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P2</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1047</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P3</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1048</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P4</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1049</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P5</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1050</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P6</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1051</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P7</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1052</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P8</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1053</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P9</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1054</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I0</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1055</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I1</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1056</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I2</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1057</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I3</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1058</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I4</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1059</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I5</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1060</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I6</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1061</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I7</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1062</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I8</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1063</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I9</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1064</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D0</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1065</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D1</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1066</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D2</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1067</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D3</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1068</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D4</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1069</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D5</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1070</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D6</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1071</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D7</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1072</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D8</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1073</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D9</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1074</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G0</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1075</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G1</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1076</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G2</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1077</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G3</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1078</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G4</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1079</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G5</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1080</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G6</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1081</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G7</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1082</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G8</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1083</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G9</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1084</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STATUS0</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1085</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_STATUS1</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1086</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_STATUS2</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1087</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_STATUS3</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1088</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_STATUS4</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1089</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_STATUS5</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1090</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_STATUS6</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1091</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_STATUS7</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1092</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_STATUS8</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1093</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_STATUS9</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1094</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT0</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1095</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT1</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1096</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT2</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1097</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT3</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1098</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT4</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1099</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT5</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1100</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT6</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1101</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT7</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1102</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT8</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1103</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT9</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1104</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT0</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1105</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT1</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1106</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT2</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1107</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT3</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1108</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT4</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1109</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT5</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1110</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT6</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1111</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT7</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1112</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT8</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1113</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT9</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1114</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE_LIMIT0</span>       <span class="o">=</span> <span class="p">(</span><span class="mi">1115</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_LIMIT1</span>       <span class="o">=</span> <span class="p">(</span><span class="mi">1116</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_LIMIT2</span>       <span class="o">=</span> <span class="p">(</span><span class="mi">1117</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_LIMIT3</span>       <span class="o">=</span> <span class="p">(</span><span class="mi">1118</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_LIMIT4</span>       <span class="o">=</span> <span class="p">(</span><span class="mi">1119</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE0</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1120</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE1</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1121</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE2</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1122</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE3</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1123</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE4</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1124</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_SPEED0</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1125</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_SPEED1</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1126</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_SPEED2</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1127</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_SPEED3</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1128</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_SPEED4</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1129</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_SPEED5</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1130</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_SPEED6</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1131</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_SPEED7</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1132</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_SPEED8</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1133</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_SPEED9</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1134</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET0</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1135</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET1</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1136</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET2</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1137</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET3</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1138</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET4</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1139</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET5</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1140</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET6</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1141</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET7</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1142</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET8</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1143</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET9</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1144</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS0</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1145</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_POS1</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1146</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_POS2</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1147</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_POS3</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1148</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_POS4</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1149</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_POS5</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1150</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_POS6</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1151</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_POS7</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1152</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_POS8</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1153</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_POS9</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1154</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET0</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1155</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET1</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1156</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET2</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1157</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET3</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1158</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET4</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1159</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET5</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1160</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET6</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1161</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET7</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1162</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET8</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1163</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET9</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1164</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE0</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1165</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE1</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1166</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE2</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1167</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE3</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1168</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE4</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1169</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE5</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1170</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE6</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1171</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE7</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1172</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE8</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1173</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE9</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1174</span><span class="p">)</span> <span class="c1"># R</span>
+</code></pre></div>
+<h3 id="42-angle-of-roh_finger_angle_target-and-roh_finger_pos">4.2. Angle of ROH_FINGER_ANGLE_TARGET and ROH_FINGER_POS</h3>
+<p>Description of angle definition and motion range:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Angle</th>
+<th style="text-align: center;">Legend</th>
+<th style="text-align: center;">Angle range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Index finger </br></br> Middle finger </br></br> Ring finger </br></br> Little finger</td>
+<td style="text-align: center;"><img alt="Finger Screen" src="../../imgs/FingerBendingEN.png" /></td>
+<td style="text-align: center;">100.22°~178.37° </br></br> 97.81° ~ 176.06° </br></br> 101.38° ~ 176.54° </br></br> 98.84° ~ 174.86°</td>
+</tr>
+<tr>
+<td style="text-align: center;">Thumb bending</td>
+<td style="text-align: center;"><img alt="Finger Screen" src="../../imgs/ThumbBendingEN.png" /></td>
+<td style="text-align: center;">-7.45° ~ 36.76°</td>
+</tr>
+<tr>
+<td style="text-align: center;">Thumb rotation</td>
+<td style="text-align: center;"><img alt="Finger Screen" src="../../imgs/ThumbRotation.png" /></td>
+<td style="text-align: center;">1° ~ 90°</td>
+</tr>
+</tbody>
+</table>
+<h3 id="43-status-code-of-roh_finger_status">4.3. Status code of ROH_FINGER_STATUS</h3>
+<table>
+<thead>
+<tr>
+<th>Status name</th>
+<th style="text-align: right;">Status code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>STATUS_OPENING</td>
+<td style="text-align: right;">0</td>
+<td>Spreading</td>
+</tr>
+<tr>
+<td>STATUS_CLOSING</td>
+<td style="text-align: right;">1</td>
+<td>Grasping</td>
+</tr>
+<tr>
+<td>STATUS_POS_REACHED</td>
+<td style="text-align: right;">2</td>
+<td>Position reached stop</td>
+</tr>
+<tr>
+<td>STATUS_OVER_CURRENT</td>
+<td style="text-align: right;">3</td>
+<td>Current protection stop</td>
+</tr>
+<tr>
+<td>STATUS_FORCE_REACHED</td>
+<td style="text-align: right;">4</td>
+<td>Force control reached stop</td>
+</tr>
+<tr>
+<td>STATUS_STUCK</td>
+<td style="text-align: right;">5</td>
+<td>Motor stuck stop</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright© 2025 OYMotion Technologies,Inc.All rights reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.expand", "navigation.tabs", "navigation.path", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../../assets/document_dates/tippy/popper.min.js"></script>
+      
+        <script src="../../../../assets/document_dates/tippy/tippy.umd.min.js"></script>
+      
+        <script src="../../../../assets/document_dates/core/default.config.js"></script>
+      
+        <script src="../../../../assets/document_dates/user.config.js"></script>
+      
+        <script src="../../../../assets/document_dates/core/utils.js"></script>
+      
+        <script src="../../../../assets/document_dates/core/core.js"></script>
+      
+        <script src="../../../../assets/document_dates/tippy/popper.min.js"></script>
+      
+        <script src="../../../../assets/document_dates/tippy/tippy.umd.min.js"></script>
+      
+        <script src="../../../../assets/document_dates/core/default.config.js"></script>
+      
+        <script src="../../../../assets/document_dates/user.config.js"></script>
+      
+        <script src="../../../../assets/document_dates/core/utils.js"></script>
+      
+        <script src="../../../../assets/document_dates/core/core.js"></script>
+      
+    
+  </body>
+</html>

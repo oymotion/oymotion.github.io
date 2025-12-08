@@ -1,0 +1,11 @@
+@media screen and (min-width: 76.1875em) {
+  .md-main__inner {
+    /* 尝试调整布局方式 */
+    display: block; /* 或 flex 等其他值，取决于原有结构 */
+  }
+  .md-content {
+    /* 让内容区域占据全部可用宽度 */
+    width: 100%;
+    max-width: 100%;
+  }
+}

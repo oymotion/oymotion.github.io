@@ -1,3 +1,381 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://oymotion.github.io/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/ROHand/Overview/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/Overview/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/Overview/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/ROHand/FAQs/FAQs/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/FAQs/FAQs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/FAQs/FAQs/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/ROHand/ROH-A001%26A002/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-A001%26A002/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-A001%26A002/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/ROHand/ROH-AP001/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-AP001/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-AP001/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/ROHand/ROH-AP002/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-AP002/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-AP002/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/ROHand/ROH-Demos/ROH_Gen1_Demos/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-Demos/ROH_Gen1_Demos/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-Demos/ROH_Gen1_Demos/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/ROHand/ROH-Demos/ROH_Gen2_Demos/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-Demos/ROH_Gen2_Demos/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-Demos/ROH_Gen2_Demos/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/ROHand/ROH-LiteS001/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-LiteS001/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-LiteS001/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/ROHand/ROH-Protocols/OHandModBusRTUProtocol_Gen1/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-Protocols/OHandModBusRTUProtocol_Gen1/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-Protocols/OHandModBusRTUProtocol_Gen1/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/ROHand/ROH-Protocols/OHandModBusRTUProtocol_Gen2/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-Protocols/OHandModBusRTUProtocol_Gen2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-Protocols/OHandModBusRTUProtocol_Gen2/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/ROHand/ROH-Protocols/OHandSerialProtocol_Gen1/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-Protocols/OHandSerialProtocol_Gen1/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-Protocols/OHandSerialProtocol_Gen1/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/ROHand/ROH-Protocols/OHandSerialProtocol_Gen2/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-Protocols/OHandSerialProtocol_Gen2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-Protocols/OHandSerialProtocol_Gen2/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/ROHand/ROS/ROS1/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROS/ROS1/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROS/ROS1/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/ROHand/ROS/ROS2/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROS/ROS2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROS/ROS2/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/ROHand/SDK/ROH_SDK_CXX/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/SDK/ROH_SDK_CXX/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/SDK/ROH_SDK_CXX/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/ROHand/SDK/ROH_SDK_Python/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/SDK/ROH_SDK_Python/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/SDK/ROH_SDK_Python/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/gForce/Overview/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/Overview/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/Overview/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/gForce/APPs/OTrain/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/APPs/OTrain/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/APPs/OTrain/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/gForce/APPs/gForceApp/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/APPs/gForceApp/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/APPs/gForceApp/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/gForce/APPs/gForceAppLegacy/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/APPs/gForceAppLegacy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/APPs/gForceAppLegacy/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/gForce/APPs/oym8CHWave/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/APPs/oym8CHWave/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/APPs/oym8CHWave/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/gForce/SDK/SDKList/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/SDK/SDKList/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/SDK/SDKList/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/gForce/SDK/gForceSDK/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/SDK/gForceSDK/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/SDK/gForceSDK/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/gForce/gForce200/gForce200UserGuide/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/gForce200/gForce200UserGuide/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/gForce200/gForce200UserGuide/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/gForce/gForceJoint/gForceJoint/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/gForceJoint/gForceJoint/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/gForceJoint/gForceJoint/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/gForce/gForcePro/gForcePro/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/gForcePro/gForcePro/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/gForcePro/gForcePro/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/ROHand/Overview/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/Overview/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/Overview/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/ROHand/FAQs/FAQs/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/FAQs/FAQs/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/FAQs/FAQs/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/ROHand/ROH-A001%26A002/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-A001%26A002/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-A001%26A002/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/ROHand/ROH-AP001/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-AP001/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-AP001/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/ROHand/ROH-AP002/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-AP002/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-AP002/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/ROHand/ROH-Demos/ROH_Gen1_Demos/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-Demos/ROH_Gen1_Demos/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-Demos/ROH_Gen1_Demos/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/ROHand/ROH-Demos/ROH_Gen2_Demos/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-Demos/ROH_Gen2_Demos/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-Demos/ROH_Gen2_Demos/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/ROHand/ROH-LiteS001/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-LiteS001/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-LiteS001/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/ROHand/ROH-Protocols/OHandModBusRTUProtocol_Gen1/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-Protocols/OHandModBusRTUProtocol_Gen1/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-Protocols/OHandModBusRTUProtocol_Gen1/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/ROHand/ROH-Protocols/OHandModBusRTUProtocol_Gen2/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-Protocols/OHandModBusRTUProtocol_Gen2/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-Protocols/OHandModBusRTUProtocol_Gen2/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/ROHand/ROH-Protocols/OHandSerialProtocol_Gen1/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-Protocols/OHandSerialProtocol_Gen1/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-Protocols/OHandSerialProtocol_Gen1/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/ROHand/ROH-Protocols/OHandSerialProtocol_Gen2/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROH-Protocols/OHandSerialProtocol_Gen2/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROH-Protocols/OHandSerialProtocol_Gen2/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/ROHand/ROS/ROS1/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROS/ROS1/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROS/ROS1/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/ROHand/ROS/ROS2/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/ROS/ROS2/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/ROS/ROS2/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/ROHand/SDK/ROH_SDK_CXX/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/SDK/ROH_SDK_CXX/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/SDK/ROH_SDK_CXX/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/ROHand/SDK/ROH_SDK_Python/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/ROHand/SDK/ROH_SDK_Python/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/ROHand/SDK/ROH_SDK_Python/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/gForce/Overview/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/Overview/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/Overview/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/gForce/APPs/OTrain/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/APPs/OTrain/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/APPs/OTrain/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/gForce/APPs/gForceApp/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/APPs/gForceApp/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/APPs/gForceApp/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/gForce/APPs/gForceAppLegacy/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/APPs/gForceAppLegacy/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/APPs/gForceAppLegacy/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/gForce/APPs/oym8CHWave/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/APPs/oym8CHWave/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/APPs/oym8CHWave/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/gForce/SDK/SDKList/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/SDK/SDKList/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/SDK/SDKList/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/gForce/SDK/gForceSDK/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/SDK/gForceSDK/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/SDK/gForceSDK/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/gForce/gForce200/gForce200UserGuide/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/gForce200/gForce200UserGuide/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/gForce200/gForce200UserGuide/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/gForce/gForceJoint/gForceJoint/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/gForceJoint/gForceJoint/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/gForceJoint/gForceJoint/"/>
+    </url>
+    <url>
+        <loc>https://oymotion.github.io/en/gForce/gForcePro/gForcePro/</loc>
+        <lastmod>2025-12-08</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://oymotion.github.io/en/gForce/gForcePro/gForcePro/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://oymotion.github.io/gForce/gForcePro/gForcePro/"/>
+    </url>
 </urlset>
