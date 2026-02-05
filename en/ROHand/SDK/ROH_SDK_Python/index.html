@@ -1504,10 +1504,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#hand_resetforce_1" class="md-nav__link">
+  <a href="#hand_setcustom" class="md-nav__link">
     <span class="md-ellipsis">
       
-        HAND_ResetForce()
+        HAND_SetCustom()
       
     </span>
   </a>
@@ -1697,6 +1697,34 @@
     
   
     ROH-Gen2-Demos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ROH-Demos/ROH_Demo_Collection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ROH-Demo-Collection
   
 
     
@@ -3122,10 +3150,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#hand_resetforce_1" class="md-nav__link">
+  <a href="#hand_setcustom" class="md-nav__link">
     <span class="md-ellipsis">
       
-        HAND_ResetForce()
+        HAND_SetCustom()
       
     </span>
   </a>
@@ -3290,7 +3318,7 @@
 
 
 <h1 id="python-sdk">Python SDK</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-05T19:20:05.040419+08:00'>2025-12-05</time></span><span data-tippy-content data-tippy-raw='2025-12-08'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-12-08T18:06:44+08:00'>2025-12-08</time></span><span class='material-icons' data-icon='doc_author'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='Wang Hang' data-tippy-content data-tippy-raw='<a href="mailto:1154690309@qq.com">Wang Hang</a>'><span class='avatar-text'></span><img class='avatar' src='https://avatars.githubusercontent.com/oymotion' onerror="this.style.display='none'" /></div></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-05T19:20:05.040419+08:00'>2025-12-05</time></span><span data-tippy-content data-tippy-raw='2026-02-05'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2026-02-05T11:27:28+08:00'>2026-02-05</time></span><span class='material-icons' data-icon='doc_authors'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='Wang Hang' data-tippy-content data-tippy-raw='<a href="mailto:1154690309@qq.com">Wang Hang</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div><div class='avatar-wrapper' data-name='lujinheng' data-tippy-content data-tippy-raw='<a href="mailto:lujinheng@oymotion.com">lujinheng</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div></div></div></div>
 
 <h2 id="1introduction">1.Introduction</h2>
 <p>This SDK provides convenient Python interfaces for the secondary development of the Aoyi Smart Hand. It allows developers to manage device connection, data acquisition, and gesture control, thereby accelerating the development of applications utilizing the Smart Hand.</p>
@@ -6018,11 +6046,11 @@ Failure: Return the corresponding error code</p>
 <div class="highlight"><pre><span></span><code><span class="n">err</span> <span class="o">=</span> <span class="n">serial_api_instance</span><span class="o">.</span><span class="n">HAND_ResetForce</span><span class="p">(</span><span class="n">hand_id</span><span class="p">,</span> <span class="p">[])</span>
 <span class="k">assert</span> <span class="n">err</span> <span class="o">==</span> <span class="n">HAND_RESP_SUCCESS</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;test_force_reset: </span><span class="si">{</span><span class="n">err</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
 </code></pre></div>
-<h3 id="hand_resetforce_1"><span style="background-color: #e7f4ffff;color: red;"> HAND_ResetForce()</span></h3>
+<h3 id="hand_setcustom"><span style="background-color: #e7f4ffff;color: red;"> HAND_SetCustom()</span></h3>
 <ul>
 <li>Method Signature：  </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">HAND_ResetForce</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hand_id</span><span class="p">,</span> <span class="n">remote_err</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">HAND_SetCustom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hand_id</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">send_data_size</span><span class="p">,</span> <span class="n">recv_data_size</span><span class="p">,</span> <span class="n">remote_err</span><span class="p">):</span>
 </code></pre></div>
 <ul>
 <li>Purpose：</li>
@@ -6072,8 +6100,34 @@ Failure: Return the corresponding error code</p>
 <p>Usage Example:  </p>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="n">err</span> <span class="o">=</span> <span class="n">serial_api_instance</span><span class="o">.</span><span class="n">HAND_ResetForce</span><span class="p">(</span><span class="n">hand_id</span><span class="p">,</span> <span class="p">[])</span>
-<span class="k">assert</span> <span class="n">err</span> <span class="o">==</span> <span class="n">HAND_RESP_SUCCESS</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;test_force_reset: </span><span class="si">{</span><span class="n">err</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="n">data_flag</span> <span class="o">=</span> <span class="n">get_flag</span>
+<span class="n">data</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">speed</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">data_flag</span> <span class="o">|=</span> <span class="n">SUB_CMD_SET_SPEED</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">speed</span><span class="p">)):</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">speed</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">clamp</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">65535</span><span class="p">)</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">)</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">value</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> 
+<span class="k">if</span> <span class="n">position</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">data_flag</span> <span class="o">|=</span> <span class="n">SUB_CMD_SET_POS</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">position</span><span class="p">)):</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">position</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">clamp</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">65535</span><span class="p">)</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">)</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">value</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> 
+<span class="k">if</span> <span class="n">angle</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">data_flag</span> <span class="o">|=</span> <span class="n">SUB_CMD_SET_ANGLE</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">angle</span><span class="p">)):</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">angle</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># scale</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">+=</span> <span class="mi">65536</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">clamp</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">65535</span><span class="p">)</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">value</span> <span class="o">&amp;</span> <span class="mh">0xFF</span><span class="p">)</span>
+        <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">value</span> <span class="o">&gt;&gt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> 
+<span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span>
+<span class="n">date_count</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">err</span> <span class="o">=</span> <span class="n">instance</span><span class="o">.</span><span class="n">HAND_SetCustom</span><span class="p">(</span><span class="n">hand_id</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">date_count</span><span class="p">,</span> <span class="p">[])</span>
 </code></pre></div>
 <h3 id="hand_setselftestlevel"><span style="background-color: #e7f4ffff;color: red;"> HAND_SetSelfTestLevel()</span></h3>
 <ul>
