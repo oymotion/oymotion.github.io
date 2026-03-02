@@ -5,7 +5,7 @@ function loadBaiduTongji() {
   
   // 创建并加载脚本
   var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?0c4d9f617fae7ddd87c538d3b4b5a54a";
+  hm.src = "https://hm.baidu.com/hm.js?14a066d917c0da99640fe4dee91ef9dc";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
   
