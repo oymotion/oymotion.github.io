@@ -2052,7 +2052,7 @@
 
 
 <h1 id="ohand-conmmunication-protocol-v30">OHand Conmmunication Protocol V3.0</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-05T19:20:05.028419+08:00'>2025-12-05</time></span><span data-tippy-content data-tippy-raw='2025-12-08'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-12-08T18:06:44+08:00'>2025-12-08</time></span><span class='material-icons' data-icon='doc_author'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='Wang Hang' data-tippy-content data-tippy-raw='<a href="mailto:1154690309@qq.com">Wang Hang</a>'><span class='avatar-text'></span><img class='avatar' src='https://avatars.githubusercontent.com/oymotion' onerror="this.style.display='none'" /></div></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-05T19:20:05.028419+08:00'>2025-12-05</time></span><span data-tippy-content data-tippy-raw='2026-03-03'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2026-03-03T17:20:52+08:00'>2026-03-03</time></span><span class='material-icons' data-icon='doc_authors'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='Wang Hang' data-tippy-content data-tippy-raw='<a href="mailto:1154690309@qq.com">Wang Hang</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div><div class='avatar-wrapper' data-name='ycq' data-tippy-content data-tippy-raw='<a href="mailto:yecq_82@hotmail.com">ycq</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div></div></div></div>
 
 <h2 id="1-communication-protocol-overview">1. Communication Protocol Overview</h2>
 <p>The user control unit sends command data to control the state of the ROH dexterous hand.
@@ -2655,7 +2655,25 @@ The upper system sends read instructions to the ROH dexterous hand, and the ROH 
 <ol>
 <li>If not specified, single-byte data is uint8 type, XXX_L, XXX_H represent the low byte and high byte of uint16 type; XXX_BYTE0, XXX_BYTE1, XXX_BYTE2, XXX_BYTE3 represent the 4 bytes from low to high of uint32 type;</li>
 <li>If specified as float32 type, XXX_BYTE0, XXX_BYTE1, XXX_BYTE2, XXX_BYTE3 represent the 4 bytes from low to high of float32 type.</li>
+<li>When using the HAND_CMD_GET_FINGER_FORCE command to obtain force data, the version is determined by the value of FORCE_ENTRY_CNT. If FORCE_ENTRY_CNT is greater than 12, it is the Dot Matrix Version; if it is less than or equal to 12, it is the 3D Force Version.</li>
 </ol>
+<p>(1) Dot Matrix Version:</p>
+<p>Thumb: 7 × 5 bytes, corresponding to data from all points. Each byte independently indicates the 
+force magnitude in units of mN, and so on;</p>
+<p>Index finger: 12 × 5 bytes;</p>
+<p>Middle finger: 12 × 5 bytes;</p>
+<p>Ring finger: 12 × 5 bytes;</p>
+<p>Little finger: 8 × 4 bytes;</p>
+<p>Palm: 11 × 5 bytes.</p>
+<p>(2) 3D Force Version:</p>
+<p>Thumb: 6 bytes. The first byte is the low 8 bits of the normal force value, and the second byte is the high 8 bits of the normal force value; the third byte is the low 8 bits of the tangential force value, and the fourth byte is the high 8 bits of the tangential force value, in units of mN; the fifth byte is the low 8 bits of the tangential force angle, and the sixth byte is the high 8 bits of the tangential force angle;</p>
+<p>Index finger: 12 bytes, divided into two channels. The first byte is the low 8 bits of the Channel 1 normal force value, and the second byte is the high 8 bits of the Channel 1 normal force value; the third byte is the low 8 bits of the Channel 1 tangential force value, and the fourth byte is the high 8 bits of the Channel 1 tangential force value, in units of mN; the fifth byte is the low 8 bits of the Channel 1 tangential force angle, and the sixth byte is the high 8 bits of the Channel 1 tangential force angle; the seventh byte is the low 8 bits of the Channel 2 normal force value, and the eighth byte is the high 8 bits of the Channel 2 normal force value, in units of mN; the ninth through twelfth bytes are fixed at 0, reserved for future 3D force updates for the second channel;</p>
+<p>Middle finger: 12 bytes, same as the index finger;</p>
+<p>Ring finger: 12 bytes, same as the index finger;</p>
+<p>Little finger: 6 bytes, same as the thumb;</p>
+<p>Palm: 11 × 5 bytes, same as the Dot Matrix Version.</p>
+<p>(3) 1D Force Version:
+TBD</p>
 <h2 id="6-dexterous-hand-error-codes">6. Dexterous Hand Error Codes</h2>
 <table>
 <thead>

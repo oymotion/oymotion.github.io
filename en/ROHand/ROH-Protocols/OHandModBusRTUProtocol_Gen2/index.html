@@ -2164,7 +2164,7 @@
 
 
 <h1 id="ohand-modbus-rtu-protocol-v20">OHand ModBus-RTU Protocol V2.0</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-05T19:20:05.025419+08:00'>2025-12-05</time></span><span data-tippy-content data-tippy-raw='2025-12-08'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-12-08T18:06:44+08:00'>2025-12-08</time></span><span class='material-icons' data-icon='doc_author'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='Wang Hang' data-tippy-content data-tippy-raw='<a href="mailto:1154690309@qq.com">Wang Hang</a>'><span class='avatar-text'></span><img class='avatar' src='https://avatars.githubusercontent.com/oymotion' onerror="this.style.display='none'" /></div></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-05T19:20:05.025419+08:00'>2025-12-05</time></span><span data-tippy-content data-tippy-raw='2026-03-03'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2026-03-03T17:20:52+08:00'>2026-03-03</time></span><span class='material-icons' data-icon='doc_authors'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='Wang Hang' data-tippy-content data-tippy-raw='<a href="mailto:1154690309@qq.com">Wang Hang</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div><div class='avatar-wrapper' data-name='ycq' data-tippy-content data-tippy-raw='<a href="mailto:yecq_82@hotmail.com">ycq</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div></div></div></div>
 
 <h2 id="1-overview-of-modbus-communication-protocol">1. Overview of ModBus communication protocol</h2>
 <p>ModBus-RTU protocol uses the Master-Slave Request-Answer communication method. It's protocol frame includes function code, data domain and CRC16 checking.
@@ -4563,23 +4563,26 @@ ModBus-RTU's master unit reads and writes internal registers of ROHand to obtain
 <p><em>notes:</em></p>
 <p>ROH_FINGER_FORCE_EX0 to ROH_FINGER_FORCE_EX9 are the starting addresses for the data of individual force sensors. The actual data length for each sensor depends on the hardware, and each data value is of type uint16.</p>
 <ol>
-<li>
-<p>Dot Matrix Version:
-   Thumb: 7 × 5 bytes (corresponding to 18 registers). The high 8 bits of the first register represent the first data byte. Each byte independently indicates the force magnitude in units of mN, and so on.
-   Index finger: 12 × 5 bytes.
-   Middle finger: 12 × 5 bytes.
-   Ring finger: 12 × 5 bytes.
-   Little finger: 8 × 4 bytes.
-   Palm: 11 × 5 bytes.</p>
-</li>
-<li>
-<p>3D Force Version:
-   TBD.</p>
-</li>
-<li>
-<p>1D Force Version:
-   uint6 data, representing force magnitude in units of mN.</p>
-</li>
+<li>Dot Matrix Version:</li>
+</ol>
+<p>Thumb: 7 × 5 bytes (corresponding to 18 registers). The high 8 bits of the first register represent the first data byte. Each byte independently indicates the force magnitude in units of mN, and so on.</p>
+<p>Index finger: 12 × 5 bytes.</p>
+<p>Middle finger: 12 × 5 bytes.</p>
+<p>Ring finger: 12 × 5 bytes.</p>
+<p>Little finger: 8 × 4 bytes.</p>
+<p>Palm: 11 × 5 bytes.</p>
+<ol>
+<li>3D Force Version:</li>
+</ol>
+<p>Thumb: 6 bytes, corresponding to 3 registers. The first register represents the normal force value; the second register represents the tangential force value, in units of mN; the third register represents the tangential force angle.</p>
+<p>Index finger: 12 bytes, corresponding to 6 registers across two channels. The first register represents the Channel 1 normal force value; the second register represents the Channel 1 tangential force value, in units of mN; the third register represents the Channel 1 tangential force angle; the fourth register represents the Channel 2 normal force value, in units of mN; the fifth and sixth registers are fixed at 0, reserved for future 3D force updates for the second channel.</p>
+<p>Middle finger: 12 bytes, same as the index finger.</p>
+<p>Ring finger: 12 bytes, same as the index finger.</p>
+<p>Little finger: 6 bytes, same as the thumb</p>
+<p>Palm: 11 × 5 bytes, same as the Dot Matrix Version.</p>
+<ol>
+<li>1D Force Version:
+   uint6 data, representing force magnitude in units of mN.</li>
 </ol>
 <p>Enclose the C/C++ macro definition of registers:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define FORCE_GROUP_SIZE              (100)</span>

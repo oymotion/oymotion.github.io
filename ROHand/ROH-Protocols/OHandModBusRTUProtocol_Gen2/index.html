@@ -2182,7 +2182,7 @@
 
 
 <h1 id="ohand-modbus-rtu-v20">OHand ModBus-RTU 协议 V2.0</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-02'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-02T09:50:21.140175+08:00'>2025-12-02</time></span><span data-tippy-content data-tippy-raw='2025-12-08'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2025-12-08T18:06:44+08:00'>2025-12-08</time></span><span class='material-icons' data-icon='doc_author'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='Wang Hang' data-tippy-content data-tippy-raw='<a href="mailto:1154690309@qq.com">Wang Hang</a>'><span class='avatar-text'></span><img class='avatar' src='https://avatars.githubusercontent.com/oymotion' onerror="this.style.display='none'" /></div></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-02'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-02T09:50:21.140175+08:00'>2025-12-02</time></span><span data-tippy-content data-tippy-raw='2026-03-03'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2026-03-03T17:20:52+08:00'>2026-03-03</time></span><span class='material-icons' data-icon='doc_authors'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='Wang Hang' data-tippy-content data-tippy-raw='<a href="mailto:1154690309@qq.com">Wang Hang</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div><div class='avatar-wrapper' data-name='ycq' data-tippy-content data-tippy-raw='<a href="mailto:yecq_82@hotmail.com">ycq</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div></div></div></div>
 
 <h2 id="1-modbus">1. ModBus 通信协议概要</h2>
 <p>ModBus-RTU 协议使用的是主从请求应答通讯方式，协议帧包括了功能码、数据域、和 CRC16 校验。
@@ -4581,23 +4581,26 @@ ModBus-RTU 主控单元通过读写 ROH 灵巧手内部寄存器来实现对灵�
 <p><em>说明：</em></p>
 <p>ROH_FINGER_FORCE_EX0 到 ROH_FINGER_FORCE_EX9 为各个力传感器数据的起始地址，每个传感器实际的数据长度和硬件相关，每个数据为 uint16 类型。</p>
 <ol>
-<li>
-<p>点阵版本：
-   大拇指7 * 5个字节，对应18个寄存器数据，第一个寄存器数据高8位为首个数据字节，每个字节独立表示力的大小，单位为mN，以此类推；
-   食指12 * 5个字节；
-   中指12 * 5个字节；
-   无名指12 * 5个字节；
-   小指8 * 4个字节；
-   手掌11 * 5个字节。</p>
-</li>
-<li>
-<p>三维力版本：
-   待定</p>
-</li>
-<li>
-<p>一维力版本：
-   uint16 数据，表示力的大小，单位mN。</p>
-</li>
+<li>点阵版本：</li>
+</ol>
+<p>大拇指7 * 5个字节，对应18个寄存器数据，第一个寄存器数据高8位为首个数据字节，每个字节独立表示力的大小，单位为mN，以此类推；</p>
+<p>食指12 * 5个字节；</p>
+<p>中指12 * 5个字节；</p>
+<p>无名指12 * 5个字节；</p>
+<p>小指8 * 4个字节；</p>
+<p>手掌11 * 5个字节。</p>
+<ol>
+<li>三维力版本：</li>
+</ol>
+<p>大拇指6 个字节，对应3个寄存器数据，第一个寄存器数据为法向力值，第二个寄存器数据为切向力值，单位为mN，第三个寄存器数据为切向力角度值；</p>
+<p>食指12 个字节，对应6个寄存器数据，分为两个通道，第一个寄存器数据为第一通道法向力值，第二个寄存器数据为第一通道切向力值，单位为mN，第三个寄存器数据为第一通道切向力角度值，第四个寄存器为第二通道法向力值，单位为mN，第五个寄存器和第六个寄存器数据固定为0，为以后更新第二通道三维力预留；</p>
+<p>中指12 个字节，与食指相同；</p>
+<p>无名指12个字节，与食指相同；</p>
+<p>小指6个字节，与大拇指相同；</p>
+<p>手掌11 * 5个字节，与点阵版本相同。</p>
+<ol>
+<li>一维力版本：
+   uint16 数据，表示力的大小，单位mN。</li>
 </ol>
 <p>附寄存器C/C++宏定义：</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#define FORCE_GROUP_SIZE              (100)</span>
