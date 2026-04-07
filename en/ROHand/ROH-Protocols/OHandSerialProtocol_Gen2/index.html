@@ -2052,7 +2052,7 @@
 
 
 <h1 id="ohand-conmmunication-protocol-v30">OHand Conmmunication Protocol V3.0</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-05T19:20:05.028419+08:00'>2025-12-05</time></span><span data-tippy-content data-tippy-raw='2026-03-03'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2026-03-03T17:20:52+08:00'>2026-03-03</time></span><span class='material-icons' data-icon='doc_authors'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='Wang Hang' data-tippy-content data-tippy-raw='<a href="mailto:1154690309@qq.com">Wang Hang</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div><div class='avatar-wrapper' data-name='ycq' data-tippy-content data-tippy-raw='<a href="mailto:yecq_82@hotmail.com">ycq</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-05T19:20:05.028419+08:00'>2025-12-05</time></span><span data-tippy-content data-tippy-raw='2026-04-07'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2026-04-07T16:09:26+08:00'>2026-04-07</time></span><span class='material-icons' data-icon='doc_authors'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='Wang Hang' data-tippy-content data-tippy-raw='<a href="mailto:1154690309@qq.com">Wang Hang</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div><div class='avatar-wrapper' data-name='ycq' data-tippy-content data-tippy-raw='<a href="mailto:yecq_82@hotmail.com">ycq</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div><div class='avatar-wrapper' data-name='lujinheng' data-tippy-content data-tippy-raw='<a href="mailto:lujinheng@oymotion.com">lujinheng</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div></div></div></div>
 
 <h2 id="1-communication-protocol-overview">1. Communication Protocol Overview</h2>
 <p>The user control unit sends command data to control the state of the ROH dexterous hand.
@@ -2188,7 +2188,7 @@ The upper system sends read instructions to the ROH dexterous hand, and the ROH 
 <td>50</td>
 <td>12</td>
 <td>10 27 FF 10 27 FF 10 27 FF 10 27 FF 10 27 FF 10 27 FF</td>
-<td>66</td>
+<td>41</td>
 </tr>
 </tbody>
 </table>
@@ -2454,6 +2454,13 @@ The upper system sends read instructions to the ROH dexterous hand, and the ROH 
 <td style="text-align: left;">[BYTE0, ..., BYTEn]</td>
 </tr>
 <tr>
+<td style="text-align: left;">HAND_CMD_GET_SPEED_CTRL_PARAMS</td>
+<td style="text-align: right;">0x3D</td>
+<td style="text-align: left;">Get speed control params</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">[SPEED_CTRL_BRAKE_DISTANCE_L, SPEED_CTRL_BRAKE_DISTANCE_H, SPEED_CTRL_ACCEL_DISTANCE_L, SPEED_CTRL_ACCEL_DISTANCE_H, SPEED_CTRL_SPEED_RATIO_L, SPEED_CTRL_SPEED_RATIO_H]</td>
+</tr>
+<tr>
 <td style="text-align: left;">HAND_CMD_GET_VENDOR_ID</td>
 <td style="text-align: right;">0x3F</td>
 <td style="text-align: left;">Get vendor ID</td>
@@ -2649,6 +2656,13 @@ The upper system sends read instructions to the ROH dexterous hand, and the ROH 
 <td style="text-align: left;">...</td>
 <td style="text-align: left;"></td>
 </tr>
+<tr>
+<td style="text-align: left;">HAND_CMD_SET_SPEED_CTRL_PARAMS</td>
+<td style="text-align: right;">0x66</td>
+<td style="text-align: left;">Set speed control params</td>
+<td style="text-align: left;">[SPEED_CTRL_BRAKE_DISTANCE_L, SPEED_CTRL_BRAKE_DISTANCE_H, SPEED_CTRL_ACCEL_DISTANCE_L, SPEED_CTRL_ACCEL_DISTANCE_H, SPEED_CTRL_SPEED_RATIO_L, SPEED_CTRL_SPEED_RATIO_H]</td>
+<td style="text-align: left;"></td>
+</tr>
 </tbody>
 </table>
 <p>Note:</p>
@@ -2672,8 +2686,6 @@ force magnitude in units of mN, and so on;</p>
 <p>Ring finger: 12 bytes, same as the index finger;</p>
 <p>Little finger: 6 bytes, same as the thumb;</p>
 <p>Palm: 11 × 5 bytes, same as the Dot Matrix Version.</p>
-<p>(3) 1D Force Version:
-TBD</p>
 <h2 id="6-dexterous-hand-error-codes">6. Dexterous Hand Error Codes</h2>
 <table>
 <thead>

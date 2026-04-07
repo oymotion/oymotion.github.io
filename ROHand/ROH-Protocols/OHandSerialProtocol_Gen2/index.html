@@ -2070,7 +2070,7 @@
 
 
 <h1 id="ohand-v30">OHand 通信协议 V3.0</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-02'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-02T09:50:21.144176+08:00'>2025-12-02</time></span><span data-tippy-content data-tippy-raw='2026-03-03'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2026-03-03T17:20:52+08:00'>2026-03-03</time></span><span class='material-icons' data-icon='doc_authors'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='Wang Hang' data-tippy-content data-tippy-raw='<a href="mailto:1154690309@qq.com">Wang Hang</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div><div class='avatar-wrapper' data-name='ycq' data-tippy-content data-tippy-raw='<a href="mailto:yecq_82@hotmail.com">ycq</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-02'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-02T09:50:21.144176+08:00'>2025-12-02</time></span><span data-tippy-content data-tippy-raw='2026-04-07'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2026-04-07T16:09:26+08:00'>2026-04-07</time></span><span class='material-icons' data-icon='doc_authors'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='Wang Hang' data-tippy-content data-tippy-raw='<a href="mailto:1154690309@qq.com">Wang Hang</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div><div class='avatar-wrapper' data-name='ycq' data-tippy-content data-tippy-raw='<a href="mailto:yecq_82@hotmail.com">ycq</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div><div class='avatar-wrapper' data-name='lujinheng' data-tippy-content data-tippy-raw='<a href="mailto:lujinheng@oymotion.com">lujinheng</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div></div></div></div>
 
 <h2 id="1">1. 通信协议概要</h2>
 <p>用户主控单元通过发送命令数据实现对灵巧手的状态获取和控制。
@@ -2206,7 +2206,7 @@
 <td>50</td>
 <td>12</td>
 <td>10 27 FF 10 27 FF 10 27 FF 10 27 FF 10 27 FF 10 27 FF</td>
-<td>66</td>
+<td>41</td>
 </tr>
 </tbody>
 </table>
@@ -2465,6 +2465,13 @@
 <td style="text-align: left;">[USE_TIME_BYTE0, USE_TIME_BYTE1, USE_TIME_BYTE2, USE_TIME_BYTE3, F0_OPEN_CNT_BYTE0, F0_OPEN_CNT_BYTE1, F0_OPEN_CNT_BYTE2, F0_OPEN_CNT_BYTE3, ..., Fn_OPEN_CNT_BYTE0, Fn_OPEN_CNT_BYTE1, Fn_OPEN_CNT_BYTE2, Fn_OPEN_CNT_BYTE3]</td>
 </tr>
 <tr>
+<td style="text-align: left;">HAND_CMD_GET_SPEED_CTRL_PARAMS</td>
+<td style="text-align: right;">0x3D</td>
+<td style="text-align: left;">获取手指速度控制系数</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">[SPEED_CTRL_BRAKE_DISTANCE_L, SPEED_CTRL_BRAKE_DISTANCE_H, SPEED_CTRL_ACCEL_DISTANCE_L, SPEED_CTRL_ACCEL_DISTANCE_H, SPEED_CTRL_SPEED_RATIO_L, SPEED_CTRL_SPEED_RATIO_H]</td>
+</tr>
+<tr>
 <td style="text-align: left;">HAND_CMD_GET_MANUFACTURE_DATA</td>
 <td style="text-align: right;">0x3E</td>
 <td style="text-align: left;">获取厂方数据</td>
@@ -2674,26 +2681,39 @@
 <td style="text-align: left;">...</td>
 <td style="text-align: left;"></td>
 </tr>
+<tr>
+<td style="text-align: left;">HAND_CMD_SET_SPEED_CTRL_PARAMS</td>
+<td style="text-align: right;">0x66</td>
+<td style="text-align: left;">设置手指速度控制系数</td>
+<td style="text-align: left;">[SPEED_CTRL_BRAKE_DISTANCE_L, SPEED_CTRL_BRAKE_DISTANCE_H, SPEED_CTRL_ACCEL_DISTANCE_L, SPEED_CTRL_ACCEL_DISTANCE_H, SPEED_CTRL_SPEED_RATIO_L, SPEED_CTRL_SPEED_RATIO_H]</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: left;">注：</td>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
 </tbody>
 </table>
-<p>注：</p>
 <ol>
 <li>如果不加说明，单字节数据为 uint8 类型，XXX_L, XXX_H 表示 uint16 类型的低字节和高字节；XXX_BYTE0, XXX_BYTE1, XXX_BYTE2, XXX_BYTE3 表示 uint32 类型自低到高 4 个字节；</li>
 <li>若指定为 float32 类型，XXX_BYTE0, XXX_BYTE1, XXX_BYTE2, XXX_BYTE3 表示 float32 类型自低到高 4 个字节。</li>
 <li>使用HAND_CMD_GET_FINGER_FORCE命令获取力量数据时，根据FORCE_ENTRY_CNT的值分为以下版本，FORCE_ENTRY_CNT大于12时为点阵版本，小于等于12时为三维力版本。</li>
 </ol>
 <p>(1) 点阵版本：</p>
-<div class="highlight"><pre><span></span><code>大拇指7 \* 5个字节，对应所有点的数据，每个字节独立表示力的大小，单位为mN，以此类推；
+<div class="highlight"><pre><span></span><code>大拇指7 x 5个字节，对应所有点的数据，每个字节独立表示力的大小，单位为mN，以此类推；
 
-食指12 \* 5个字节；
+食指12 x 5个字节；
 
-中指12 \* 5个字节；
+中指12 x 5个字节；
 
-无名指12 \* 5个字节；
+无名指12 x 5个字节；
 
-小指8 \* 4个字节；
+小指8 x 4个字节；
 
-手掌11 \* 5个字节。
+手掌11 x 5个字节。
 </code></pre></div>
 <p>(2) 三维力版本：</p>
 <div class="highlight"><pre><span></span><code>大拇指: 6 个字节。第一个字节为法向力值的低8位，第二个字节为法向力值的高8位；第三个字节为切向力值的低8位，第四个字节为切向力值的高8位，单位为mN；第五个字节为切向力角度值的低8位，第六个字节为切向力角度值的高8位；
@@ -2706,10 +2726,8 @@
 
 小指6个字节，与大拇指相同；
 
-手掌11 \* 5个字节，与点阵版本相同。
+手掌11 x 5个字节，与点阵版本相同。
 </code></pre></div>
-<p>(3) 一维力版本：
-    待定</p>
 <h2 id="6">6. 灵巧手错误代码</h2>
 <table>
 <thead>
@@ -2789,7 +2807,7 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">食指 </br></br> 中指 </br></br> 无名指 </br></br> 小拇指</td>
+<td style="text-align: center;">食指 </br></br> 中指 /br&gt;</br> 无名指 </br></br> 小拇指</td>
 <td style="text-align: center;"><img alt="Finger Screen" src="../../imgs/FingerBending.png" /></td>
 <td style="text-align: center;">100.22°~178.37° </br></br> 97.81° ~ 176.06° </br></br> 101.38° ~ 176.54° </br></br> 98.84° ~ 174.86°</td>
 </tr>

@@ -2164,7 +2164,7 @@
 
 
 <h1 id="ohand-modbus-rtu-protocol-v20">OHand ModBus-RTU Protocol V2.0</h1>
-<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-05T19:20:05.025419+08:00'>2025-12-05</time></span><span data-tippy-content data-tippy-raw='2026-03-03'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2026-03-03T17:20:52+08:00'>2026-03-03</time></span><span class='material-icons' data-icon='doc_authors'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='Wang Hang' data-tippy-content data-tippy-raw='<a href="mailto:1154690309@qq.com">Wang Hang</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div><div class='avatar-wrapper' data-name='ycq' data-tippy-content data-tippy-raw='<a href="mailto:yecq_82@hotmail.com">ycq</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div></div></div></div>
+<div class='document-dates-plugin-wrapper document-dates-top'><div class='document-dates-plugin' locale=''><span data-tippy-content data-tippy-raw='2025-12-05'><span class='material-icons' data-icon='doc_created'></span><time datetime='2025-12-05T19:20:05.025419+08:00'>2025-12-05</time></span><span data-tippy-content data-tippy-raw='2026-04-07'><span class='material-icons' data-icon='doc_modified'></span><time datetime='2026-04-07T16:09:26+08:00'>2026-04-07</time></span><span class='material-icons' data-icon='doc_authors'></span><div class='avatar-group'><div class='avatar-wrapper' data-name='Wang Hang' data-tippy-content data-tippy-raw='<a href="mailto:1154690309@qq.com">Wang Hang</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div><div class='avatar-wrapper' data-name='ycq' data-tippy-content data-tippy-raw='<a href="mailto:yecq_82@hotmail.com">ycq</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div><div class='avatar-wrapper' data-name='lujinheng' data-tippy-content data-tippy-raw='<a href="mailto:lujinheng@oymotion.com">lujinheng</a>'><span class='avatar-text'></span><img class='avatar' src='' onerror="this.style.display='none'" /></div></div></div></div>
 
 <h2 id="1-overview-of-modbus-communication-protocol">1. Overview of ModBus communication protocol</h2>
 <p>ModBus-RTU protocol uses the Master-Slave Request-Answer communication method. It's protocol frame includes function code, data domain and CRC16 checking.
@@ -3789,140 +3789,140 @@ ModBus-RTU's master unit reads and writes internal registers of ROHand to obtain
 <td>Reserved.</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_SPEED0</td>
+<td>ROH_FINGER_STALL_SPEED0</td>
 <td style="text-align: right;">1185</td>
 <td>R/W</td>
-<td></td>
-<td></td>
+<td>16</td>
+<td>Thumb bending motor stall stop speed (uint16),unit logical_pos/s, resets to default value on startup</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_SPEED1</td>
+<td>ROH_FINGER_STALL_SPEED1</td>
 <td style="text-align: right;">1186</td>
 <td>R/W</td>
-<td></td>
-<td></td>
+<td>16</td>
+<td>Index finger bending motor stall stop time (uint16), logical_pos/s, resets to default value on startup</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_SPEED2</td>
+<td>ROH_FINGER_STALL_SPEED2</td>
 <td style="text-align: right;">1187</td>
 <td>R/W</td>
-<td></td>
-<td></td>
+<td>16</td>
+<td>Middle finger bending motor stall stop time (uint16), logical_pos/s, resets to default value on startup</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_SPEED3</td>
+<td>ROH_FINGER_STALL_SPEED3</td>
 <td style="text-align: right;">1188</td>
 <td>R/W</td>
-<td></td>
-<td></td>
+<td>16</td>
+<td>Ring finger bending motor stall stop time (uint16), logical_pos/s, resets to default value on startup</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_SPEED4</td>
+<td>ROH_FINGER_STALL_SPEED4</td>
 <td style="text-align: right;">1189</td>
 <td>R/W</td>
-<td></td>
-<td></td>
+<td>16</td>
+<td>Little finger bending motor stall stop time (uint16), logical_pos/s, resets to default value on startup</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_SPEED5</td>
+<td>ROH_FINGER_STALL_SPEED5</td>
 <td style="text-align: right;">1190</td>
 <td>R/W</td>
-<td></td>
-<td></td>
+<td>16</td>
+<td>Thumb rotation motor stall stop time (uint16), logical_pos/s, resets to default value on startup</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_SPEED6</td>
+<td>ROH_FINGER_STALL_SPEED6</td>
 <td style="text-align: right;">1191</td>
 <td>R/W</td>
 <td></td>
-<td></td>
+<td>Reserved</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_SPEED7</td>
+<td>ROH_FINGER_STALL_SPEED7</td>
 <td style="text-align: right;">1192</td>
 <td>R/W</td>
 <td></td>
-<td></td>
+<td>Reserved</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_SPEED8</td>
+<td>ROH_FINGER_STALL_SPEED8</td>
 <td style="text-align: right;">1193</td>
 <td>R/W</td>
 <td></td>
-<td></td>
+<td>Reserved</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_SPEED9</td>
+<td>ROH_FINGER_STALL_SPEED9</td>
 <td style="text-align: right;">1194</td>
 <td>R/W</td>
 <td></td>
-<td></td>
+<td>Reserved</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_CURRENT0</td>
+<td>ROH_FINGER_STALL_CURRENT0</td>
 <td style="text-align: right;">1195</td>
 <td>R/W</td>
 <td>200</td>
 <td>Thumb bending motor stall stop current limit value (uint16), unit mA, resets to default value on startup</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_CURRENT1</td>
+<td>ROH_FINGER_STALL_CURRENT1</td>
 <td style="text-align: right;">1196</td>
 <td>R/W</td>
 <td>200</td>
 <td>Index finger bending motor stall stop current limit value (uint16), unit mA, resets to default value on startup</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_CURRENT2</td>
+<td>ROH_FINGER_STALL_CURRENT2</td>
 <td style="text-align: right;">1197</td>
 <td>R/W</td>
 <td>200</td>
 <td>Middle finger bending motor stall stop current limit value (uint16), unit mA, resets to default value on startup</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_CURRENT3</td>
+<td>ROH_FINGER_STALL_CURRENT3</td>
 <td style="text-align: right;">1198</td>
 <td>R/W</td>
 <td>200</td>
 <td>Ring finger bending motor stall stop current limit value (uint16), unit mA, resets to default value on startup</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_CURRENT4</td>
+<td>ROH_FINGER_STALL_CURRENT4</td>
 <td style="text-align: right;">1199</td>
 <td>R/W</td>
 <td>200</td>
 <td>Little finger bending motor stall stop current limit value (uint16), unit mA, resets to default value on startup</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_CURRENT5</td>
+<td>ROH_FINGER_STALL_CURRENT5</td>
 <td style="text-align: right;">1200</td>
 <td>R/W</td>
 <td>200</td>
 <td>Thumb rotation motor stall stop current limit value (uint16), unit mA, resets to default value on startup</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_CURRENT6</td>
+<td>ROH_FINGER_STALL_CURRENT6</td>
 <td style="text-align: right;">1201</td>
 <td>R/W</td>
 <td></td>
 <td>Reserved</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_CURRENT7</td>
+<td>ROH_FINGER_STALL_CURRENT7</td>
 <td style="text-align: right;">1202</td>
 <td>R/W</td>
 <td></td>
 <td>Reserved</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_CURRENT8</td>
+<td>ROH_FINGER_STALL_CURRENT8</td>
 <td style="text-align: right;">1203</td>
 <td>R/W</td>
 <td></td>
 <td>Reserved</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_CURRENT9</td>
+<td>ROH_FINGER_STALL_CURRENT9</td>
 <td style="text-align: right;">1204</td>
 <td>R/W</td>
 <td></td>
@@ -3999,70 +3999,70 @@ ModBus-RTU's master unit reads and writes internal registers of ROHand to obtain
 <td>Reserved</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_RETRY_PERIOD0</td>
+<td>ROH_FINGER_RETRY_AFTER_PERIOD0</td>
 <td style="text-align: right;">1215</td>
 <td>R/W</td>
 <td>500</td>
 <td>Thumb bending motor stall stop retry time (uint16), unit ms, resets to default value on startup</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_RETRY_PERIOD1</td>
+<td>ROH_FINGER_RETRY_AFTER_PERIOD1</td>
 <td style="text-align: right;">1216</td>
 <td>R/W</td>
 <td>500</td>
 <td>Index finger bending motor stall stop retry time (uint16), unit ms, resets to default value on startup</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_RETRY_PERIOD2</td>
+<td>ROH_FINGER_RETRY_AFTER_PERIOD2</td>
 <td style="text-align: right;">1217</td>
 <td>R/W</td>
 <td>500</td>
 <td>Middle finger bending motor stall stop retry time (uint16), unit ms, resets to default value on startup</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_RETRY_PERIOD3</td>
+<td>ROH_FINGER_RETRY_AFTER_PERIOD3</td>
 <td style="text-align: right;">1218</td>
 <td>R/W</td>
 <td>500</td>
 <td>Ring finger bending motor stall stop retry time (uint16), unit ms, resets to default value on startup</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_RETRY_PERIOD4</td>
+<td>ROH_FINGER_RETRY_AFTER_PERIOD4</td>
 <td style="text-align: right;">1219</td>
 <td>R/W</td>
 <td>500</td>
 <td>Little finger bending motor stall stop retry time (uint16), unit ms, resets to default value on startup</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_RETRY_PERIOD5</td>
+<td>ROH_FINGER_RETRY_AFTER_PERIOD5</td>
 <td style="text-align: right;">1220</td>
 <td>R/W</td>
 <td>500</td>
 <td>Thumb rotation motor stall stop retry time (uint16), unit ms, resets to default value on startup</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_RETRY_PERIOD6</td>
+<td>ROH_FINGER_RETRY_AFTER_PERIOD6</td>
 <td style="text-align: right;">1221</td>
 <td>R/W</td>
 <td></td>
 <td>Reserved</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_RETRY_PERIOD7</td>
+<td>ROH_FINGER_RETRY_AFTER_PERIOD7</td>
 <td style="text-align: right;">1222</td>
 <td>R/W</td>
 <td></td>
 <td>Reserved</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_RETRY_PERIOD8</td>
+<td>ROH_FINGER_RETRY_AFTER_PERIOD8</td>
 <td style="text-align: right;">1223</td>
 <td>R/W</td>
 <td></td>
 <td>Reserved</td>
 </tr>
 <tr>
-<td>ROH_FINGER_STOP_RETRY_PERIOD9</td>
+<td>ROH_FINGER_RETRY_AFTER_PERIOD9</td>
 <td style="text-align: right;">1224</td>
 <td>R/W</td>
 <td></td>
@@ -4349,6 +4349,139 @@ ModBus-RTU's master unit reads and writes internal registers of ROHand to obtain
 <td>Reserved</td>
 </tr>
 <tr>
+<td>ROH_MANU_DATA0</td>
+<td style="text-align: right;">1265</td>
+<td>R/W</td>
+<td></td>
+<td>Manufacture Data, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_MANU_DATA1</td>
+<td style="text-align: right;">1266</td>
+<td>R/W</td>
+<td></td>
+<td>Manufacture Data, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_MANU_DATA2</td>
+<td style="text-align: right;">1267</td>
+<td>R/W</td>
+<td></td>
+<td>Manufacture Data, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_MANU_DATA3</td>
+<td style="text-align: right;">1268</td>
+<td>R/W</td>
+<td></td>
+<td>Manufacture Data, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_MANU_DATA4</td>
+<td style="text-align: right;">1269</td>
+<td>R/W</td>
+<td></td>
+<td>Manufacture Data, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_MANU_DATA5</td>
+<td style="text-align: right;">1270</td>
+<td>R/W</td>
+<td></td>
+<td>Manufacture Data, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_MANU_DATA6</td>
+<td style="text-align: right;">1271</td>
+<td>R/W</td>
+<td></td>
+<td>Manufacture Data, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_MANU_DATA7</td>
+<td style="text-align: right;">1272</td>
+<td>R/W</td>
+<td></td>
+<td>Manufacture Data, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_MANU_DATA8</td>
+<td style="text-align: right;">1273</td>
+<td>R/W</td>
+<td></td>
+<td>Manufacture Data, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_MANU_DATA9</td>
+<td style="text-align: right;">1274</td>
+<td>R/W</td>
+<td></td>
+<td>Manufacture Data, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_MANU_DATA10</td>
+<td style="text-align: right;">1275</td>
+<td>R/W</td>
+<td></td>
+<td>Manufacture Data, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_MANU_DATA11</td>
+<td style="text-align: right;">1276</td>
+<td>R/W</td>
+<td></td>
+<td>Manufacture Data, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_MANU_DATA12</td>
+<td style="text-align: right;">1277</td>
+<td>R/W</td>
+<td></td>
+<td>Manufacture Data, saved to Non-Volatile Memory (NVM) when setting.</td>
+</tr>
+<tr>
+<td>ROH_MANU_DATA13</td>
+<td style="text-align: right;">1278</td>
+<td>R/W</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ROH_MANU_DATA14</td>
+<td style="text-align: right;">1279</td>
+<td>R/W</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ROH_MANU_DATA15</td>
+<td style="text-align: right;">1280</td>
+<td>R/W</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>ROH_SPEED_CTRL_BRAKE_DISTANCE</td>
+<td style="text-align: right;">1281</td>
+<td>R/W</td>
+<td>1024</td>
+<td>finger speed control brake distance（uint16），unit ms，resets to default value on startup</td>
+</tr>
+<tr>
+<td>ROH_SPEED_CTRL_ACCEL_DISTANCE</td>
+<td style="text-align: right;">1282</td>
+<td>R/W</td>
+<td>1024</td>
+<td>finger speed control acceleration distance（uint16），unit ms，resets to default value on startup</td>
+</tr>
+<tr>
+<td>ROH_SPEED_CTRL_PID_SPEED_RATIO</td>
+<td style="text-align: right;">1283</td>
+<td>R/W</td>
+<td>0.50 * 100</td>
+<td>finger speed control PID speed ratio*100（uint16），resets to default value on startup</td>
+</tr>
+<tr>
 <td>ROH_FINGER_FORCE_EX0</td>
 <td style="text-align: right;">2000</td>
 <td>R</td>
@@ -4585,568 +4718,600 @@ ModBus-RTU's master unit reads and writes internal registers of ROHand to obtain
    uint6 data, representing force magnitude in units of mN.</li>
 </ol>
 <p>Enclose the C/C++ macro definition of registers:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#define FORCE_GROUP_SIZE              (100)</span>
+<div class="highlight"><pre><span></span><code><span class="cp">#define FORCE_GROUP_SIZE                   (100)</span>
 
 <span class="cm">/* ModBus-RTU registers */</span><span class="w">   </span>
 
-<span class="cp">#define ROH_PROTOCOL_VERSION          (1000) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FW_VERSION                (1001) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FW_REVISION               (1002) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_HW_VERSION                (1003) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_BOOT_VERSION              (1004) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_NODE_ID                   (1005) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_SUB_EXCEPTION             (1006) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_BATTERY_VOLTAGE           (1007) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_SELF_TEST_LEVEL           (1008) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_BEEP_SWITCH               (1009) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_BEEP_PERIOD               (1010) </span><span class="cm">/* W   */</span>
-<span class="cp">#define ROH_BUTTON_PRESS_CNT          (1011) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_RECALIBRATE               (1012) </span><span class="cm">/* W   */</span>
-<span class="cp">#define ROH_START_INIT                (1013) </span><span class="cm">/* W   */</span>
-<span class="cp">#define ROH_RESET                     (1014) </span><span class="cm">/* W   */</span>
-<span class="cp">#define ROH_POWER_OFF                 (1015) </span><span class="cm">/* W   */</span>
-<span class="cp">#define ROH_RESET_FORCE               (1016) </span><span class="cm">/* W   */</span>
-<span class="cp">#define ROH_RESERVED1                 (1017) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_RESERVED2                 (1018) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_RESERVED3                 (1019) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_END0                 (1020) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_END1                 (1021) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_END2                 (1022) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_END3                 (1023) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_END4                 (1024) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_END5                 (1025) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_END6                 (1026) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_END7                 (1027) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_END8                 (1028) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_END9                 (1029) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_START0               (1030) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_START1               (1031) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_START2               (1032) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_START3               (1033) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_START4               (1034) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_START5               (1035) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_START6               (1036) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_START7               (1037) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_START8               (1038) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_START9               (1039) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_THUMB_POS0           (1040) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_THUMB_POS1           (1041) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_THUMB_POS2           (1042) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_THUMB_POS3           (1043) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_CALI_THUMB_POS4           (1044) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_P0                 (1045) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_P1                 (1046) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_P2                 (1047) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_P3                 (1048) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_P4                 (1049) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_P5                 (1050) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_P6                 (1051) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_P7                 (1052) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_P8                 (1053) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_P9                 (1054) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_I0                 (1055) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_I1                 (1056) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_I2                 (1057) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_I3                 (1058) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_I4                 (1059) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_I5                 (1060) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_I6                 (1061) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_I7                 (1062) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_I8                 (1063) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_I9                 (1064) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_D0                 (1065) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_D1                 (1066) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_D2                 (1067) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_D3                 (1068) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_D4                 (1069) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_D5                 (1070) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_D6                 (1071) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_D7                 (1072) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_D8                 (1073) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_D9                 (1074) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_G0                 (1075) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_G1                 (1076) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_G2                 (1077) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_G3                 (1078) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_G4                 (1079) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_G5                 (1080) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_G6                 (1081) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_G7                 (1082) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_G8                 (1083) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_G9                 (1084) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STATUS0            (1085) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_STATUS1            (1086) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_STATUS2            (1087) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_STATUS3            (1088) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_STATUS4            (1089) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_STATUS5            (1090) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_STATUS6            (1091) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_STATUS7            (1092) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_STATUS8            (1093) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_STATUS9            (1094) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_CURRENT_LIMIT0     (1095) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_CURRENT_LIMIT1     (1096) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_CURRENT_LIMIT2     (1097) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_CURRENT_LIMIT3     (1098) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_CURRENT_LIMIT4     (1099) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_CURRENT_LIMIT5     (1100) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_CURRENT_LIMIT6     (1101) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_CURRENT_LIMIT7     (1102) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_CURRENT_LIMIT8     (1103) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_CURRENT_LIMIT9     (1104) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_CURRENT0           (1105) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_CURRENT1           (1106) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_CURRENT2           (1107) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_CURRENT3           (1108) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_CURRENT4           (1109) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_CURRENT5           (1110) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_CURRENT6           (1111) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_CURRENT7           (1112) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_CURRENT8           (1113) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_CURRENT9           (1114) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE_TARGET0      (1115) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_TARGET1      (1116) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_TARGET2      (1117) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_TARGET3      (1118) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_TARGET4      (1119) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_TARGET5      (1120) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_TARGET6      (1121) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_TARGET7      (1122) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_TARGET8      (1123) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_TARGET9      (1124) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_SPEED0             (1125) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_SPEED1             (1126) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_SPEED2             (1127) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_SPEED3             (1128) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_SPEED4             (1129) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_SPEED5             (1130) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_SPEED6             (1131) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_SPEED7             (1132) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_SPEED8             (1133) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_SPEED9             (1134) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_POS_TARGET0        (1135) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_POS_TARGET1        (1136) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_POS_TARGET2        (1137) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_POS_TARGET3        (1138) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_POS_TARGET4        (1139) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_POS_TARGET5        (1140) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_POS_TARGET6        (1141) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_POS_TARGET7        (1142) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_POS_TARGET8        (1143) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_POS_TARGET9        (1144) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_POS0               (1145) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_POS1               (1146) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_POS2               (1147) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_POS3               (1148) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_POS4               (1149) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_POS5               (1150) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_POS6               (1151) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_POS7               (1152) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_POS8               (1153) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_POS9               (1154) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_ANGLE_TARGET0      (1155) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_ANGLE_TARGET1      (1156) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_ANGLE_TARGET2      (1157) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_ANGLE_TARGET3      (1158) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_ANGLE_TARGET4      (1159) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_ANGLE_TARGET5      (1160) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_ANGLE_TARGET6      (1161) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_ANGLE_TARGET7      (1162) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_ANGLE_TARGET8      (1163) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_ANGLE_TARGET9      (1164) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_ANGLE0             (1165) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_ANGLE1             (1166) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_ANGLE2             (1167) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_ANGLE3             (1168) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_ANGLE4             (1169) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_ANGLE5             (1170) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_ANGLE6             (1171) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_ANGLE7             (1172) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_ANGLE8             (1173) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_ANGLE9             (1174) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE0             (1175) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE1             (1176) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE2             (1177) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE3             (1178) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE4             (1179) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE5             (1180) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE6             (1181) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE7             (1182) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE8             (1183) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE9             (1184) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_STOP_SPEED0        (1185) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_SPEED1        (1186) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_SPEED2        (1187) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_SPEED3        (1188) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_SPEED4        (1189) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_SPEED5        (1190) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_SPEED6        (1191) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_SPEED7        (1192) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_SPEED8        (1193) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_SPEED9        (1194) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_CURRENT0      (1195) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_CURRENT1      (1196) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_CURRENT2      (1197) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_CURRENT3      (1198) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_CURRENT4      (1199) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_CURRENT5      (1200) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_CURRENT6      (1201) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_CURRENT7      (1202) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_CURRENT8      (1203) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_CURRENT9      (1204) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD0 (1205) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD1 (1206) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD2 (1207) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD3 (1208) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD4 (1209) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD5 (1210) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD6 (1211) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD7 (1212) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD8 (1213) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD9 (1214) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_RETRY_PERIOD0 (1215) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_RETRY_PERIOD1 (1216) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_RETRY_PERIOD2 (1217) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_RETRY_PERIOD3 (1218) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_RETRY_PERIOD4 (1219) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_RETRY_PERIOD5 (1220) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_RETRY_PERIOD6 (1221) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_RETRY_PERIOD7 (1222) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_RETRY_PERIOD8 (1223) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_STOP_RETRY_PERIOD9 (1224) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_P0           (1225) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_P1           (1226) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_P2           (1227) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_P3           (1228) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_P4           (1229) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_P5           (1230) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_P6           (1231) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_P7           (1232) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_P8           (1233) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_P9           (1234) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_I0           (1235) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_I1           (1236) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_I2           (1237) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_I3           (1238) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_I4           (1239) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_I5           (1240) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_I6           (1241) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_I7           (1242) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_I8           (1243) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_I9           (1244) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_D0           (1245) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_D1           (1246) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_D2           (1247) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_D3           (1248) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_D4           (1249) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_D5           (1250) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_D6           (1251) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_D7           (1252) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_D8           (1253) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_D9           (1254) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_G0           (1255) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_G1           (1256) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_G2           (1257) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_G3           (1258) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_G4           (1259) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_G5           (1260) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_G6           (1261) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_G7           (1262) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_G8           (1263) </span><span class="cm">/* R/W */</span>
-<span class="cp">#define ROH_FINGER_FORCE_G9           (1264) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_PROTOCOL_VERSION               (1000) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FW_VERSION                     (1001) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FW_REVISION                    (1002) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_HW_VERSION                     (1003) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_BOOT_VERSION                   (1004) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_NODE_ID                        (1005) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_SUB_EXCEPTION                  (1006) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_BATTERY_VOLTAGE                (1007) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_SELF_TEST_LEVEL                (1008) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_BEEP_SWITCH                    (1009) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_BEEP_PERIOD                    (1010) </span><span class="cm">/* W   */</span>
+<span class="cp">#define ROH_BUTTON_PRESS_CNT               (1011) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_RECALIBRATE                    (1012) </span><span class="cm">/* W   */</span>
+<span class="cp">#define ROH_START_INIT                     (1013) </span><span class="cm">/* W   */</span>
+<span class="cp">#define ROH_RESET                          (1014) </span><span class="cm">/* W   */</span>
+<span class="cp">#define ROH_POWER_OFF                      (1015) </span><span class="cm">/* W   */</span>
+<span class="cp">#define ROH_RESET_FORCE                    (1016) </span><span class="cm">/* W   */</span>
+<span class="cp">#define ROH_RESERVED1                      (1017) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_RESERVED2                      (1018) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_RESERVED3                      (1019) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END0                      (1020) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END1                      (1021) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END2                      (1022) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END3                      (1023) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END4                      (1024) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END5                      (1025) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END6                      (1026) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END7                      (1027) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END8                      (1028) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_END9                      (1029) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START0                    (1030) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START1                    (1031) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START2                    (1032) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START3                    (1033) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START4                    (1034) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START5                    (1035) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START6                    (1036) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START7                    (1037) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START8                    (1038) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_START9                    (1039) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_THUMB_POS0                (1040) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_THUMB_POS1                (1041) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_THUMB_POS2                (1042) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_THUMB_POS3                (1043) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_CALI_THUMB_POS4                (1044) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P0                      (1045) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P1                      (1046) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P2                      (1047) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P3                      (1048) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P4                      (1049) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P5                      (1050) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P6                      (1051) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P7                      (1052) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P8                      (1053) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_P9                      (1054) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I0                      (1055) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I1                      (1056) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I2                      (1057) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I3                      (1058) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I4                      (1059) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I5                      (1060) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I6                      (1061) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I7                      (1062) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I8                      (1063) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_I9                      (1064) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D0                      (1065) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D1                      (1066) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D2                      (1067) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D3                      (1068) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D4                      (1069) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D5                      (1070) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D6                      (1071) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D7                      (1072) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D8                      (1073) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_D9                      (1074) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G0                      (1075) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G1                      (1076) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G2                      (1077) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G3                      (1078) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G4                      (1079) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G5                      (1080) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G6                      (1081) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G7                      (1082) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G8                      (1083) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_G9                      (1084) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STATUS0                 (1085) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_STATUS1                 (1086) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_STATUS2                 (1087) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_STATUS3                 (1088) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_STATUS4                 (1089) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_STATUS5                 (1090) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_STATUS6                 (1091) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_STATUS7                 (1092) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_STATUS8                 (1093) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_STATUS9                 (1094) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT0          (1095) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT1          (1096) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT2          (1097) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT3          (1098) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT4          (1099) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT5          (1100) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT6          (1101) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT7          (1102) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT8          (1103) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT_LIMIT9          (1104) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_CURRENT0                (1105) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT1                (1106) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT2                (1107) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT3                (1108) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT4                (1109) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT5                (1110) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT6                (1111) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT7                (1112) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT8                (1113) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_CURRENT9                (1114) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE_TARGET0           (1115) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_TARGET1           (1116) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_TARGET2           (1117) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_TARGET3           (1118) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_TARGET4           (1119) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_TARGET5           (1120) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_TARGET6           (1121) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_TARGET7           (1122) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_TARGET8           (1123) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_TARGET9           (1124) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_SPEED0                  (1125) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_SPEED1                  (1126) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_SPEED2                  (1127) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_SPEED3                  (1128) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_SPEED4                  (1129) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_SPEED5                  (1130) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_SPEED6                  (1131) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_SPEED7                  (1132) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_SPEED8                  (1133) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_SPEED9                  (1134) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET0             (1135) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET1             (1136) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET2             (1137) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET3             (1138) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET4             (1139) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET5             (1140) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET6             (1141) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET7             (1142) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET8             (1143) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS_TARGET9             (1144) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_POS0                    (1145) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_POS1                    (1146) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_POS2                    (1147) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_POS3                    (1148) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_POS4                    (1149) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_POS5                    (1150) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_POS6                    (1151) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_POS7                    (1152) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_POS8                    (1153) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_POS9                    (1154) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET0           (1155) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET1           (1156) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET2           (1157) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET3           (1158) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET4           (1159) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET5           (1160) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET6           (1161) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET7           (1162) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET8           (1163) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE_TARGET9           (1164) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_ANGLE0                  (1165) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE1                  (1166) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE2                  (1167) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE3                  (1168) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE4                  (1169) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE5                  (1170) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE6                  (1171) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE7                  (1172) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE8                  (1173) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_ANGLE9                  (1174) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE0                  (1175) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE1                  (1176) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE2                  (1177) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE3                  (1178) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE4                  (1179) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE5                  (1180) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE6                  (1181) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE7                  (1182) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE8                  (1183) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE9                  (1184) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_STALL_SPEED0            (1185) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STALL_SPEED1            (1186) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STALL_SPEED2            (1187) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STALL_SPEED3            (1188) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STALL_SPEED4            (1189) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STALL_SPEED5            (1190) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STALL_SPEED6            (1191) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STALL_SPEED7            (1192) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STALL_SPEED8            (1193) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STALL_SPEED9            (1194) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STALL_CURRENT0          (1195) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STALL_CURRENT1          (1196) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STALL_CURRENT2          (1197) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STALL_CURRENT3          (1198) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STALL_CURRENT4          (1199) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STALL_CURRENT5          (1200) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STALL_CURRENT6          (1201) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STALL_CURRENT7          (1202) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STALL_CURRENT8          (1203) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STALL_CURRENT9          (1204) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD0      (1205) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD1      (1206) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD2      (1207) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD3      (1208) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD4      (1209) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD5      (1210) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD6      (1211) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD7      (1212) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD8      (1213) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_STOP_AFTER_PERIOD9      (1214) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_RETRY_AFTER_PERIOD0     (1215) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_RETRY_AFTER_PERIOD1     (1216) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_RETRY_AFTER_PERIOD2     (1217) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_RETRY_AFTER_PERIOD3     (1218) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_RETRY_AFTER_PERIOD4     (1219) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_RETRY_AFTER_PERIOD5     (1220) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_RETRY_AFTER_PERIOD6     (1221) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_RETRY_AFTER_PERIOD7     (1222) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_RETRY_AFTER_PERIOD8     (1223) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_RETRY_AFTER_PERIOD9     (1224) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_P0                (1225) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_P1                (1226) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_P2                (1227) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_P3                (1228) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_P4                (1229) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_P5                (1230) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_P6                (1231) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_P7                (1232) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_P8                (1233) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_P9                (1234) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_I0                (1235) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_I1                (1236) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_I2                (1237) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_I3                (1238) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_I4                (1239) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_I5                (1240) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_I6                (1241) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_I7                (1242) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_I8                (1243) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_I9                (1244) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_D0                (1245) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_D1                (1246) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_D2                (1247) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_D3                (1248) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_D4                (1249) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_D5                (1250) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_D6                (1251) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_D7                (1252) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_D8                (1253) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_D9                (1254) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_G0                (1255) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_G1                (1256) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_G2                (1257) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_G3                (1258) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_G4                (1259) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_G5                (1260) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_G6                (1261) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_G7                (1262) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_G8                (1263) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_FINGER_FORCE_G9                (1264) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_MANU_DATA0                     (1265) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_MANU_DATA1                     (1266) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_MANU_DATA2                     (1267) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_MANU_DATA3                     (1268) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_MANU_DATA4                     (1269) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_MANU_DATA5                     (1270) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_MANU_DATA6                     (1271) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_MANU_DATA7                     (1272) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_MANU_DATA8                     (1273) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_MANU_DATA9                     (1274) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_MANU_DATA10                    (1275) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_MANU_DATA11                    (1276) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_MANU_DATA12                    (1277) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_MANU_DATA13                    (1278) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_MANU_DATA14                    (1279) </span><span class="cm">/* R/W */</span>
+<span class="cp">#define ROH_MANU_DATA15                    (1280) </span><span class="cm">/* R/W */</span>
 
-<span class="cp">#define ROH_FINGER_FORCE_EX0          (2000 + 0 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE_EX1          (2000 + 1 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE_EX2          (2000 + 2 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE_EX3          (2000 + 3 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE_EX4          (2000 + 4 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE_EX5          (2000 + 5 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE_EX6          (2000 + 6 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE_EX7          (2000 + 7 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE_EX8          (2000 + 8 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
-<span class="cp">#define ROH_FINGER_FORCE_EX9          (2000 + 9 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE_EX0               (2000 + 0 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE_EX1               (2000 + 1 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE_EX2               (2000 + 2 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE_EX3               (2000 + 3 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE_EX4               (2000 + 4 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE_EX5               (2000 + 5 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE_EX6               (2000 + 6 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE_EX7               (2000 + 7 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE_EX8               (2000 + 8 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
+<span class="cp">#define ROH_FINGER_FORCE_EX9               (2000 + 9 * FORCE_GROUP_SIZE) </span><span class="cm">/* R   */</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="c1"># Define</span>
 <span class="n">FORCE_GROUP_SIZE</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">100</span><span class="p">)</span>  <span class="c1"># Max entries count for each force sensor</span>
 
 <span class="c1"># ModBus-RTU registers for ROH</span>
 
-<span class="n">ROH_PROTOCOL_VERSION</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">1000</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FW_VERSION</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1001</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FW_REVISION</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1002</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_HW_VERSION</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1003</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_BOOT_VERSION</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1004</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_NODE_ID</span>                   <span class="o">=</span> <span class="p">(</span><span class="mi">1005</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_SUB_EXCEPTION</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1006</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_BATTERY_VOLTAGE</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1007</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_SELF_TEST_LEVEL</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1008</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_BEEP_SWITCH</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1009</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_BEEP_PERIOD</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1010</span><span class="p">)</span> <span class="c1"># W</span>
-<span class="n">ROH_BUTTON_PRESS_CNT</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">1011</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_RECALIBRATE</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1012</span><span class="p">)</span> <span class="c1"># W</span>
-<span class="n">ROH_START_INIT</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1013</span><span class="p">)</span> <span class="c1"># W</span>
-<span class="n">ROH_RESET</span>                     <span class="o">=</span> <span class="p">(</span><span class="mi">1014</span><span class="p">)</span> <span class="c1"># W</span>
-<span class="n">ROH_POWER_OFF</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1015</span><span class="p">)</span> <span class="c1"># W</span>
-<span class="n">ROH_RESET_FORCE</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1016</span><span class="p">)</span> <span class="c1"># W</span>
-<span class="n">ROH_RESERVED1</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1017</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_RESERVED2</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1018</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_RESERVED3</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1019</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_END0</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1020</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_END1</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1021</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_END2</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1022</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_END3</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1023</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_END4</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1024</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_END5</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1025</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_END6</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1026</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_END7</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1027</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_END8</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1028</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_END9</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1029</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_START0</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1030</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_START1</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1031</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_START2</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1032</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_START3</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1033</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_START4</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1034</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_START5</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1035</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_START6</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1036</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_START7</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1037</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_START8</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1038</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_START9</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1039</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_THUMB_POS0</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1040</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_THUMB_POS1</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1041</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_THUMB_POS2</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1042</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_THUMB_POS3</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1043</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_CALI_THUMB_POS4</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1044</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_P0</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1045</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_P1</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1046</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_P2</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1047</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_P3</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1048</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_P4</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1049</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_P5</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1050</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_P6</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1051</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_P7</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1052</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_P8</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1053</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_P9</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1054</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_I0</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1055</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_I1</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1056</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_I2</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1057</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_I3</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1058</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_I4</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1059</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_I5</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1060</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_I6</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1061</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_I7</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1062</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_I8</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1063</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_I9</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1064</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_D0</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1065</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_D1</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1066</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_D2</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1067</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_D3</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1068</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_D4</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1069</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_D5</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1070</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_D6</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1071</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_D7</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1072</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_D8</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1073</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_D9</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1074</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_G0</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1075</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_G1</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1076</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_G2</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1077</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_G3</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1078</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_G4</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1079</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_G5</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1080</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_G6</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1081</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_G7</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1082</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_G8</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1083</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_G9</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1084</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STATUS0</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1085</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_STATUS1</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1086</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_STATUS2</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1087</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_STATUS3</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1088</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_STATUS4</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1089</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_STATUS5</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1090</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_STATUS6</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1091</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_STATUS7</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1092</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_STATUS8</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1093</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_STATUS9</span>            <span class="o">=</span> <span class="p">(</span><span class="mi">1094</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_CURRENT_LIMIT0</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1095</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_CURRENT_LIMIT1</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1096</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_CURRENT_LIMIT2</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1097</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_CURRENT_LIMIT3</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1098</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_CURRENT_LIMIT4</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1099</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_CURRENT_LIMIT5</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1100</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_CURRENT_LIMIT6</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1101</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_CURRENT_LIMIT7</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1102</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_CURRENT_LIMIT8</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1103</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_CURRENT_LIMIT9</span>     <span class="o">=</span> <span class="p">(</span><span class="mi">1104</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_CURRENT0</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1105</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_CURRENT1</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1106</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_CURRENT2</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1107</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_CURRENT3</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1108</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_CURRENT4</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1109</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_CURRENT5</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1110</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_CURRENT6</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1111</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_CURRENT7</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1112</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_CURRENT8</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1113</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_CURRENT9</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1114</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE_TARGET0</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1115</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_TARGET1</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1116</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_TARGET2</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1117</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_TARGET3</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1118</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_TARGET4</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1119</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_TARGET5</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1120</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_TARGET6</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1121</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_TARGET7</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1122</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_TARGET8</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1123</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_TARGET9</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1124</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_SPEED0</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1125</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_SPEED1</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1126</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_SPEED2</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1127</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_SPEED3</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1128</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_SPEED4</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1129</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_SPEED5</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1130</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_SPEED6</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1131</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_SPEED7</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1132</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_SPEED8</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1133</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_SPEED9</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1134</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_POS_TARGET0</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1135</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_POS_TARGET1</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1136</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_POS_TARGET2</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1137</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_POS_TARGET3</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1138</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_POS_TARGET4</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1139</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_POS_TARGET5</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1140</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_POS_TARGET6</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1141</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_POS_TARGET7</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1142</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_POS_TARGET8</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1143</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_POS_TARGET9</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1144</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_POS0</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1145</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_POS1</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1146</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_POS2</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1147</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_POS3</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1148</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_POS4</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1149</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_POS5</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1150</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_POS6</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1151</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_POS7</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1152</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_POS8</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1153</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_POS9</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1154</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_ANGLE_TARGET0</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1155</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_ANGLE_TARGET1</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1156</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_ANGLE_TARGET2</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1157</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_ANGLE_TARGET3</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1158</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_ANGLE_TARGET4</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1159</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_ANGLE_TARGET5</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1160</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_ANGLE_TARGET6</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1161</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_ANGLE_TARGET7</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1162</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_ANGLE_TARGET8</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1163</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_ANGLE_TARGET9</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1164</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_ANGLE0</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1165</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_ANGLE1</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1166</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_ANGLE2</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1167</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_ANGLE3</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1168</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_ANGLE4</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1169</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_ANGLE5</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1170</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_ANGLE6</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1171</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_ANGLE7</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1172</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_ANGLE8</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1173</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_ANGLE9</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1174</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE0</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1175</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE1</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1176</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE2</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1177</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE3</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1178</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE4</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1179</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE5</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1180</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE6</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1181</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE7</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1182</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE8</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1183</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE9</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1184</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_STOP_SPEED0</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1185</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_SPEED1</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1186</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_SPEED2</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1187</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_SPEED3</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1188</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_SPEED4</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1189</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_SPEED5</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1190</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_SPEED6</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1191</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_SPEED7</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1192</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_SPEED8</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1193</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_SPEED9</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1194</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_CURRENT0</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1195</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_CURRENT1</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1196</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_CURRENT2</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1197</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_CURRENT3</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1198</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_CURRENT4</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1199</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_CURRENT5</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1200</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_CURRENT6</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1201</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_CURRENT7</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1202</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_CURRENT8</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1203</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_CURRENT9</span>      <span class="o">=</span> <span class="p">(</span><span class="mi">1204</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_AFTER_PERIOD0</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1205</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_AFTER_PERIOD1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1206</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_AFTER_PERIOD2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1207</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_AFTER_PERIOD3</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1208</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_AFTER_PERIOD4</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1209</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_AFTER_PERIOD5</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1210</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_AFTER_PERIOD6</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1211</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_AFTER_PERIOD7</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1212</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_AFTER_PERIOD8</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1213</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_AFTER_PERIOD9</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1214</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_RETRY_PERIOD0</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1215</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_RETRY_PERIOD1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1216</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_RETRY_PERIOD2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1217</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_RETRY_PERIOD3</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1218</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_RETRY_PERIOD4</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1219</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_RETRY_PERIOD5</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1220</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_RETRY_PERIOD6</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1221</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_RETRY_PERIOD7</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1222</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_RETRY_PERIOD8</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1223</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_STOP_RETRY_PERIOD9</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1224</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_P0</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1225</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_P1</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1226</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_P2</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1227</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_P3</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1228</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_P4</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1229</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_P5</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1230</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_P6</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1231</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_P7</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1232</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_P8</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1233</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_P9</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1234</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_I0</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1235</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_I1</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1236</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_I2</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1237</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_I3</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1238</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_I4</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1239</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_I5</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1240</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_I6</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1241</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_I7</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1242</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_I8</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1243</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_I9</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1244</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_D0</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1245</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_D1</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1246</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_D2</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1247</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_D3</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1248</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_D4</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1249</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_D5</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1250</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_D6</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1251</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_D7</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1252</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_D8</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1253</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_D9</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1254</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_G0</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1255</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_G1</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1256</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_G2</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1257</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_G3</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1258</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_G4</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1259</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_G5</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1260</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_G6</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1261</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_G7</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1262</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_G8</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1263</span><span class="p">)</span> <span class="c1"># R/W</span>
-<span class="n">ROH_FINGER_FORCE_G9</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1264</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_PROTOCOL_VERSION</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1000</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FW_VERSION</span>                   <span class="o">=</span> <span class="p">(</span><span class="mi">1001</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FW_REVISION</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1002</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_HW_VERSION</span>                   <span class="o">=</span> <span class="p">(</span><span class="mi">1003</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_BOOT_VERSION</span>                 <span class="o">=</span> <span class="p">(</span><span class="mi">1004</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_NODE_ID</span>                      <span class="o">=</span> <span class="p">(</span><span class="mi">1005</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_SUB_EXCEPTION</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1006</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_BATTERY_VOLTAGE</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1007</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_SELF_TEST_LEVEL</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1008</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_BEEP_SWITCH</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1009</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_BEEP_PERIOD</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1010</span><span class="p">)</span> <span class="c1"># W</span>
+<span class="n">ROH_BUTTON_PRESS_CNT</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">1011</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_RECALIBRATE</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1012</span><span class="p">)</span> <span class="c1"># W</span>
+<span class="n">ROH_START_INIT</span>                   <span class="o">=</span> <span class="p">(</span><span class="mi">1013</span><span class="p">)</span> <span class="c1"># W</span>
+<span class="n">ROH_RESET</span>                        <span class="o">=</span> <span class="p">(</span><span class="mi">1014</span><span class="p">)</span> <span class="c1"># W</span>
+<span class="n">ROH_POWER_OFF</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1015</span><span class="p">)</span> <span class="c1"># W</span>
+<span class="n">ROH_RESET_FORCE</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1016</span><span class="p">)</span> <span class="c1"># W</span>
+<span class="n">ROH_RESERVED1</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1017</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_RESERVED2</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1018</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_RESERVED3</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1019</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END0</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1020</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END1</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1021</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END2</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1022</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END3</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1023</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END4</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1024</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END5</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1025</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END6</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1026</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END7</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1027</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END8</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1028</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_END9</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1029</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START0</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1030</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START1</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1031</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START2</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1032</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START3</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1033</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START4</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1034</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START5</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1035</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START6</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1036</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START7</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1037</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START8</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1038</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_START9</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1039</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_THUMB_POS0</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1040</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_THUMB_POS1</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1041</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_THUMB_POS2</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1042</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_THUMB_POS3</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1043</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_CALI_THUMB_POS4</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1044</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P0</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1045</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P1</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1046</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P2</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1047</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P3</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1048</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P4</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1049</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P5</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1050</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P6</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1051</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P7</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1052</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P8</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1053</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_P9</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1054</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I0</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1055</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I1</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1056</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I2</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1057</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I3</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1058</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I4</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1059</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I5</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1060</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I6</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1061</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I7</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1062</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I8</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1063</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_I9</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1064</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D0</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1065</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D1</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1066</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D2</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1067</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D3</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1068</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D4</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1069</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D5</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1070</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D6</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1071</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D7</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1072</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D8</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1073</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_D9</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1074</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G0</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1075</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G1</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1076</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G2</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1077</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G3</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1078</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G4</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1079</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G5</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1080</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G6</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1081</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G7</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1082</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G8</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1083</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_G9</span>                    <span class="o">=</span> <span class="p">(</span><span class="mi">1084</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STATUS0</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1085</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_STATUS1</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1086</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_STATUS2</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1087</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_STATUS3</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1088</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_STATUS4</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1089</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_STATUS5</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1090</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_STATUS6</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1091</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_STATUS7</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1092</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_STATUS8</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1093</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_STATUS9</span>               <span class="o">=</span> <span class="p">(</span><span class="mi">1094</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT0</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1095</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT1</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1096</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT2</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1097</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT3</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1098</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT4</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1099</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT5</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1100</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT6</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1101</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT7</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1102</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT8</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1103</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT_LIMIT9</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1104</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_CURRENT0</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1105</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT1</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1106</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT2</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1107</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT3</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1108</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT4</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1109</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT5</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1110</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT6</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1111</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT7</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1112</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT8</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1113</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_CURRENT9</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1114</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE_TARGET0</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1115</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_TARGET1</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1116</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_TARGET2</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1117</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_TARGET3</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1118</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_TARGET4</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1119</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_TARGET5</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1120</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_TARGET6</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1121</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_TARGET7</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1122</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_TARGET8</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1123</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_TARGET9</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1124</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_SPEED0</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1125</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_SPEED1</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1126</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_SPEED2</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1127</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_SPEED3</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1128</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_SPEED4</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1129</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_SPEED5</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1130</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_SPEED6</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1131</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_SPEED7</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1132</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_SPEED8</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1133</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_SPEED9</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1134</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET0</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1135</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET1</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1136</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET2</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1137</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET3</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1138</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET4</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1139</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET5</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1140</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET6</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1141</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET7</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1142</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET8</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1143</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS_TARGET9</span>           <span class="o">=</span> <span class="p">(</span><span class="mi">1144</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_POS0</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1145</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_POS1</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1146</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_POS2</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1147</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_POS3</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1148</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_POS4</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1149</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_POS5</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1150</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_POS6</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1151</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_POS7</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1152</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_POS8</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1153</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_POS9</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1154</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET0</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1155</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET1</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1156</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET2</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1157</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET3</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1158</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET4</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1159</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET5</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1160</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET6</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1161</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET7</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1162</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET8</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1163</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE_TARGET9</span>         <span class="o">=</span> <span class="p">(</span><span class="mi">1164</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_ANGLE0</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1165</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE1</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1166</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE2</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1167</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE3</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1168</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE4</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1169</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE5</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1170</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE6</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1171</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE7</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1172</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE8</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1173</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_ANGLE9</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1174</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE0</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1175</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE1</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1176</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE2</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1177</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE3</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1178</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE4</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1179</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE5</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1180</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE6</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1181</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE7</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1182</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE8</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1183</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE9</span>                <span class="o">=</span> <span class="p">(</span><span class="mi">1184</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_STALL_SPEED0</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">1185</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STALL_SPEED1</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">1186</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STALL_SPEED2</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">1187</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STALL_SPEED3</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">1188</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STALL_SPEED4</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">1189</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STALL_SPEED5</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">1190</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STALL_SPEED6</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">1191</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STALL_SPEED7</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">1192</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STALL_SPEED8</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">1193</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STALL_SPEED9</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">1194</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STALL_CURRENT0</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1195</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STALL_CURRENT1</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1196</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STALL_CURRENT2</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1197</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STALL_CURRENT3</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1198</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STALL_CURRENT4</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1199</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STALL_CURRENT5</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1200</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STALL_CURRENT6</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1201</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STALL_CURRENT7</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1202</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STALL_CURRENT8</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1203</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STALL_CURRENT9</span>        <span class="o">=</span> <span class="p">(</span><span class="mi">1204</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STOP_AFTER_PERIOD0</span>    <span class="o">=</span> <span class="p">(</span><span class="mi">1205</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STOP_AFTER_PERIOD1</span>    <span class="o">=</span> <span class="p">(</span><span class="mi">1206</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STOP_AFTER_PERIOD2</span>    <span class="o">=</span> <span class="p">(</span><span class="mi">1207</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STOP_AFTER_PERIOD3</span>    <span class="o">=</span> <span class="p">(</span><span class="mi">1208</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STOP_AFTER_PERIOD4</span>    <span class="o">=</span> <span class="p">(</span><span class="mi">1209</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STOP_AFTER_PERIOD5</span>    <span class="o">=</span> <span class="p">(</span><span class="mi">1210</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STOP_AFTER_PERIOD6</span>    <span class="o">=</span> <span class="p">(</span><span class="mi">1211</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STOP_AFTER_PERIOD7</span>    <span class="o">=</span> <span class="p">(</span><span class="mi">1212</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STOP_AFTER_PERIOD8</span>    <span class="o">=</span> <span class="p">(</span><span class="mi">1213</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_STOP_AFTER_PERIOD9</span>    <span class="o">=</span> <span class="p">(</span><span class="mi">1214</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_RETRY_AFTER_PERIOD0</span>   <span class="o">=</span> <span class="p">(</span><span class="mi">1215</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_RETRY_AFTER_PERIOD1</span>   <span class="o">=</span> <span class="p">(</span><span class="mi">1216</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_RETRY_AFTER_PERIOD2</span>   <span class="o">=</span> <span class="p">(</span><span class="mi">1217</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_RETRY_AFTER_PERIOD3</span>   <span class="o">=</span> <span class="p">(</span><span class="mi">1218</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_RETRY_AFTER_PERIOD4</span>   <span class="o">=</span> <span class="p">(</span><span class="mi">1219</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_RETRY_AFTER_PERIOD5</span>   <span class="o">=</span> <span class="p">(</span><span class="mi">1220</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_RETRY_AFTER_PERIOD6</span>   <span class="o">=</span> <span class="p">(</span><span class="mi">1221</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_RETRY_AFTER_PERIOD7</span>   <span class="o">=</span> <span class="p">(</span><span class="mi">1222</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_RETRY_AFTER_PERIOD8</span>   <span class="o">=</span> <span class="p">(</span><span class="mi">1223</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_RETRY_AFTER_PERIOD9</span>   <span class="o">=</span> <span class="p">(</span><span class="mi">1224</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_P0</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1225</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_P1</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1226</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_P2</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1227</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_P3</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1228</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_P4</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1229</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_P5</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1230</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_P6</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1231</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_P7</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1232</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_P8</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1233</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_P9</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1234</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_I0</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1235</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_I1</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1236</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_I2</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1237</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_I3</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1238</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_I4</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1239</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_I5</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1240</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_I6</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1241</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_I7</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1242</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_I8</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1243</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_I9</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1244</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_D0</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1245</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_D1</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1246</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_D2</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1247</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_D3</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1248</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_D4</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1249</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_D5</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1250</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_D6</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1251</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_D7</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1252</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_D8</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1253</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_D9</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1254</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_G0</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1255</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_G1</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1256</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_G2</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1257</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_G3</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1258</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_G4</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1259</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_G5</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1260</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_G6</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1261</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_G7</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1262</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_G8</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1263</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_FINGER_FORCE_G9</span>              <span class="o">=</span> <span class="p">(</span><span class="mi">1264</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_MANU_DATA0</span>                   <span class="o">=</span> <span class="p">(</span><span class="mi">1265</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_MANU_DATA1</span>                   <span class="o">=</span> <span class="p">(</span><span class="mi">1266</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_MANU_DATA2</span>                   <span class="o">=</span> <span class="p">(</span><span class="mi">1267</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_MANU_DATA3</span>                   <span class="o">=</span> <span class="p">(</span><span class="mi">1268</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_MANU_DATA4</span>                   <span class="o">=</span> <span class="p">(</span><span class="mi">1269</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_MANU_DATA5</span>                   <span class="o">=</span> <span class="p">(</span><span class="mi">1270</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_MANU_DATA6</span>                   <span class="o">=</span> <span class="p">(</span><span class="mi">1271</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_MANU_DATA7</span>                   <span class="o">=</span> <span class="p">(</span><span class="mi">1272</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_MANU_DATA8</span>                   <span class="o">=</span> <span class="p">(</span><span class="mi">1273</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_MANU_DATA9</span>                   <span class="o">=</span> <span class="p">(</span><span class="mi">1274</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_MANU_DATA10</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1275</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_MANU_DATA11</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1276</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_MANU_DATA12</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1277</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_MANU_DATA13</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1278</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_MANU_DATA14</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1279</span><span class="p">)</span> <span class="c1"># R/W</span>
+<span class="n">ROH_MANU_DATA15</span>                  <span class="o">=</span> <span class="p">(</span><span class="mi">1280</span><span class="p">)</span> <span class="c1"># R/W</span>
 
-<span class="n">ROH_FINGER_FORCE_EX0</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE_EX1</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE_EX2</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE_EX3</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE_EX4</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE_EX5</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE_EX6</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE_EX7</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE_EX8</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
-<span class="n">ROH_FINGER_FORCE_EX9</span>          <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE_EX0</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE_EX1</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE_EX2</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE_EX3</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE_EX4</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE_EX5</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE_EX6</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">6</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE_EX7</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">7</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE_EX8</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
+<span class="n">ROH_FINGER_FORCE_EX9</span>             <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span> <span class="o">+</span> <span class="mi">9</span> <span class="o">*</span> <span class="n">FORCE_GROUP_SIZE</span><span class="p">)</span> <span class="c1"># R</span>
 </code></pre></div>
 <h3 id="42-angle-of-roh_finger_angle_target-and-roh_finger_pos">4.2. Angle of ROH_FINGER_ANGLE_TARGET and ROH_FINGER_POS</h3>
 <p>Description of angle definition and motion range:</p>
